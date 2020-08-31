@@ -1,138 +1,113 @@
 import React, { Fragment, Component } from 'react';
 
-import Particles from 'react-particles-js';
+import Navigation from './components/navigation/Navigation';  
+import WelcomePage from './components/welcome_page/WelcomePage';  
+import AboutPage from './components/about_page/AboutPage';  
+import SkillsPage from './components/skills_page/SkillsPage';  
+import ExperiencePage from './components/experience_page/ExperiencePage';  
+import LinksPage from './components/links_page/LinksPage';  
+import ContactForm from './components/contact_form/ContactForm';  
 
 import './App.css';
-
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 100,
-      density: {
-        enable: true,
-        value_area: 1000
-      }
-    },
-    color: {
-      value: "#ffffff"
-    },
-    shape: {
-      type: "polygon",
-      stroke: {
-        width: 0,
-        color: "#000000"
-      },
-      polygon: {
-        nb_sides: 5
-      },
-      image: {
-
-      }
-    },
-    size: {
-      value: 3,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 4,
-        size_min: 0.3,
-        sync: false
-      }
-    },
-    opacity: {
-      value: 1,
-      random: true,
-      anim: {
-        enable: true,
-        speed: 1,
-        opacity_min: 0,
-        sync: false
-      }
-    },
-    line_linked: {
-      enable: false,
-      distance: 200,
-      color: "#ffffff",
-      opacity: 0.5,
-      width: 1
-    },
-    move: {
-      enable: true,
-      direction: "none",
-      random: true,
-      straight: false,
-      speed: 1,
-      out_mode: "out",
-      attract: {
-        enable: false,
-        rotateX: 600,
-        totateY: 600
-      }
-    }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: {
-        enable: true,
-        mode: "bubble"
-      },
-      onclick: {
-        enable: true,
-        mode: "repulse"
-      },
-      resize: true
-    },
-    modes: {
-      grab: {
-        distance: 400,
-        line_linked: {
-          opacity: 1
-        }
-      },
-      bubble: {
-        distance: 150,
-        size: 0,
-        duration: 3,
-        opacity: 0,
-        speed: 3
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.3
-      },
-      push: {
-        particles_nb: 4
-      },
-      remove: {
-        particles_nb: 2
-      }
-    }
-  },
-  retina_detect: true,
-  // config_demo: {
-  //   hide_card: false,
-  // }
-}
 
 class App extends Component {
   constructor() {
     super();
 
-    this.state = {
+    this.myRef = React.createRef();
 
+    this.state = {
+      scrolled: false,
     }
   }
 
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    if (window.pageYOffset >= 80) {
+      this.setState({scrolled: true});
+    } else {
+      this.setState({scrolled: false});
+    }
+  }
+
+  handleClickAbout = () => {
+    setTimeout(() => {
+      window.scrollBy(0, 10);
+    }, 550);
+  }
+
+  handleClickSkills = () => {
+    setTimeout(() => {
+      window.scrollBy(0, 10);
+    }, 550);
+  }
+
+  handleClickExperience = () => {
+    setTimeout(() => {
+      window.scrollBy(0, 10);
+    }, 550);
+  }
+
+  handleClickLinks = () => {
+    setTimeout(() => {
+      window.scrollBy(0, 10);
+    }, 550);
+  }
+
+  handleClickContact = () => {
+    setTimeout(() => {
+      window.scrollBy(0, 10);
+    }, 550);
+  }
+
   render() {
+    const { scrolled } = this.state;
+
     return (
       <Fragment>
-        <div className="container_App">
-          <Particles className="particles"
-            params={particlesOptions} 
+        <div className="container_App">  
+          <Navigation 
+            scrolled={scrolled}
+
+            handleClickAbout={this.handleClickAbout}
+            handleClickSkills={this.handleClickSkills}
+            handleClickExperience={this.handleClickExperience}
+            handleClickLinks={this.handleClickLinks}
+            handleClickContact={this.handleClickContact}
           />
 
-          
+          <WelcomePage 
+            id="home"
+
+            handleClickAbout={this.handleClickAbout}
+          />
+
+          <AboutPage 
+            id="aboutpage"
+          />
+
+          <SkillsPage 
+            id="skillspage" 
+          />
+
+          <ExperiencePage 
+            id="experiencepage"
+          />
+
+          <LinksPage 
+            id="linkspage"
+          />
+
+          <ContactForm 
+            id="contact"
+          />
         </div>
       </Fragment>
     );

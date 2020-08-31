@@ -1,0 +1,9 @@
+.about-page_container {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh);
+}
+
+.about-page_inside_container {
+    padding-top: 140px;
+}

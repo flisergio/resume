@@ -1,0 +1,127 @@
+.welcome-page_container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #051937;
+    background-size: contain;
+    /* background-position: right; */
+    background-repeat: no-repeat;
+}
+
+.description_container {
+    width: 50%;
+    margin: 220px 0 0 30px;
+    padding: 0 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_welcome {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 50px;
+    margin: 0;
+}
+
+.header_welcome span {
+    color: #00D3CC;
+}
+
+.p_welcome-description {
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    line-height: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+
+.link_about {
+    position: relative;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.link_about:hover {
+    background: #fff;
+    color: #000;
+    border-radius: 25px;
+}
+
+.link_about span {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-picture_container {
+    margin-top: 220px;
+    padding: 0;
+    z-index: 1;
+}
+
+.img_profile-picture {
+    height: calc(100vh - 260px);
+    width: auto;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    opacity: .75;
+}
+
+.ul_social-media {
+    list-style-type: none;
+    z-index: 5;
+    padding: 0 20px 40px 20px;
+    margin: 220px 0  0 0;
+}
+
+.ul_social-media li {
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    opacity: .45;
+}
+
+.ul_social-media:hover li {
+    opacity: .85;
+}
+
+.ul_social-media li a {
+    height: 50px;
+    width: 60px;
+}
+
+.icon_social-media_container {
+    background: linear-gradient(89deg, #CFD6E6 0%, #E7EFF9  100%);
+    box-shadow: 10px 10px #000;
+}
+
+.icon_social-media {
+    height: 40px;
+    width: auto;
+    margin: 5px 10px;
+}
+
+.icon_social-media:hover {
+    cursor: pointer;
+}

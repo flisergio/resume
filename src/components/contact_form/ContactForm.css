@@ -1,0 +1,9 @@
+.contact-form_container {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh);
+}
+
+.contact-form_inside_container {
+    padding-top: 140px;
+}
