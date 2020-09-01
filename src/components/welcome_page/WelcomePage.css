@@ -9,8 +9,12 @@
 
     background-color: #051937;
     background-size: contain;
-    /* background-position: right; */
     background-repeat: no-repeat;
+}
+
+.particles {
+    z-index: 4;
+    height: 100vh;
 }
 
 .description_container {
@@ -27,12 +31,13 @@
     color: #fff;
     text-align: center;
     font-size: 2.5em;
-    line-height: 50px;
+    line-height: 75px;
     margin: 0;
 }
 
 .header_welcome span {
-    color: #00D3CC;
+    color: #27d4cf;
+    font-size: 1.5em;
 }
 
 .p_welcome-description {
@@ -58,6 +63,7 @@
     font-weight: 300;
     transition: .5s;
     cursor: pointer;
+    z-index: 5;
 }
 
 .link_about:hover {
@@ -74,7 +80,7 @@
 .profile-picture_container {
     margin-top: 220px;
     padding: 0;
-    z-index: 1;
+    z-index: 5;
 }
 
 .img_profile-picture {
@@ -89,7 +95,7 @@
     list-style-type: none;
     z-index: 5;
     padding: 0 20px 40px 20px;
-    margin: 220px 0  0 0;
+    margin: 220px 0 0 0;
 }
 
 .ul_social-media li {

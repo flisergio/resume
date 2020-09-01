@@ -37,35 +37,41 @@ class App extends Component {
     }
   }
 
-  handleClickAbout = () => {
+  handleNavClick = () => {
     setTimeout(() => {
       window.scrollBy(0, 10);
-    }, 550);
+    }, 1050);
   }
 
-  handleClickSkills = () => {
-    setTimeout(() => {
-      window.scrollBy(0, 10);
-    }, 550);
-  }
+  // handleClickAbout = () => {
+  //   setTimeout(() => {
+  //     window.scrollBy(0, 10);
+  //   }, 550);
+  // }
 
-  handleClickExperience = () => {
-    setTimeout(() => {
-      window.scrollBy(0, 10);
-    }, 550);
-  }
+  // handleClickSkills = () => {
+  //   setTimeout(() => {
+  //     window.scrollBy(0, 10);
+  //   }, 550);
+  // }
 
-  handleClickLinks = () => {
-    setTimeout(() => {
-      window.scrollBy(0, 10);
-    }, 550);
-  }
+  // handleClickExperience = () => {
+  //   setTimeout(() => {
+  //     window.scrollBy(0, 10);
+  //   }, 550);
+  // }
 
-  handleClickContact = () => {
-    setTimeout(() => {
-      window.scrollBy(0, 10);
-    }, 550);
-  }
+  // handleClickLinks = () => {
+  //   setTimeout(() => {
+  //     window.scrollBy(0, 10);
+  //   }, 550);
+  // }
+
+  // handleClickContact = () => {
+  //   setTimeout(() => {
+  //     window.scrollBy(0, 10);
+  //   }, 550);
+  // }
 
   render() {
     const { scrolled } = this.state;
@@ -76,11 +82,12 @@ class App extends Component {
           <Navigation 
             scrolled={scrolled}
 
-            handleClickAbout={this.handleClickAbout}
-            handleClickSkills={this.handleClickSkills}
-            handleClickExperience={this.handleClickExperience}
-            handleClickLinks={this.handleClickLinks}
-            handleClickContact={this.handleClickContact}
+            handleNavClick={this.handleNavClick}
+            // handleClickAbout={this.handleClickAbout}
+            // handleClickSkills={this.handleClickSkills}
+            // handleClickExperience={this.handleClickExperience}
+            // handleClickLinks={this.handleClickLinks}
+            // handleClickContact={this.handleClickContact}
           />
 
           <WelcomePage 

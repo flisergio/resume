@@ -1,7 +1,22 @@
 .skills-page_container {
     position: relative;
     width: 100%;
-    min-height: calc(100vh);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    background-image:
+        linear-gradient(to bottom, rgba(20, 38, 65, 1), rgba(33, 66, 116, 0.5)),
+        url('images/background-skills.png');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 5;
 }
 
 .skills-page_inside_container {

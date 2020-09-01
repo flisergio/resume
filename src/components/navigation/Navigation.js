@@ -35,7 +35,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                         >
                             <span>Home</span>
                         </Link>
@@ -48,7 +48,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickAbout}
                         >
                             <span>About Me</span>
@@ -62,7 +62,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickSkills}
                         >
                             <span>Skills</span>
@@ -76,7 +76,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickExperience}
                         >
                             <span>Experience</span>
@@ -90,7 +90,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickLinks}
                         >
                             <span>Links</span>
@@ -104,7 +104,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickContact}
                         >
                             <span>Hire Me</span>
@@ -131,7 +131,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                         >
                             <span>Home</span>
                         </Link>
@@ -144,7 +144,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickAbout}
                         >
                             <span>About Me</span>
@@ -158,7 +158,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickSkills}
                         >
                             <span>Skills</span>
@@ -172,7 +172,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickExperience}
                         >
                             <span>Experience</span>
@@ -186,7 +186,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickLinks}
                         >
                             <span>Links</span>
@@ -200,7 +200,7 @@ const Navigation = ({ scrolled,
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickContact}
                         >
                             <span>Hire Me</span>
