@@ -119,7 +119,7 @@
 
 .icon_social-media_container {
     background: linear-gradient(89deg, #CFD6E6 0%, #E7EFF9  100%);
-    box-shadow: 10px 10px #000;
+    /* box-shadow: 10px 10px #000; */
 }
 
 .icon_social-media {
