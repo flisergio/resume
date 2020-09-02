@@ -162,7 +162,7 @@
 }
 
 .other-skills-window_container:hover .skill-async-progress_container {
-    width: 50%;
+    width: 40%;
 }
 
 .other-skills-window_container:hover .skill-heroku-progress_container {

@@ -178,7 +178,7 @@ const WelcomePage = ({ id, handleClickAbout }) => {
                             </Tilt>
                         </a></li>
                         
-                        <li><a href="https://instagram.com/flisergio">
+                        <li><a href="https://www.instagram.com/flisergio">
                             <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} >
                                 <div className="Tilt-inner">
                                     <img 

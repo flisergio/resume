@@ -107,7 +107,7 @@ const Navigation = ({ scrolled,
                             duration={1000}
                             onClick={handleClickContact}
                         >
-                            <span>Hire Me</span>
+                            <span>Contact</span>
                         </Link>
                     </li>
                 </ul>
@@ -203,7 +203,7 @@ const Navigation = ({ scrolled,
                             duration={1000}
                             onClick={handleClickContact}
                         >
-                            <span>Hire Me</span>
+                            <span>Contact</span>
                         </Link>
                     </li>
                 </ul>

@@ -20,7 +20,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-html_container">
                             <div className="skill-label_container">
                                 <h3>HTML5</h3>
-                                <span class="skill-percentage">90%</span>
+                                <span className="skill-percentage">90%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -211,7 +211,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-async_container">
                             <div className="skill-label_container">
                                 <h3>HTTP & JSON & AJAX</h3>
-                                <span class="skill-percentage">50%</span>
+                                <span class="skill-percentage">40%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
