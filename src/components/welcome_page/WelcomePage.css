@@ -30,25 +30,43 @@
 .header_welcome {
     color: #fff;
     text-align: center;
-    font-size: 2.5em;
-    line-height: 75px;
+    font-size: 2vw;
+    line-height: 3vw;
     margin: 0;
 }
 
 .header_welcome span {
     color: #27d4cf;
-    font-size: 1.5em;
+    font-size: 1.8em;
+}
+
+.welcome-description_container {
+    border: 1px solid #fff;
+    border-radius: 25px;    
+    padding: 1.5vw;
+    margin: 1vw 0;
 }
 
 .p_welcome-description {
     color: #fff;
+    padding: 0;
+    margin: 0;
     text-align: center;
-    font-size: 1em;
-    line-height: 20px;
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #fff;
-    border-radius: 25px;
+    font-size: 1.8vw;
+    line-height: 1.8vw;
+}
+
+.p_quote {
+    color: #27d4cf;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 1.8vw;
+    line-height: 1.8vw;
+    text-transform: uppercase;
+    margin-top: 1vw;
+    padding-top: 1vw;
+    border-top: 1px solid #fff;
 }
 
 .link_about {
@@ -56,10 +74,11 @@
     background: none;
     border: none;
     margin: 0;
-    padding: 20px;
+    padding: 1vw;
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
+    font-size: 1.5vw;
     font-weight: 300;
     transition: .5s;
     cursor: pointer;
@@ -84,7 +103,7 @@
 }
 
 .img_profile-picture {
-    height: calc(100vh - 260px);
+    height: 35vw;
     width: auto;
     border-radius: 50px;
     margin-bottom: 40px;
@@ -101,7 +120,7 @@
 .ul_social-media li {
     background: #fff;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: .8vw 0;
     display: flex;
     align-items: center;
     transition: .5s;
@@ -113,8 +132,8 @@
 }
 
 .ul_social-media li a {
-    height: 50px;
-    width: 60px;
+    height: 2.8vw;
+    width: 3vw;
 }
 
 .icon_social-media_container {
@@ -123,9 +142,9 @@
 }
 
 .icon_social-media {
-    height: 40px;
+    height: 2.2vw;
     width: auto;
-    margin: 5px 10px;
+    margin: .3vw .4vw .1vw .4vw;
 }
 
 .icon_social-media:hover {

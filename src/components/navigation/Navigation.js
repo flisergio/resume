@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Tilt from 'react-tilt';
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -21,8 +21,8 @@ const Navigation = ({ scrolled,
         return(
             <nav className="nav_main">
                 <div className="logo_container mt0">
-                    <Tilt className="logo_main_container br2 shadow-2" options={{ max : 35 }} style={{ height: 100, width: 100 }} >
-                        <div className="Tilt-inner"><img className="logo_main" src={logo_main} alt="logo" onClick={scrollToTop}/></div>
+                    <Tilt className="logo_main_container br2 shadow-2" options={{ max : 55 }} >
+                        <div className="Tilt-inner"><img className="logo_main" src={logo_main} alt="logo" /></div>
                     </Tilt>
                 </div>
 
@@ -117,7 +117,7 @@ const Navigation = ({ scrolled,
         return(
             <nav className="nav_main sticky">
                 <div className="logo_container mt0">
-                    <Tilt className="logo_main_container br2 shadow-2" options={{ max : 35 }} style={{ height: 100, width: 100 }} >
+                    <Tilt className="logo_main_container br2 shadow-2" options={{ max : 35 }} >
                         <div className="Tilt-inner"><img className="logo_main" src={logo_main} alt="logo"/></div>
                     </Tilt>
                 </div>

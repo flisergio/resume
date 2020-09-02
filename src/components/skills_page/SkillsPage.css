@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 .skills-page_container {
     position: relative;
     width: 100%;
     min-height: 100vh;
 
+    padding-top: 140px;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
+    font-family: 'Montserrat', sans-serif;
 
     background-image:
         linear-gradient(to bottom, rgba(20, 38, 65, 1), rgba(33, 66, 116, 0.5)),
@@ -20,5 +25,177 @@
 }
 
 .skills-page_inside_container {
-    padding-top: 140px;
+    position: relative;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills-window_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24%;
+    background: #051937;
+    padding: .9vw;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    opacity: .25;
+    transition: 1s;
+}
+
+.skills-window_container:hover {
+    opacity: 1;
+}
+
+.skills-window_container h1 {
+    font-size: 1.5vw;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-window_container p {
+    font-size: .7vw;
+    color: #fff;
+}
+
+.skill_container {
+    position: relative;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, .1);
+    margin: .1vw 0;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, .5);
+}
+
+.skill-label_container h3 {
+    font-size: .8vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    float: left;
+}
+
+.skill-percentage {
+    font-size: .8vw;
+    color: #fff;
+    float: right;
+    opacity: 0;
+    transition: 1s;
+}
+
+.skills-window_container:hover .skill-percentage {
+    opacity: 1;
+}
+
+.skill-bar_container {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: #051937;
+    margin: .5vw 0;
+}
+
+.skill-progress_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #0b2752, #2b80ff);
+    transition: 1s;
+}
+
+.front-end-skills-window_container:hover .skill-html-progress_container {
+    width: 90%;
+}
+
+.front-end-skills-window_container:hover .skill-css-progress_container {
+    width: 75%;
+}
+
+.front-end-skills-window_container:hover .skill-js-progress_container {
+    width: 60%;
+}
+
+.front-end-skills-window_container:hover .skill-react-progress_container {
+    width: 60%;
+}
+
+.front-end-skills-window_container:hover .skill-redux-progress_container {
+    width: 30%;
+}
+
+.back-end-skills-window_container:hover .skill-node-progress_container {
+    width: 60%;
+}
+
+.back-end-skills-window_container:hover .skill-express-progress_container {
+    width: 60%;
+}
+
+.back-end-skills-window_container:hover .skill-databases-progress_container {
+    width: 50%;
+}
+
+.back-end-skills-window_container:hover .skill-python-progress_container {
+    width: 30%;
+}
+
+.back-end-skills-window_container:hover .skill-java-cpp-progress_container {
+    width: 10%;
+}
+
+.other-skills-window_container:hover .skill-git-progress_container {
+    width: 70%;
+}
+
+.other-skills-window_container:hover .skill-wordpress-progress_container {
+    width: 60%;
+}
+
+.other-skills-window_container:hover .skill-ms-progress_container {
+    width: 50%;
+}
+
+.other-skills-window_container:hover .skill-async-progress_container {
+    width: 50%;
+}
+
+.other-skills-window_container:hover .skill-heroku-progress_container {
+    width: 40%;
+}
+
+.language-skills-window_container:hover .skill-ua-progress_container {
+    width: 100%;
+}
+
+.language-skills-window_container:hover .skill-rus-progress_container {
+    width: 100%;
+}
+
+.language-skills-window_container:hover .skill-pl-progress_container {
+    width: 90%;
+}
+
+.language-skills-window_container:hover .skill-en-progress_container {
+    width: 75%;
+}
+
+.skill-progress_container:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.skills-window_container:hover .skill-progress_container:before {
+    background: #fff;
+    box-shadow: 0 0 25px rgba(41, 123, 247, 1);
 }

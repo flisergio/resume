@@ -45,14 +45,14 @@
 }
 
 .about-page_left_container .face {
-    width: 175px;
-    height: 175px;
+    width: 14vw;
+    height: 14vw;
     transition: 0.5s;
 }
 
 .about-page_right_container .face {
-    width: 675px;
-    height: 200px;
+    width: 55vw;
+    height: 14vw;
     transition: 0.5s;
 }
 
@@ -78,16 +78,16 @@
 }
 
 .img_about-page_card {
-    max-width: 100px;
+    max-width: 8vw;
     filter: invert(1);
 }
 
 .content h3 {
-    margin: 10px 0 0;
+    margin: 1vw 0 0;
     padding: 0;
     color: #fff;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.5vw;
 }
 
 .about-page_card_container:hover .content {
@@ -103,7 +103,7 @@
 }
 
 .about-page_card_container:hover .img_about-page_card {
-    max-width: 100px;
+    max-width: 8vw;
 }
 
 .face.face2 {
@@ -113,7 +113,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: .5vw;
     box-sizing: border-box;
     transform: translateY(-100px);
     opacity: 0;
@@ -132,8 +132,8 @@
 .personal-info {
     margin: 0;
     padding: 0;
-    font-size: 0.8em;
-    line-height: 2em;
+    font-size: 1vw;
+    line-height: 1.5vw;
     line-break: auto;    
     vertical-align: middle;
     display: inline-block;
@@ -170,9 +170,9 @@
 .education-name {
     margin: 0;
     padding: 0;
-    padding-bottom: 5px;
-    font-size: 1em;
-    line-height: 1.1em;
+    padding-bottom: .5vw;
+    font-size: 1vw;
+    line-height: 1.5vw;
     line-break: auto;
     transition: ease-in 1s;
     font-weight: 500;
@@ -190,8 +190,9 @@
 .education-info {
     width: 100%;
     margin: 0;
-    padding: 5px 0;
-    line-height: 1.1em;
+    padding: .5vw 0;
+    font-size: 1vw;
+    line-height: 1.5vw;
     line-break: auto;
     transition: ease-in 2s;
     vertical-align: middle;
@@ -208,8 +209,9 @@
 .education-time {
     width: 100%;
     margin: 0;
-    padding: 5px 0;
-    line-height: 1.1em;
+    padding: .5vw 0;
+    font-size: 1vw;
+    line-height: 1.5vw;
     line-break: auto;
     transition: ease-in 2.5s;
     vertical-align: middle;
@@ -259,7 +261,7 @@
 }
 
 .hobby-title p {
-    font-size: 1.2em;
+    font-size: 1.5vw;
     font-weight: 700;
     transition: 1s;
     opacity: .35;
@@ -276,8 +278,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: .8em;
-    padding: 0 5px;
+    font-size: 1.1vw;
+    padding: 0 .5vw;
 }
 
 .hobby-description p {

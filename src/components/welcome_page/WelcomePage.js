@@ -6,6 +6,9 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 import './WelcomePage.css';
 import profilePicture from "./images/profile.JPG";
+import facebookPicture from "./images/facebook.png";
+import instagramPicture from "./images/instagram.png";
+import linkedinPicture from "./images/linkedin.png";
 
 const particlesOptions = {
     particles: {
@@ -129,17 +132,25 @@ const WelcomePage = ({ id, handleClickAbout }) => {
                 {/* <div className="welcome-page_inside_container"> */}
                     <div className="description_container">
                         <h2 className="header_welcome">Hello, I'm<span><br></br>Sergii Kobyliaiev</span></h2>
-                        <p className="p_welcome-description">
-                            Sit in sint dolor aliqua occaecat aliqua qui velit incididunt. Veniam consequat ad sit duis culpa ullamco fugiat ut dolor. Laboris anim enim id culpa Lorem commodo incididunt. Mollit tempor proident et duis eu culpa tempor dolor ullamco qui et quis anim laborum. Pariatur et amet sint Lorem sint laboris culpa occaecat elit. Irure ullamco cillum est id officia pariatur in nulla. Et non aliquip officia laboris aliqua nostrud consectetur incididunt ut proident.
-                            Sit laborum est aliqua sunt fugiat ea enim aute excepteur laboris. Occaecat amet dolor sunt amet veniam irure proident. Deserunt duis dolore reprehenderit minim aute in do dolore ullamco Lorem nulla adipisicing dolor consectetur. Pariatur ad minim mollit aliquip. Commodo eiusmod quis quis cillum aliquip laboris elit consectetur. Magna nulla tempor ex nulla reprehenderit. Ut labore eu tempor fugiat occaecat laborum commodo.
-                        </p>
+
+                        <div className="welcome-description_container">
+                            <p className="p_welcome-description">
+                                My main goals are acquiring new skills and professional development. I am a hard-working person, 
+                                so I am ready to spend a lot of time learning new things and doing work. Every created  project 
+                                is my motivation. I am not scare of new tasks and always finish anything I start.
+                            </p>
+
+                            <p className="p_quote">
+                                "If you can't do great things, do small things in a great way"
+                            </p>
+                        </div>
                         <Link
                             className="link_about"
                             to="aboutpage"
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={1000}
                             onClick={handleClickAbout}
                         >
                             <span>About Me</span>
@@ -155,36 +166,36 @@ const WelcomePage = ({ id, handleClickAbout }) => {
                     </div>
 
                     <ul className="ul_social-media">
-                        <li><a href="https://facebook.com">
-                            <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} style={{ height: 50, width: 60 }} >
+                        <li><a href="https://www.facebook.com/sergio.mejor.5/">
+                            <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} >
                                 <div className="Tilt-inner">
                                     <img 
                                         className="icon_social-media" 
-                                        src={'https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Facebook_svg-512.png'} 
+                                        src={facebookPicture} 
                                         alt="facebook"
                                     />
                                 </div>
                             </Tilt>
                         </a></li>
                         
-                        <li><a href="https://facebook.com">
-                            <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} style={{ height: 50, width: 60 }} >
+                        <li><a href="https://instagram.com/flisergio">
+                            <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} >
                                 <div className="Tilt-inner">
                                     <img 
                                         className="icon_social-media" 
-                                        src={'https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-512.png'} 
+                                        src={instagramPicture} 
                                         alt="instagram"
                                     />
                                 </div>
                             </Tilt>
                         </a></li>
 
-                        <li><a href="https://facebook.com">
-                            <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} style={{ height: 50, width: 60 }} >
+                        <li><a href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
+                            <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} >
                                 <div className="Tilt-inner">
                                     <img 
                                         className="icon_social-media" 
-                                        src={'https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Linkedin_svg-512.png'} 
+                                        src={linkedinPicture} 
                                         alt="linkedin"
                                     />
                                 </div>
