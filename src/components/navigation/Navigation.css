@@ -141,7 +141,7 @@
     height: 50px;
     border-radius: 25px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .hamburger_container span {
