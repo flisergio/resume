@@ -318,7 +318,7 @@
     }
     
     .span_contact-info_text {
-        font-size: 3vh;
+        font-size: 2vh;
         font-weight: 500;
         opacity: 1;
         transition: .5s;
@@ -336,7 +336,7 @@
     
     .ul_social-media_contact li a img {
         opacity: 1;
-        height: 6vh;
+        height: 4vh;
     }
     
     .ul_social-media_contact li:hover a img {
