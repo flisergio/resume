@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.3ccb3b68.chunk.css",
+    "main.css": "/resume/static/css/main.25e44971.chunk.css",
     "main.js": "/resume/static/js/main.8b9d8bb1.chunk.js",
     "main.js.map": "/resume/static/js/main.8b9d8bb1.chunk.js.map",
     "runtime-main.js": "/resume/static/js/runtime-main.6275bf14.js",
@@ -9,10 +9,10 @@
     "static/js/2.edb65895.chunk.js": "/resume/static/js/2.edb65895.chunk.js",
     "static/js/2.edb65895.chunk.js.map": "/resume/static/js/2.edb65895.chunk.js.map",
     "index.html": "/resume/index.html",
-    "precache-manifest.c48b745d9d7a2f42c93c48e4d82826c4.js": "/resume/precache-manifest.c48b745d9d7a2f42c93c48e4d82826c4.js",
+    "precache-manifest.dac1a55dcf9ba799d9b8f129ba09340b.js": "/resume/precache-manifest.dac1a55dcf9ba799d9b8f129ba09340b.js",
     "service-worker.js": "/resume/service-worker.js",
     "static/css/2.3c03f26f.chunk.css.map": "/resume/static/css/2.3c03f26f.chunk.css.map",
-    "static/css/main.3ccb3b68.chunk.css.map": "/resume/static/css/main.3ccb3b68.chunk.css.map",
+    "static/css/main.25e44971.chunk.css.map": "/resume/static/css/main.25e44971.chunk.css.map",
     "static/js/2.edb65895.chunk.js.LICENSE.txt": "/resume/static/js/2.edb65895.chunk.js.LICENSE.txt",
     "static/media/AboutPage.css": "/resume/static/media/background-about.d078968b.jpg",
     "static/media/ContactForm.css": "/resume/static/media/background-contact.af7a2913.jpeg",
@@ -32,7 +32,7 @@
     "static/js/runtime-main.6275bf14.js",
     "static/css/2.3c03f26f.chunk.css",
     "static/js/2.edb65895.chunk.js",
-    "static/css/main.3ccb3b68.chunk.css",
+    "static/css/main.25e44971.chunk.css",
     "static/js/main.8b9d8bb1.chunk.js"
   ]
 }
