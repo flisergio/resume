@@ -8,7 +8,7 @@ import facebookPicture from "./images/facebook.png";
 import instagramPicture from "./images/instagram.png";
 import linkedinPicture from "./images/linkedin.png";
 
-const ContactForm = ({ id }) => {
+const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChange, messageChange }) => {
     return(
         <Fragment>
             <div className="contact-form_container"  id={id}>
@@ -89,33 +89,34 @@ const ContactForm = ({ id }) => {
                         </ul>
                     </div>
 
-                    <div className="contact-form_inner_container">
-                        <h2>Send a message</h2>
+                    <form className="contact-form_inner_container" onSubmit={handleEmailSubmit}>
+                        <h2>Send me a message</h2>
 
                         <div className="form-box_container">
                             <div className="input-box_container w50">
-                                <input type="text" name="" required />
-                                <span>Last Name</span>
+                                <input type="text" name="" onChange={nameChange} required />
+                                <span>Name</span>
                             </div>
                         </div>
 
                         <div className="form-box_container">
                             <div className="input-box_container w50">
-                                <input type="email" name="" required />
-                                <span>Email Address</span>
+                                <input type="email" name="" onChange={emailChange} required />
+                                <span>Email</span>
                             </div>
                         </div>
 
                         <div className="form-box_container">
-                            <div className="input-box_container w50">
-                                <input type="text" name="" required/>
-                                <span>Phone Number</span>
+                            <div className="input-box_container input-box_container_phone w50">
+                                <input type="tel" name="" pattern="+[1, 4][2, 8][0-9]{3}[0-9]{3}[0-9]{2}" 
+                                onChange={phoneChange} required/>
+                                <span>Phone</span>
                             </div>
                         </div>
 
                         <div className="form-box_container">
                             <div className="input-box_container w100">
-                                <textarea name="" required></textarea>
+                                <textarea name="" onChange={messageChange} required></textarea>
                                 <span>Enter your message here . . .</span>
                             </div>
                         </div>
@@ -125,7 +126,7 @@ const ContactForm = ({ id }) => {
                                 <input type="submit" value="send" name="" />
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </Fragment>

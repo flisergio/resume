@@ -33,7 +33,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-css_container">
                             <div className="skill-label_container">
                                 <h3>CSS3</h3>
-                                <span class="skill-percentage">75%</span>
+                                <span className="skill-percentage">75%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -46,7 +46,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-js_container">
                             <div className="skill-label_container">
                                 <h3>JavaScript</h3>
-                                <span class="skill-percentage">60%</span>
+                                <span className="skill-percentage">60%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -59,7 +59,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-react_container">
                             <div className="skill-label_container">
                                 <h3>React</h3>
-                                <span class="skill-percentage">60%</span>
+                                <span className="skill-percentage">60%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -72,7 +72,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-redux_container">
                             <div className="skill-label_container">
                                 <h3>Redux</h3>
-                                <span class="skill-percentage">30%</span>
+                                <span className="skill-percentage">30%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -96,7 +96,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-node_container">
                             <div className="skill-label_container">
                                 <h3>Node.js</h3>
-                                <span class="skill-percentage">60%</span>
+                                <span className="skill-percentage">60%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -109,7 +109,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-express_container">
                             <div className="skill-label_container">
                                 <h3>Express.js</h3>
-                                <span class="skill-percentage">60%</span>
+                                <span className="skill-percentage">60%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -122,7 +122,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-databases_container">
                             <div className="skill-label_container">
                                 <h3>Databases & PostgreSQL</h3>
-                                <span class="skill-percentage">50%</span>
+                                <span className="skill-percentage">50%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -135,7 +135,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-python_container">
                             <div className="skill-label_container">
                                 <h3>Python</h3>
-                                <span class="skill-percentage">30%</span>
+                                <span className="skill-percentage">30%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -148,7 +148,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-java-cpp_container">
                             <div className="skill-label_container">
                                 <h3>Java & C++</h3>
-                                <span class="skill-percentage">10%</span>
+                                <span className="skill-percentage">10%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -172,7 +172,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-git_container">
                             <div className="skill-label_container">
                                 <h3>Git Bash, Git & GitHub</h3>
-                                <span class="skill-percentage">70%</span>
+                                <span className="skill-percentage">70%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -185,7 +185,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-wordpress_container">
                             <div className="skill-label_container">
                                 <h3>WordPress</h3>
-                                <span class="skill-percentage">60%</span>
+                                <span className="skill-percentage">60%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -198,7 +198,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-ms_container">
                             <div className="skill-label_container">
                                 <h3>Word & Excel & PowerPoint</h3>
-                                <span class="skill-percentage">50%</span>
+                                <span className="skill-percentage">50%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -211,7 +211,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-async_container">
                             <div className="skill-label_container">
                                 <h3>HTTP & JSON & AJAX</h3>
-                                <span class="skill-percentage">40%</span>
+                                <span className="skill-percentage">40%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -224,7 +224,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-heroku_container">
                             <div className="skill-label_container">
                                 <h3>Heroku Deployment</h3>
-                                <span class="skill-percentage">40%</span>
+                                <span className="skill-percentage">40%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -248,7 +248,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-ua_container">
                             <div className="skill-label_container">
                                 <h3>Ukranian</h3>
-                                <span class="skill-percentage">Native</span>
+                                <span className="skill-percentage">Native</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -261,7 +261,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-rus_container">
                             <div className="skill-label_container">
                                 <h3>Russian</h3>
-                                <span class="skill-percentage">Native</span>
+                                <span className="skill-percentage">Native</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -274,7 +274,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-pl_container">
                             <div className="skill-label_container">
                                 <h3>Polish</h3>
-                                <span class="skill-percentage">Fluent</span>
+                                <span className="skill-percentage">Fluent</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -287,7 +287,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-en_container">
                             <div className="skill-label_container">
                                 <h3>English</h3>
-                                <span class="skill-percentage">Advanced</span>
+                                <span className="skill-percentage">Advanced</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>

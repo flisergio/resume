@@ -133,7 +133,7 @@
     margin: 0;
     padding: 0;
     font-size: 1vw;
-    line-height: 1.5vw;
+    line-height: 1.8vw;
     line-break: auto;    
     vertical-align: middle;
     display: inline-block;
@@ -289,4 +289,235 @@
 
 .hobbies-column:hover .hobby-description p {
     opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-page_container {
+        padding-top: 0;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }  
+
+    .about-page_card_container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2vh;
+        transition: 1s;
+        /* align-items: center; */
+    }
+
+    .about-page_card_container:hover {
+        margin-left: 0;
+    }
+
+    .about-page_hobbies_container {
+        margin-left: 0;
+    }
+
+    .about-page_inside_container {
+        min-height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .about-page_left_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .about-page_right_container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-page_hobbies_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-page_left_container .face {
+        width: 25vh;
+        height: 25vh;
+        transition: 0.5s;
+    }
+    
+    .about-page_right_container .face {
+        width: 100vh;
+        height: 25vh;
+        transition: 0.5s;
+    }
+    
+    .face.face1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        align-items: center;
+        z-index: 6;
+        transition: 1s;
+        transform: translateX(50px);
+    }
+
+    .about-page_hobbies_container .face.face1 {
+        padding: 1vh 0;
+        transition: 1s;
+        transform: translateY(50px);
+    }
+    
+    .about-page_card_container:hover .face.face1 {
+        background: #000;
+        transform: translateX(0);
+    }
+
+    .about-page_hobbies_container:hover .face.face1 {
+        transform: translateY(0);
+    }
+
+    .img_about-page_card {
+        max-width: 15vh;
+        filter: invert(1);
+    }
+
+    .about-page_hobbies_container .img_about-page_card {
+        max-width: 10vh;
+    }
+    
+    .content h3 {
+        margin: .5vh 0 .5vh;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    .about-page_hobbies_container .content h3 {
+        margin: .5vh 0 0 0;
+    }
+
+    .face.face2 .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-page_card_container:hover .img_about-page_card {
+        max-width: 15vh;
+    }
+
+    .about-page_hobbies_container:hover .img_about-page_card {
+        max-width: 10vh;
+    }
+    
+    .face.face2 {
+        position: relative;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1vh;
+        box-sizing: border-box;
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    .about-page_hobbies_container .face.face2 {
+        transform: translateY(-15vh);
+    }
+
+    .about-page_card_container:hover .face.face2 {
+        transform: translateX(0);
+    }
+    
+    .about-page_hobbies_container:hover .face.face2 {
+        transform: translateY(0);
+    }  
+
+    .personal-info {
+        font-size: 2.5vh;
+        line-height: 3vh;
+    }
+
+    
+    .personal-info span {
+        font-size: 3vh;
+    }
+
+    .education-name {
+        padding-bottom: .5vh;
+        font-size: 2.5vh;
+        line-height: 2.5vh;
+    }
+    
+    .education-info {
+        padding: .5vh 0;
+        font-size: 2.5vh;
+        line-height: 2.5vh;
+    }
+    
+    .education-time {
+        padding: .5vh 0;
+        font-size: 2.5vh;
+        line-height: 2.5vh;
+    }
+
+    .about-page_right_container .face {
+        width: 90vw;
+        height: 30vw;
+        transition: 0.5s;
+    }
+
+    .about-page_hobbies_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .hobbies_flexbox {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hobbies-column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-right: 1px solid #000;
+        padding: 0 .5vw;
+    }
+    
+    .hobby-title {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hobby-title p {
+        font-size: 3vw;
+        font-weight: 700;
+        transition: 1s;
+        opacity: .35;
+    }
+    
+    .hobby-description {
+        font-size: 2vw;
+    }
 }
