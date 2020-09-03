@@ -202,13 +202,12 @@
 
 @media only screen and (max-width: 1200px) {
     .skills-page_container {
-        padding-top: 0;
+        padding: 40px 0;
     }
     
     .skills-page_inside_container {
         width: 90%;
         min-height: 100%;
-        margin-top: 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -220,6 +219,10 @@
         height: 45%;
         padding: 20px;
         margin-bottom: 40px;
+    }
+
+    .skills-window_container:last-child {
+        margin-bottom: 0;
     }
 
     .skills-window_container h1 {

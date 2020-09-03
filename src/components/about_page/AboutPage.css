@@ -293,8 +293,7 @@
 
 @media only screen and (max-width: 1200px) {
     .about-page_container {
-        padding-top: 0;
-        padding-bottom: 100px;
+        padding: 40px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -305,7 +304,6 @@
         justify-content: center;
         margin-top: 2vh;
         transition: 1s;
-        /* align-items: center; */
     }
 
     .about-page_card_container:hover {
@@ -384,12 +382,12 @@
     }
 
     .img_about-page_card {
-        max-width: 15vh;
+        max-width: 15vw;
         filter: invert(1);
     }
 
     .about-page_hobbies_container .img_about-page_card {
-        max-width: 10vh;
+        max-width: 15vw;
     }
     
     .content h3 {
@@ -397,11 +395,12 @@
         padding: 0;
         color: #fff;
         text-align: center;
-        font-size: 3vh;
+        font-size: 3vw;
     }
 
     .about-page_hobbies_container .content h3 {
         margin: .5vh 0 0 0;
+        font-size: 3vw;
     }
 
     .face.face2 .content {
@@ -413,11 +412,11 @@
     }
     
     .about-page_card_container:hover .img_about-page_card {
-        max-width: 15vh;
+        max-width: 15vw;
     }
 
     .about-page_hobbies_container:hover .img_about-page_card {
-        max-width: 10vh;
+        max-width: 15vw;
     }
     
     .face.face2 {
@@ -446,31 +445,37 @@
     }  
 
     .personal-info {
-        font-size: 2.5vh;
-        line-height: 3vh;
+        font-size: 3vw;
+        line-height: 3.8vw;
     }
 
     
     .personal-info span {
-        font-size: 3vh;
+        font-size: 3.5vw;
     }
 
     .education-name {
-        padding-bottom: .5vh;
-        font-size: 2.5vh;
-        line-height: 2.5vh;
+        padding-bottom: 1vw;
+        font-size: 2.8vw;
+        line-height: 3vw;
     }
     
     .education-info {
-        padding: .5vh 0;
-        font-size: 2.5vh;
-        line-height: 2.5vh;
+        padding: 1vw 0;
+        font-size: 2.8vw;
+        line-height: 2.8vw;
     }
     
     .education-time {
-        padding: .5vh 0;
-        font-size: 2.5vh;
-        line-height: 2.5vh;
+        padding: 1vw 0;
+        font-size: 2.8vw;
+        line-height: 2.8vw;
+    }
+
+    .about-page_left_container .face {
+        width: 30vw;
+        height: 30vw;
+        transition: 0.5s;
     }
 
     .about-page_right_container .face {

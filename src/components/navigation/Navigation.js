@@ -223,7 +223,40 @@ const Navigation = (props) => {
                                 <span>Contact</span>
                             </Link>
                         </div>
+
+                        <ul className="ul_social-media_mobile">
+                            <li>
+                                <a href="https://www.facebook.com/sergio.mejor.5/">
+                                    <img 
+                                        className="icon_social-media_mobile" 
+                                        src={facebookPicture} 
+                                        alt="facebook"
+                                    />
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://www.instagram.com/flisergio">
+                                    <img 
+                                        className="icon_social-media_mobile" 
+                                        src={instagramPicture} 
+                                        alt="instagram"
+                                    />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
+                                    <img 
+                                        className="icon_social-media_mobile" 
+                                        src={linkedinPicture} 
+                                        alt="linkedin"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
                     </div>
+
                 </nav>
             </Fragment>
         );

@@ -125,12 +125,11 @@
     background: #fff;
     clip-path: circle(25px at calc(100% - 35px) 35px);
     transition: all .5s ease-in-out;
-    z-index: 5;
+    z-index: 10;
 }
 
 .nav_main_mobile.active {
     clip-path: circle(75%);
-    z-index: 10;
 }
 
 .hamburger_container {
@@ -141,7 +140,6 @@
     height: 50px;
     border-radius: 25px;
     cursor: pointer;
-    z-index: 1000;
 }
 
 .hamburger_container span {

@@ -141,7 +141,7 @@ const WelcomePage = ({ id, handleClickAbout }) => {
                             </p>
 
                             <p className="p_quote">
-                                "If you can't do great things, do small things in a great way"
+                                <span>"If you can't do great things, do small things in a great way"</span>
                             </p>
                         </div>
                         <Link
