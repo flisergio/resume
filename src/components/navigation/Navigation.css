@@ -120,16 +120,21 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 100%;
-    height: 100%;
+    width: 75px;
+    height: 75px;
     background: #fff;
     clip-path: circle(25px at calc(100% - 35px) 35px);
     transition: all .5s ease-in-out;
-    z-index: 5;
+    z-index: 10;
 }
 
 .nav_main_mobile.active {
     clip-path: circle(75%);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .hamburger_container {
