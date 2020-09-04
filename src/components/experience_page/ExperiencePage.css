@@ -40,7 +40,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
     opacity: .25;
     transition: 1s;
-    margin-bottom: 2vw;
+    /* margin-bottom: 2vw; */
 }
 
 .experience-window_container:hover {
