@@ -7,8 +7,8 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import './WelcomePage.css';
 import profilePicture from "./images/profile.JPG";
 import facebookPicture from "./images/facebook.png";
-import instagramPicture from "./images/instagram.png";
 import linkedinPicture from "./images/linkedin.png";
+import githubPicture from "./images/github.png";
 
 const particlesOptions = {
     particles: {
@@ -166,7 +166,7 @@ const WelcomePage = ({ id, handleClickAbout }) => {
                     </div>
 
                     <ul className="ul_social-media">
-                        <li><a href="https://www.facebook.com/sergio.mejor.5/">
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sergio.mejor.5/">
                             <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} >
                                 <div className="Tilt-inner">
                                     <img 
@@ -177,26 +177,26 @@ const WelcomePage = ({ id, handleClickAbout }) => {
                                 </div>
                             </Tilt>
                         </a></li>
-                        
-                        <li><a href="https://www.instagram.com/flisergio">
-                            <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} >
-                                <div className="Tilt-inner">
-                                    <img 
-                                        className="icon_social-media" 
-                                        src={instagramPicture} 
-                                        alt="instagram"
-                                    />
-                                </div>
-                            </Tilt>
-                        </a></li>
 
-                        <li><a href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
                             <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} >
                                 <div className="Tilt-inner">
                                     <img 
                                         className="icon_social-media" 
                                         src={linkedinPicture} 
                                         alt="linkedin"
+                                    />
+                                </div>
+                            </Tilt>
+                        </a></li>
+
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.github.com/flisergio">
+                            <Tilt className="icon_social-media_container br2 shadow-2" options={{ max : 35 }} >
+                                <div className="Tilt-inner">
+                                    <img 
+                                        className="icon_social-media" 
+                                        src={githubPicture} 
+                                        alt="github"
                                     />
                                 </div>
                             </Tilt>

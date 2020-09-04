@@ -6,8 +6,8 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import './Navigation.css';
 import logo_main from './images/logo_main.png';
 import facebookPicture from "./images/facebook.png";
-import instagramPicture from "./images/instagram.png";
 import linkedinPicture from "./images/linkedin.png";
+import githubPicture from "./images/github.png";
 
 const scrollToTop = () => {
     scroll.scrollToTop();
@@ -226,7 +226,7 @@ const Navigation = (props) => {
 
                         <ul className="ul_social-media_mobile">
                             <li>
-                                <a href="https://www.facebook.com/sergio.mejor.5/">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sergio.mejor.5/">
                                     <img 
                                         className="icon_social-media_mobile" 
                                         src={facebookPicture} 
@@ -234,23 +234,23 @@ const Navigation = (props) => {
                                     />
                                 </a>
                             </li>
-                            
+
                             <li>
-                                <a href="https://www.instagram.com/flisergio">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
                                     <img 
                                         className="icon_social-media_mobile" 
-                                        src={instagramPicture} 
-                                        alt="instagram"
+                                        src={linkedinPicture} 
+                                        alt="linkedin"
                                     />
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/flisergio">
                                     <img 
                                         className="icon_social-media_mobile" 
-                                        src={linkedinPicture} 
-                                        alt="linkedin"
+                                        src={githubPicture} 
+                                        alt="github"
                                     />
                                 </a>
                             </li>
@@ -465,7 +465,7 @@ const Navigation = (props) => {
 
                         <ul className="ul_social-media_mobile">
                             <li>
-                                <a href="https://www.facebook.com/sergio.mejor.5/">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sergio.mejor.5/">
                                     <img 
                                         className="icon_social-media_mobile" 
                                         src={facebookPicture} 
@@ -473,23 +473,23 @@ const Navigation = (props) => {
                                     />
                                 </a>
                             </li>
-                            
+
                             <li>
-                                <a href="https://www.instagram.com/flisergio">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
                                     <img 
                                         className="icon_social-media_mobile" 
-                                        src={instagramPicture} 
-                                        alt="instagram"
+                                        src={linkedinPicture} 
+                                        alt="linkedin"
                                     />
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/flisergio">
                                     <img 
                                         className="icon_social-media_mobile" 
-                                        src={linkedinPicture} 
-                                        alt="linkedin"
+                                        src={githubPicture} 
+                                        alt="github"
                                     />
                                 </a>
                             </li>

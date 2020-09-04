@@ -5,8 +5,8 @@ import locationPicture from "./images/location.png";
 import emailPicture from "./images/email.png";
 import phonePicture from "./images/phone.png";
 import facebookPicture from "./images/facebook.png";
-import instagramPicture from "./images/instagram.png";
 import linkedinPicture from "./images/linkedin.png";
+import githubPicture from "./images/github.png";
 
 const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChange, messageChange }) => {
     return(
@@ -58,7 +58,7 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
 
                         <ul className="ul_social-media_contact">
                             <li>
-                                <a href="https://www.facebook.com/sergio.mejor.5/">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sergio.mejor.5/">
                                     <img 
                                         src={facebookPicture}
                                         className="img_facebook"
@@ -68,21 +68,21 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
                             </li>
 
                             <li>
-                                <a href="https://www.instagram.com/flisergio/">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
                                     <img 
-                                        src={instagramPicture}
-                                        className="img_instagram"
-                                        alt="instagram"
+                                        src={linkedinPicture}
+                                        className="img_linkedin"
+                                        alt="linkedin"
                                     />
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/flisergio/">
                                     <img 
-                                        src={linkedinPicture}
-                                        className="img_linkedin"
-                                        alt="linkedin"
+                                        src={githubPicture}
+                                        className="img_github"
+                                        alt="github"
                                     />
                                 </a>
                             </li>
