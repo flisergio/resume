@@ -44,6 +44,7 @@
     border: 1px solid #fff;
     padding: 1.5vw;
     margin: 1vw 0;
+    border-radius: 25px;
 }
 
 .p_welcome-description {
@@ -87,6 +88,7 @@
 .link_about:hover {
     background: #fff;
     color: #000;
+    border-radius: 10px;
 }
 
 .link_about span {
@@ -104,6 +106,7 @@
     height: 35vw;
     width: auto;
     margin-bottom: 40px;
+    border-radius: 25px;
     opacity: .75;
 }
 
