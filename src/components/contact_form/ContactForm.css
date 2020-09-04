@@ -397,7 +397,9 @@
     .input-box_container input:focus ~ span,
     .input-box_container textarea:focus ~ span,
     .input-box_container input:valid ~ span,
-    .input-box_container textarea:valid ~ span {
+    .input-box_container textarea:valid ~ span,
+    .input-box_container input:invalid ~ span,
+    .input-box_container textarea:invalid ~ span {
         transform: translateY(-3vh);
         font-size: 2.5vh;
     }
