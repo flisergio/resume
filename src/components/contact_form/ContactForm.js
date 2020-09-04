@@ -108,7 +108,7 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
 
                         <div className="form-box_container">
                             <div className="input-box_container input-box_container_phone w50">
-                                <input type="tel" name="" pattern="+[1, 4][2, 8][0-9]{3}[0-9]{3}[0-9]{2}" 
+                                <input type="tel" name="" pattern="[/+/][1, 4][2, 8][0-9]{9}" 
                                 onChange={phoneChange} required/>
                                 <span>Phone</span>
                             </div>

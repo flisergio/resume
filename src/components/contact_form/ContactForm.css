@@ -235,7 +235,7 @@
 
 .input-box_container_phone input:focus ~ span:after,
 .input-box_container_phone input:valid ~ span:after {
-    content: ' (ie. +48123456789)';
+    content: ' (ie. +48xxxxxxxxx)';
 }
 
 .input-box_container input[type="submit"] {
