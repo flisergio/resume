@@ -1,7 +1,7 @@
 .links-page_container {
     position: relative;
     width: 100%;
-    min-height: 200vh;
+    min-height: calc(100vh + 5px);
 
     display: flex;
     justify-content: space-between;

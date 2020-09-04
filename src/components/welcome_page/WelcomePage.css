@@ -155,12 +155,12 @@
     .welcome-page_container {
         position: relative;
         width: 100%;
-        min-height: calc(100vh + 100px);
-        padding: 50px 0;
+        min-height: calc(100vh + 10vw);
+        padding: 0 0 10vw;
 
         display: flex;
         flex-direction: column-reverse;
-        justify-content: space-between;
+        justify-content: center ;
         align-items: center;
     
         background-color: #051937;
@@ -182,7 +182,7 @@
         text-align: center;
         font-size: 5vw;
         line-height: 7vw;
-        margin: 0;
+        margin: 0 0 1vw;
     }
     
     .header_welcome span {
@@ -194,7 +194,7 @@
         border: 1px solid #fff;
         border-radius: 25px;    
         padding: 3vw;
-        margin: 5vh 0 5vh;
+        margin: 2vh 0 2vh;
     }
     
     .p_welcome-description {
@@ -223,7 +223,7 @@
         position: relative;
         background: none;
         border: none;
-        margin: 0;
+        margin: 1vw 0 0;
         padding: 3vw;
         text-decoration: none;
         background: #fff;
@@ -249,14 +249,14 @@
     }
 
     .profile-picture_container {
-        margin: 5vh 0;
+        margin: 5vw 0;
         padding: 0;
         z-index: 5;
     }
     
     .img_profile-picture {
         margin: 0;
-        width: 50vw;
+        width: 60vw;
         height: auto;
         border-radius: 50px;
         opacity: .75;

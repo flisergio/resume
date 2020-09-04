@@ -112,7 +112,7 @@ class App extends Component {
 
   handleNavClick = () => {
     setTimeout(() => {
-      window.scrollBy(0, 10);
+      window.scrollBy(0, 5);
     }, 1050);
   }
 
