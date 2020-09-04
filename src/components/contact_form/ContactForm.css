@@ -210,7 +210,7 @@
     position: absolute;
     left: 0;
     padding: .5vw 0;
-    font-size: 1vw;
+    font-size: .9vw;
     font-weight: 300;
     color: #333;
     /* transition: .5s; */
@@ -239,7 +239,7 @@
 
 .input-box_container_phone input:focus ~ span:after,
 .input-box_container_phone input:valid ~ span:after {
-    content: ' (ie. +48xxxxxxxxx)';
+    content: ' (+48xxxxxxxxx)';
 }
 
 .input-box_container input[type="submit"] {
