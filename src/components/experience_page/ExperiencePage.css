@@ -39,7 +39,7 @@
     background: #051937;
     padding: 1vw;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-    opacity: .25;
+    opacity: .5;
     transition: 1s;
     /* margin-bottom: 2vw; */
 }
