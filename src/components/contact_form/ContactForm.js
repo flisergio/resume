@@ -94,14 +94,14 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
 
                         <div className="form-box_container">
                             <div className="input-box_container w50">
-                                <input type="text" name="" onChange={nameChange} required />
+                                <input type="text" name="" onChange={nameChange} placeholder="Name" required />
                                 <span>Name</span>
                             </div>
                         </div>
 
                         <div className="form-box_container">
                             <div className="input-box_container w50">
-                                <input type="email" name="" onChange={emailChange} required />
+                                <input type="email" name="" onChange={emailChange} placeholder="Email" required />
                                 <span>Email</span>
                             </div>
                         </div>
@@ -109,14 +109,14 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
                         <div className="form-box_container">
                             <div className="input-box_container input-box_container_phone w50">
                                 <input type="tel" name="" pattern="[/+/][1, 4][2, 8][0-9]{9}" 
-                                onChange={phoneChange} required/>
+                                onChange={phoneChange} placeholder="Phone" required/>
                                 <span>Phone</span>
                             </div>
                         </div>
 
                         <div className="form-box_container">
                             <div className="input-box_container w100">
-                                <textarea name="" onChange={messageChange} required></textarea>
+                                <textarea name="" onChange={messageChange} placeholder="Enter your message here . . ." required></textarea>
                                 <span>Enter your message here . . .</span>
                             </div>
                         </div>
