@@ -180,10 +180,15 @@
 
 .mobile_links-container {
     position: absolute;
+    display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.nav_main_mobile.active .mobile_links-container {
+    display: block;
 }
 
 .link_main_mobile_nav {
