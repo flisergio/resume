@@ -42,7 +42,6 @@
 
 .welcome-description_container {
     border: 1px solid #fff;
-    border-radius: 25px;    
     padding: 1.5vw;
     margin: 1vw 0;
 }
@@ -88,7 +87,6 @@
 .link_about:hover {
     background: #fff;
     color: #000;
-    border-radius: 25px;
 }
 
 .link_about span {
@@ -105,7 +103,6 @@
 .img_profile-picture {
     height: 35vw;
     width: auto;
-    border-radius: 50px;
     margin-bottom: 40px;
     opacity: .75;
 }
