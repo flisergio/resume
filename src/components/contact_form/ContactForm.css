@@ -219,8 +219,8 @@
 
 .input-box_container input:focus ~ span,
 .input-box_container textarea:focus ~ span,
-.input-box_container input:valid ~ span,
-.input-box_container textarea:valid ~ span {
+.input-box_container input:invalid ~ span,
+.input-box_container textarea:invalid ~ span {
     transform: translateY(-1.2vw);
     font-size: .8vw;
     font-weight: 500;
@@ -230,6 +230,10 @@
 
 .input-box_container input:valid ~ span,
 .input-box_container textarea:valid ~ span {
+    transform: translateY(-1.2vw);
+    font-size: .8vw;
+    font-weight: 500;
+    letter-spacing: 1px;
     color: #000;
 }
 
