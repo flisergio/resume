@@ -64,6 +64,7 @@
     z-index: 6;
     transition: 1s;
     transform: translateY(100px);
+    background: rgba(5, 25, 55, .5);
 }
 
 .about-page_card_container:hover .face.face1 {
@@ -316,7 +317,7 @@
     .about-page_card_container {
         display: flex;
         justify-content: center;
-        margin-top: 2vh;
+        margin-top: 5vh;
         transition: 1s;
     }
 
@@ -345,12 +346,18 @@
     
     .face.face1 {
         padding: 0;
-        transform: translateX(50px);
+        transform: none;
+        background: #000;
+    }
+    
+    .about-page_card_container:hover .face.face1 {
+        background: #000;
+        transform: none;
     }
 
     .about-page_hobbies_container .face.face1 {
         padding: 1vh 0;
-        transform: translateY(50px);
+        transform: none;
     }
     
     .about-page_card_container:hover .face.face1 {
@@ -370,6 +377,10 @@
         margin-bottom: 1vw;
     }
     
+    .content {
+        opacity: 1;
+    }
+
     .content h3 {
         margin: .5vh 0 .5vh;
         font-size: 4vw;
@@ -389,11 +400,12 @@
     }
     
     .face.face2 {
-        transform: translateX(-50px);
+        transform: none;
+        opacity: 1;
     }
 
     .about-page_hobbies_container .face.face2 {
-        transform: translateY(-15vh);
+        transform: none;
     }
 
     .about-page_card_container:hover .face.face2 {
@@ -409,27 +421,46 @@
         line-height: 4.3vw;
     }
 
+    .personal-info_name {
+        opacity: 1;
+    }
+    
+    .personal-info_birthdate {
+        opacity: 1;
+    }
+    
+    .personal-info_birthplace {
+        opacity: 1;
+    }
     
     .personal-info span {
         font-size: 4.1vw;
+    }
+
+    .personal-info_content,
+    .education_content {
+        padding: 2vw;
     }
 
     .education-name {
         padding-bottom: 1.4vw;
         font-size: 3.2vw;
         line-height: 3.2vw;
+        opacity: 1;
     }
     
     .education-info {
         padding: 1.4vw 0;
         font-size: 3.2vw;
         line-height: 3.2vw;
+        opacity: 1;
     }
     
     .education-time {
         padding: 1.4vw 0;
         font-size: 3.2vw;
         line-height: 3.2vw;
+        opacity: 1;
     }
 
     .about-page_left_container .face {
@@ -458,10 +489,15 @@
     
     .hobby-title p {
         font-size: 2.8vw;
+        opacity: 1;
     }
     
     .hobby-description {
         height: 85%;
         font-size: 2.2vw;
+    }
+
+    .hobby-description p {
+        opacity: 1;
     }
 }

@@ -29,7 +29,7 @@ const AboutPage = ({ id }) => {
 
                             <div className="face face2">
                                 <div className="content">
-                                    <div className="personal-info">
+                                    <div className="personal-info personal-info_content">
                                         <p className="personal-info_name">
                                             My name is <span>Sergii Kobyliaiev</span>
                                         </p>
@@ -62,7 +62,7 @@ const AboutPage = ({ id }) => {
                             </div>
 
                             <div className="face face2">
-                                <div className="content">
+                                <div className="content education_content">
                                     <div className="education-name">
                                         <p><span>Politechnika Krakowska</span> im. Tadeusza Koszciuszki</p>
                                     </div>
