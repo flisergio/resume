@@ -7,7 +7,7 @@ const LinksPage = ({ id }) => {
         <Fragment>
             <div className="links-page_container" id={id}>
                 <div className="links-page_inside_container">
-                    <p className="center">Links</p>
+                    
                 </div>
             </div>
         </Fragment>

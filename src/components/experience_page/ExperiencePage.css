@@ -41,20 +41,11 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
     opacity: .5;
     transition: 1s;
-    /* margin-bottom: 2vw; */
 }
 
 .experience-window_container:hover {
     opacity: 1;
 }
-
-/* .experience-first-window_container {
-    margin-right: 2.5%;
-}
-
-.experience-second-window_container {
-    margin-left: 2.5%;
-} */
 
 .experience-window_company-container {
     display: flex;

@@ -241,10 +241,6 @@
     opacity: 1;
 }
 
-.ul_social-media_mobile li:hover {
-    transform: scale(1.2);
-}
-
 .ul_social-media_mobile li a {
     height: 10vh;
     width: auto;
