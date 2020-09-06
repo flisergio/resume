@@ -58,31 +58,6 @@ const LinksPage = ({ id }) => {
                             </div>  
                         </div>
                     </div>
-
-                    <div className="links-card_container">
-                        <div className="links_link-box_container" data-text="GitHub">
-                            <p>GitHub Profile</p>
-                        </div>
-
-                        <div className="links_content_container">
-                            <div className="links_content_inside_container">
-                                <p>
-                                    My main <span>GitHub</span> profile where I gather all my self-development projects or other projects, 
-                                    that can be shared. You can find there a <span>CultureCenter project</span>, which was a 
-                                    <span> university project</span> used for simple maintaining of the <span>cinema system</span>. It was
-                                    developed by me and two other friends in <span>Java</span> and <span>MySQL</span>.
-                                </p>
-
-                                <a 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    href="https://github.com/flisergio"
-                                    className="link_button link_github">
-                                        Visit Link
-                                </a>
-                            </div>  
-                        </div>
-                    </div>
                 </div>
             </div>
         </Fragment>
