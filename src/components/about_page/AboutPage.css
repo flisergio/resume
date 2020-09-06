@@ -286,6 +286,7 @@
 .hobby-description p {
     transition: 1s;
     opacity: .35;
+    text-align: center;
 }
 
 .hobbies-column:hover .hobby-description p {

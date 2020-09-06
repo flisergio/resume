@@ -20,7 +20,7 @@ const ExperiencePage = ({ id }) => {
 
                         <div className="experience-window_position-container">
                             <h3 className="position-name">Intern Programmer</h3>
-                            <p className="position-dates">Oct 2018 - Sep 2019</p>
+                            <p className="position-dates">Oct 2018 - Oct 2019</p>
 
                             <div className="experience-window_task-container">
                                 <p>
@@ -41,13 +41,13 @@ const ExperiencePage = ({ id }) => {
                             <div className="experience-window_task-container">
                                 <p>
                                     Creating and maintaining <span>databases</span> for created products 
-                                    (<span>MySQL</span> and <span>PostgreSQL</span>).
+                                    (<span>PostgreSQL</span> and <span>MySQL</span>).
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="experience-window_container experience-second-window_container">
+                    {/* <div className="experience-window_container experience-second-window_container">
                         <div className="experience-window_company-container">
                             <h1 className="company-title">Capgemini</h1>
                             <p className="company-location">Kraków</p>
@@ -74,7 +74,7 @@ const ExperiencePage = ({ id }) => {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Fragment>

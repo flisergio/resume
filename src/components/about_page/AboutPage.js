@@ -149,16 +149,6 @@ const AboutPage = ({ id }) => {
                                             <p>I am really excited about travelling and visiting new places</p>
                                         </div>
                                     </div>
-
-                                    <div className="hobbies-column">
-                                        <div className="hobby-title">
-                                            <p>Outdoor</p>
-                                        </div>
-
-                                        <div className="hobby-description">
-                                            <p>I like any outdoor activities and prefer moving by bike when it is possible</p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
