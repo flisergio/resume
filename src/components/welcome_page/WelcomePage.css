@@ -156,7 +156,7 @@
         padding: 0 0 10vw;
 
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .description_container {
@@ -206,7 +206,7 @@
     }
 
     .profile-picture_container {
-        margin: 5vw 0;
+        margin: 20px 0;
     }
     
     .img_profile-picture {

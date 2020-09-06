@@ -27,7 +27,7 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
                                         />
                                     </span>
 
-                                    <span className="span_contact-info_text">Katowice, Poland</span>
+                                    <span className="span_contact-info_text">Poland</span>
                                 </li>
 
                                 <li>

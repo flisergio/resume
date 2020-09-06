@@ -149,6 +149,7 @@
         width: 100%;
         margin-bottom: 4vh;
         padding: 2vh;
+        opacity: 1;
     }
 
     .company-title {

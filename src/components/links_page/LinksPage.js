@@ -67,33 +67,10 @@ const LinksPage = ({ id }) => {
                         <div className="links_content_container">
                             <div className="links_content_inside_container">
                                 <p>
-                                    Sit in sint dolor aliqua occaecat aliqua qui velit incididunt. Veniam consequat ad sit duis 
-                                    culpa ullamco fugiat ut dolor. Laboris anim enim id culpa Lorem commodo incididunt. Mollit 
-                                    tempor proident et duis eu culpa tempor dolor ullamco qui et quis anim laborum.
-                                </p>
-
-                                <a 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    href="https://github.com/flisergio"
-                                    className="link_button link_github">
-                                        Visit Link
-                                </a>
-                            </div>  
-                        </div>
-                    </div>
-
-                    <div className="links-card_container">
-                        <div className="links_link-box_container" data-text="GitHub">
-                            <p>GitHub Profile</p>
-                        </div>
-
-                        <div className="links_content_container">
-                            <div className="links_content_inside_container">
-                                <p>
-                                    Sit in sint dolor aliqua occaecat aliqua qui velit incididunt. Veniam consequat ad sit duis 
-                                    culpa ullamco fugiat ut dolor. Laboris anim enim id culpa Lorem commodo incididunt. Mollit 
-                                    tempor proident et duis eu culpa tempor dolor ullamco qui et quis anim laborum.
+                                    My main <span>GitHub</span> profile where I gather all my self-development projects or other projects, 
+                                    that can be shared. You can find there a <span>CultureCenter project</span>, which was a 
+                                    <span> university project</span> used for simple maintaining of the <span>cinema system</span>. It was
+                                    developed by me and two other friends in <span>Java</span> and <span>MySQL</span>.
                                 </p>
 
                                 <a 

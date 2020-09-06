@@ -321,6 +321,10 @@
         transition: 1s;
     }
 
+    .about-page_personal-info_container {
+        margin-top: 0;
+    }
+
     .about-page_card_container:hover {
         margin-left: 0;
     }
@@ -345,7 +349,7 @@
     }
     
     .face.face1 {
-        padding: 0;
+        padding: 2vw 0;
         transform: none;
         background: #000;
     }

@@ -193,6 +193,14 @@
         background: #000;
         color: #fff;
     }
+
+    .links_content_inside_container_spectrumfilaments p {
+        font-size: 13px;
+    }
+
+    .links_content_inside_container_spectrumfilaments a {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -210,6 +218,14 @@
     .links_content_container {
         margin: 0;
         padding: 20px;
+    }
+
+    .links_content_inside_container_spectrumfilaments p {
+        font-size: 13px;
+    }
+
+    .links_content_inside_container_spectrumfilaments a {
+        font-size: 15px;
     }
 
     .links_link-box_container {

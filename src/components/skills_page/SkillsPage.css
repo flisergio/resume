@@ -130,15 +130,15 @@
 }
 
 .back-end-skills-window_container:hover .skill-node-progress_container {
-    width: 60%;
+    width: 50%;
 }
 
 .back-end-skills-window_container:hover .skill-express-progress_container {
-    width: 60%;
+    width: 50%;
 }
 
 .back-end-skills-window_container:hover .skill-databases-progress_container {
-    width: 50%;
+    width: 40%;
 }
 
 .back-end-skills-window_container:hover .skill-python-progress_container {
@@ -150,11 +150,11 @@
 }
 
 .other-skills-window_container:hover .skill-git-progress_container {
-    width: 70%;
+    width: 80%;
 }
 
 .other-skills-window_container:hover .skill-wordpress-progress_container {
-    width: 60%;
+    width: 70%;
 }
 
 .other-skills-window_container:hover .skill-ms-progress_container {
