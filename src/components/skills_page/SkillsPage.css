@@ -109,48 +109,56 @@
     transition: 1s;
 }
 
-.front-end-skills-window_container:hover .skill-html-progress_container {
+.front-end-skills-window_container:hover .skill-html-css-progress_container {
     width: 90%;
 }
 
-.front-end-skills-window_container:hover .skill-css-progress_container {
-    width: 75%;
+.front-end-skills-window_container:hover .skill-js-progress_container {
+    width: 80%;
 }
 
-.front-end-skills-window_container:hover .skill-js-progress_container {
-    width: 60%;
+.front-end-skills-window_container:hover .skill-lit-wc-progress_container {
+    width: 70%;
 }
 
 .front-end-skills-window_container:hover .skill-react-progress_container {
-    width: 60%;
+    width: 65%;
+}
+
+.front-end-skills-window_container:hover .skill-backbone-progress_container {
+    width: 50%;
 }
 
 .front-end-skills-window_container:hover .skill-redux-progress_container {
     width: 30%;
 }
 
-.back-end-skills-window_container:hover .skill-node-progress_container {
-    width: 50%;
+.back-end-skills-window_container:hover .skill-node-express-progress_container {
+    width: 55%;
 }
 
-.back-end-skills-window_container:hover .skill-express-progress_container {
-    width: 50%;
+.back-end-skills-window_container:hover .skill-python-progress_container {
+    width: 40%;
 }
 
 .back-end-skills-window_container:hover .skill-databases-progress_container {
     width: 40%;
 }
 
-.back-end-skills-window_container:hover .skill-python-progress_container {
-    width: 30%;
+.back-end-skills-window_container:hover .skill-java-progress_container {
+    width: 25%;
 }
 
-.back-end-skills-window_container:hover .skill-java-cpp-progress_container {
-    width: 10%;
+.back-end-skills-window_container:hover .skill-cpp-progress_container {
+    width: 20%;
 }
 
 .other-skills-window_container:hover .skill-git-progress_container {
     width: 80%;
+}
+
+.other-skills-window_container:hover .skill-api-progress_container {
+    width: 75%;
 }
 
 .other-skills-window_container:hover .skill-wordpress-progress_container {
@@ -158,11 +166,11 @@
 }
 
 .other-skills-window_container:hover .skill-ms-progress_container {
-    width: 50%;
+    width: 60%;
 }
 
-.other-skills-window_container:hover .skill-async-progress_container {
-    width: 40%;
+.other-skills-window_container:hover .skill-server-progress_container {
+    width: 50%;
 }
 
 .other-skills-window_container:hover .skill-heroku-progress_container {
@@ -183,6 +191,10 @@
 
 .language-skills-window_container:hover .skill-en-progress_container {
     width: 75%;
+}
+
+.language-skills-window_container:hover .skill-de-progress_container {
+    width: 10%;
 }
 
 .skill-progress_container:before {

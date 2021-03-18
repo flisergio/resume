@@ -12,41 +12,29 @@ const SkillsPage = ({ id }) => {
                         <p>
                             Front-End development is the most exciting IT sphere for me. I enjoy creating and designing
                             the web pages and applications. I have a good knowledge of HTML + CSS and can easily manipulate
-                            DOM with JavaScript. I am familiar with jQuery and Bootstrap. I started learning of React.JS in
-                            March 2020 as self-development and when I tried it I really loved how it works. Now I can easily
-                            create some simple web applications and I am always ready to conribute in some big and great projects.
+                            DOM with JavaScript. Besides that I am familiar with advanced JS concepts, jQuery and Bootstrap. 
+                            I started learning of React.JS in March 2020 as self-development and when I tried it I really 
+                            loved how it works. Now I can create some simple web applications and I am always ready to conribute 
+                            in some big projects.
                         </p>
 
-                        <div className="skill_container skill-html_container">
+                        <div className="skill_container skill-html-css_container">
                             <div className="skill-label_container">
-                                <h3>HTML5</h3>
+                                <h3>HTML5 & CSS3</h3>
                                 <span className="skill-percentage">90%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
 
                             <div className="skill-bar_container">
-                                <div className="skill-progress_container skill-html-progress_container"></div>
-                            </div>
-                        </div>
-
-                        <div className="skill_container skill-css_container">
-                            <div className="skill-label_container">
-                                <h3>CSS3</h3>
-                                <span className="skill-percentage">75%</span>
-
-                                <div style={{clear:'both'}}></div>
-                            </div>
-
-                            <div className="skill-bar_container">
-                                <div className="skill-progress_container skill-css-progress_container"></div>
+                                <div className="skill-progress_container skill-html-css-progress_container"></div>
                             </div>
                         </div>
 
                         <div className="skill_container skill-js_container">
                             <div className="skill-label_container">
                                 <h3>JavaScript</h3>
-                                <span className="skill-percentage">60%</span>
+                                <span className="skill-percentage">80%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -56,16 +44,42 @@ const SkillsPage = ({ id }) => {
                             </div>
                         </div>
 
+                        <div className="skill_container skill-lit-wc_container">
+                            <div className="skill-label_container">
+                                <h3>Lit Elements & WebComponents</h3>
+                                <span className="skill-percentage">70%</span>
+
+                                <div style={{clear:'both'}}></div>
+                            </div>
+
+                            <div className="skill-bar_container">
+                                <div className="skill-progress_container skill-lit-wc-progress_container"></div>
+                            </div>
+                        </div>
+
                         <div className="skill_container skill-react_container">
                             <div className="skill-label_container">
-                                <h3>React</h3>
-                                <span className="skill-percentage">60%</span>
+                                <h3>React.JS</h3>
+                                <span className="skill-percentage">65%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
 
                             <div className="skill-bar_container">
                                 <div className="skill-progress_container skill-react-progress_container"></div>
+                            </div>
+                        </div>
+
+                        <div className="skill_container skill-backbone_container">
+                            <div className="skill-label_container">
+                                <h3>Backbone & Marionette.js</h3>
+                                <span className="skill-percentage">50%</span>
+
+                                <div style={{clear:'both'}}></div>
+                            </div>
+
+                            <div className="skill-bar_container">
+                                <div className="skill-progress_container skill-backbone-progress_container"></div>
                             </div>
                         </div>
 
@@ -93,29 +107,29 @@ const SkillsPage = ({ id }) => {
                             second years of studying, but I don't have big experience in that languages.
                         </p>
 
-                        <div className="skill_container skill-node_container">
+                        <div className="skill_container skill-node-express_container">
                             <div className="skill-label_container">
-                                <h3>Node.js</h3>
-                                <span className="skill-percentage">50%</span>
+                                <h3>Node & Express.js</h3>
+                                <span className="skill-percentage">55%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
 
                             <div className="skill-bar_container">
-                                <div className="skill-progress_container skill-node-progress_container"></div>
+                                <div className="skill-progress_container skill-node-express-progress_container"></div>
                             </div>
                         </div>
 
-                        <div className="skill_container skill-express_container">
+                        <div className="skill_container skill-python_container">
                             <div className="skill-label_container">
-                                <h3>Express.js</h3>
-                                <span className="skill-percentage">50%</span>
+                                <h3>Python & ML + AI</h3>
+                                <span className="skill-percentage">40%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
 
                             <div className="skill-bar_container">
-                                <div className="skill-progress_container skill-express-progress_container"></div>
+                                <div className="skill-progress_container skill-python-progress_container"></div>
                             </div>
                         </div>
 
@@ -132,29 +146,29 @@ const SkillsPage = ({ id }) => {
                             </div>
                         </div>
 
-                        <div className="skill_container skill-python_container">
+                        <div className="skill_container skill-java_container">
                             <div className="skill-label_container">
-                                <h3>Python</h3>
-                                <span className="skill-percentage">30%</span>
+                                <h3>Java</h3>
+                                <span className="skill-percentage">25%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
 
                             <div className="skill-bar_container">
-                                <div className="skill-progress_container skill-python-progress_container"></div>
+                                <div className="skill-progress_container skill-java-progress_container"></div>
                             </div>
                         </div>
 
-                        <div className="skill_container skill-java-cpp_container">
+                        <div className="skill_container skill-cpp_container">
                             <div className="skill-label_container">
-                                <h3>Java & C++</h3>
-                                <span className="skill-percentage">10%</span>
+                                <h3>C++</h3>
+                                <span className="skill-percentage">20%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
 
                             <div className="skill-bar_container">
-                                <div className="skill-progress_container skill-java-cpp-progress_container"></div>
+                                <div className="skill-progress_container skill-cpp-progress_container"></div>
                             </div>
                         </div>
                     </div>
@@ -172,7 +186,7 @@ const SkillsPage = ({ id }) => {
 
                         <div className="skill_container skill-git_container">
                             <div className="skill-label_container">
-                                <h3>Git Bash, Git & GitHub</h3>
+                                <h3>Git Bash, Git & GitLab</h3>
                                 <span className="skill-percentage">80%</span>
 
                                 <div style={{clear:'both'}}></div>
@@ -182,6 +196,20 @@ const SkillsPage = ({ id }) => {
                                 <div className="skill-progress_container skill-git-progress_container"></div>
                             </div>
                         </div>
+
+                        <div className="skill_container skill-api_container">
+                            <div className="skill-label_container">
+                                <h3>JSON & API Communication</h3>
+                                <span className="skill-percentage">75%</span>
+
+                                <div style={{clear:'both'}}></div>
+                            </div>
+
+                            <div className="skill-bar_container">
+                                <div className="skill-progress_container skill-api-progress_container"></div>
+                            </div>
+                        </div>
+
 
                         <div className="skill_container skill-wordpress_container">
                             <div className="skill-label_container">
@@ -199,7 +227,7 @@ const SkillsPage = ({ id }) => {
                         <div className="skill_container skill-ms_container">
                             <div className="skill-label_container">
                                 <h3>Word & Excel & PowerPoint</h3>
-                                <span className="skill-percentage">50%</span>
+                                <span className="skill-percentage">60%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
@@ -209,16 +237,16 @@ const SkillsPage = ({ id }) => {
                             </div>
                         </div>
 
-                        <div className="skill_container skill-async_container">
+                        <div className="skill_container skill-server_container">
                             <div className="skill-label_container">
-                                <h3>HTTP & JSON & AJAX</h3>
-                                <span className="skill-percentage">40%</span>
+                                <h3>HTTP, AJAX & Server Communication</h3>
+                                <span className="skill-percentage">50%</span>
 
                                 <div style={{clear:'both'}}></div>
                             </div>
 
                             <div className="skill-bar_container">
-                                <div className="skill-progress_container skill-async-progress_container"></div>
+                                <div className="skill-progress_container skill-server-progress_container"></div>
                             </div>
                         </div>
 
@@ -293,6 +321,19 @@ const SkillsPage = ({ id }) => {
 
                             <div className="skill-bar_container">
                                 <div className="skill-progress_container skill-en-progress_container"></div>
+                            </div>
+                        </div>
+
+                        <div className="skill_container skill-de_container">
+                            <div className="skill-label_container">
+                                <h3>Deutsch</h3>
+                                <span className="skill-percentage">Beginner</span>
+
+                                <div style={{clear:'both'}}></div>
+                            </div>
+
+                            <div className="skill-bar_container">
+                                <div className="skill-progress_container skill-de-progress_container"></div>
                             </div>
                         </div>
                     </div>

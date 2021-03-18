@@ -75,7 +75,8 @@ const AboutPage = ({ id }) => {
                                     </div>
 
                                     <div className="education-time">
-                                        <p>Started in <br /><span>October, 2016</span></p>
+                                        <p>Started in <span>October, 2016</span></p>
+                                        <p>Graduated in <span>February, 2021</span></p>
                                     </div>
                                 </div>
                             </div>

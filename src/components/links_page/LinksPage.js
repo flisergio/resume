@@ -15,12 +15,10 @@ const LinksPage = ({ id }) => {
                         <div className="links_content_container">
                             <div className="links_content_inside_container links_content_inside_container_spectrumfilaments">
                                 <p>
-                                    Big back-end system (developed using <span>Python</span>) that communicates with PLC controller 
-                                    by <span>TCP</span>. Developed and used for controlling <span>filament quality</span>. After entering 
-                                    an ID of filament spool (generated in Python), system searches for such spool in <span>PostgreSQL database </span> 
-                                    and shows it's characteristics. If the graph goes out of borders -  the spool quality is bad. Here are some 
-                                    test example spool ID's: <span>prdLG</span>, <span>joNaL</span>, <span>oN3Qa</span>, <span>vdpVq</span>, 
-                                    <span> dJjgo</span>, <span>a128a</span> (for checking).
+                                    Big back-end system (developed using <span>Python</span>) that communicates with PLC controller by <span>TCP</span>. 
+                                    Developed and used for controlling <span>filament quality</span>. After entering an ID of filament spool 
+                                    (generated in Python), system searches for such spool in <span>PostgreSQL database </span> and shows it's 
+                                    characteristics that declare quality of the spool along with the raph that visualises it's quality.
                                 </p>
 
                                 <a 

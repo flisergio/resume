@@ -211,7 +211,7 @@
     width: 100%;
     margin: 0;
     padding: .5vw 0;
-    font-size: 1vw;
+    font-size: .8vw;
     line-height: 1.5vw;
     line-break: auto;
     transition: ease-in 2.5s;
@@ -222,6 +222,7 @@
 
 .education-time span {
     color: #27d4cf;
+    font-size: 1vw;
     font-weight: 700;
 }
 
@@ -262,7 +263,7 @@
 }
 
 .hobby-title p {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     font-weight: 700;
     transition: 1s;
     opacity: .35;
@@ -279,8 +280,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.1vw;
-    padding: 0 .5vw;
+    font-size: 1.3vw;
+    padding: 0 .25vw;
 }
 
 .hobby-description p {
@@ -449,23 +450,35 @@
 
     .education-name {
         padding-bottom: 1.4vw;
-        font-size: 3.2vw;
-        line-height: 3.2vw;
+        font-size: 2.7vw;
+        line-height: 3vw;
         opacity: 1;
+    }
+
+    .education-name span {
+        font-size: 3vw;
     }
     
     .education-info {
         padding: 1.4vw 0;
-        font-size: 3.2vw;
-        line-height: 3.2vw;
+        font-size: 2.7vw;
+        line-height: 3vw;
         opacity: 1;
+    }
+
+    .education-info span {
+        font-size: 3vw;
     }
     
     .education-time {
         padding: 1.4vw 0;
-        font-size: 3.2vw;
-        line-height: 3.2vw;
+        font-size: 2.7vw;
+        line-height: 3vw;
         opacity: 1;
+    }
+
+    .education-time span {
+        font-size: 3vw;
     }
 
     .about-page_left_container .face {
@@ -485,7 +498,7 @@
     }
     
     .hobbies-column {
-        padding: .5vw;
+        padding: .25vw;
     }
     
     .hobby-title {
@@ -493,13 +506,13 @@
     }
     
     .hobby-title p {
-        font-size: 2.8vw;
+        font-size: 3vw;
         opacity: 1;
     }
     
     .hobby-description {
         height: 85%;
-        font-size: 2.2vw;
+        font-size: 2.5vw;
     }
 
     .hobby-description p {
