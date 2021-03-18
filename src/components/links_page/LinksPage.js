@@ -88,7 +88,7 @@ const LinksPage = ({ id }) => {
                         <div className="links_content_container">
                             <div className="links_content_inside_container">
                                 <p>
-                                    Simple <span>Static Web Page</span> that shows how <span>COVID-19 cases quantity was chaning</span> in 2020. 
+                                    Simple <span>Static Web Page</span> that shows how <span>COVID-19 cases quantity</span> was changing in 2020. 
                                     Created with <span>Vanilla JS</span>. Can be <span>run</span> only <span>locally</span> in browser.
                                 </p>
 
