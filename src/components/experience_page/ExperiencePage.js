@@ -94,7 +94,7 @@ const ExperiencePage = ({ id }) => {
                             <p className="company-description">
                                 SAP SE is a <span>German</span> multinational software corporation based in <span>Walldorf, Baden-Württemberg</span>, 
                                 that develops <span>enterprise software</span> to manage business operations and customer relations. SAP is the 
-                                <span> largest non-American software company</span> by revenue, and and the <span>largest German company </span>
+                                <span> largest non-American software company</span> by revenue, and the <span>largest German company </span>
                                 by market capitalisation. As of 2016, SAP is the <span>world's third-largest software and programming company</span>.
                                 SAP focuses on <span>25 industries and six industry sectors</span>: process industries, discrete industries, 
                                 consumer industries, service industries, financial services and public services. It offers
