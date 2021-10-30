@@ -9,7 +9,7 @@ const ExperiencePage = ({ id }) => {
                 <div className="experience-page_inside_container">
                     <div className="experience-window_container experience-first-window_container">
                         <div className="experience-window_company-container">
-                            <h1 className="company-title">Mora-Solutions<span>Sp. z o.o.</span></h1>
+                            <h1 className="company-title">Mora Solutions</h1>
                             <p className="company-location">Kraków, Poland</p>
                             <p className="company-description">
                                 A small company that <span>builds machines</span> and <span>creates IT systems</span> from scratch. 
@@ -49,7 +49,7 @@ const ExperiencePage = ({ id }) => {
 
                     <div className="experience-window_container experience-second-window_container">
                         <div className="experience-window_company-container">
-                            <h1 className="company-title">ING Bank Śląski</h1>
+                            <h1 className="company-title">ING Bank</h1>
                             <p className="company-location">Katowice, Poland</p>
                             <p className="company-description">
                                 ING Bank is a <span>Dutch</span> multinational bank, headquartered in <span>Amsterdam, Netherlands</span>.
@@ -63,7 +63,7 @@ const ExperiencePage = ({ id }) => {
 
                         <div className="experience-window_position-container">
                             <h3 className="position-name">Junior Front-End Developer</h3>
-                            <p className="position-dates">Nov 2020 - currently</p>
+                            <p className="position-dates">Nov 2020 - Aug 2021</p>
 
                             <div className="experience-window_task-container">
                                 <p>
@@ -84,10 +84,45 @@ const ExperiencePage = ({ id }) => {
                                     Creating <span>unit tests</span> for created software.
                                 </p>
                             </div>
+                        </div>
+                    </div>
+
+                    <div className="experience-window_container experience-third-window_container">
+                        <div className="experience-window_company-container">
+                            <h1 className="company-title">SAP SE</h1>
+                            <p className="company-location">Gliwice, Poland</p>
+                            <p className="company-description">
+                                SAP SE is a <span>German</span> multinational software corporation based in <span>Walldorf, Baden-Württemberg</span>, 
+                                that develops <span>enterprise software</span> to manage business operations and customer relations. SAP is the 
+                                <span> largest non-American software company</span> by revenue, and and the <span>largest German company </span>
+                                by market capitalisation. As of 2016, SAP is the <span>world's third-largest software and programming company</span>.
+                                SAP focuses on <span>25 industries and six industry sectors</span>: process industries, discrete industries, 
+                                consumer industries, service industries, financial services and public services. It offers
+                                <span> integrated product sets</span> for large enterprises, mid-sized companies and small businesses.
+                            </p>
+                        </div>
+
+                        <div className="experience-window_position-container">
+                            <h3 className="position-name">IT Consultant / Front-End Developer</h3>
+                            <p className="position-dates">Aug 2021 - currently</p>
 
                             <div className="experience-window_task-container">
                                 <p>
-                                    <span>Communication</span> with Back-End <span>APIs</span> and <span>requests</span>.
+                                    Developing software for the global <span>CIS Tax Monitoring</span> project.                                   
+                                </p>
+                            </div>
+
+                            <div className="experience-window_task-container">
+                                <p>
+                                    Creating and maintaining reports using <span>SAP Analytics Cloud</span> platform.
+                                </p>
+                            </div>
+
+                            <div className="experience-window_task-container">
+                                <p>
+                                    Working with <span>S/4HANA Databases</span> and SAP Web tools and 
+                                    technologies: <span>SAP Cloud Programming Model</span>, <span>SAPUI5</span>,
+                                    <span> Fiori Elements</span> and <span>SAP Business Application Studio</span>.
                                 </p>
                             </div>
                         </div>

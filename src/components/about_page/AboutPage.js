@@ -64,7 +64,7 @@ const AboutPage = ({ id }) => {
                             <div className="face face2">
                                 <div className="content education_content">
                                     <div className="education-name">
-                                        <p><span>Politechnika Krakowska</span> im. Tadeusza Koszciuszki</p>
+                                        <p><span>Politechnika Krakowska</span> im. Tadeusza Kościuszki</p>
                                     </div>
 
                                     <div className="education-info">

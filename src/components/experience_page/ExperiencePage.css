@@ -47,6 +47,10 @@
     opacity: 1;
 }
 
+.experience-third-window_container {
+    margin-top: 5vh;
+}
+
 .experience-window_company-container {
     display: flex;
     flex-direction: column;
@@ -154,6 +158,10 @@
         margin-bottom: 4vh;
         padding: 2vh;
         opacity: 1;
+    }
+
+    .experience-third-window_container {
+        margin-top: 0;
     }
 
     .company-title {
