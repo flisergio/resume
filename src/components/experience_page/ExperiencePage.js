@@ -122,7 +122,7 @@ const ExperiencePage = ({ id }) => {
                                 <p>
                                     Working with <span>S/4HANA Databases</span> and SAP Web tools and 
                                     technologies: <span>SAP Cloud Programming Model</span>, <span>SAPUI5</span>,
-                                    <span> Fiori Elements</span> and <span>SAP Business Application Studio</span>.
+                                    <span> Fiori Elements</span> &amp; <span>SAP Business Application Studio</span>.
                                 </p>
                             </div>
                         </div>
