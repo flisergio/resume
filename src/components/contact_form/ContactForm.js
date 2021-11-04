@@ -39,7 +39,9 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
                                         />
                                     </span>
 
-                                    <span className="span_contact-info_text">sergey.dko@gmail.com</span>
+                                    <a href="mailto:sergey.dko@gmail.com" className="link_contact-info">
+                                        <span className="span_contact-info_text">sergey.dko@gmail.com</span>
+                                    </a>
                                 </li>
 
                                 <li>
@@ -51,7 +53,9 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
                                         />
                                     </span>
 
-                                    <span className="span_contact-info_text">+48 666 946 559</span>
+                                    <a href="tel:+48666946559" className="link_contact-info">
+                                        <span className="span_contact-info_text">+48 666 946 559</span>
+                                    </a>
                                 </li>
                             </ul>           
                         </div>
@@ -116,8 +120,8 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
 
                         <div className="form-box_container">
                             <div className="input-box_container w100">
-                                <textarea name="" onChange={messageChange} placeholder="Enter your message here . . ." required></textarea>
-                                <span>Enter your message here . . .</span>
+                                <textarea name="" onChange={messageChange} placeholder="Enter your message . . ." required></textarea>
+                                <span>Enter your message . . .</span>
                             </div>
                         </div>
 
