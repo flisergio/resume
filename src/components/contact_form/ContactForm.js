@@ -120,7 +120,7 @@ const ContactForm = ({ id, handleEmailSubmit, nameChange, emailChange, phoneChan
 
                         <div className="form-box_container">
                             <div className="input-box_container w100">
-                                <textarea name="" onChange={messageChange} placeholder="Enter your message . . ." required></textarea>
+                                <textarea name="" minlength="10" onChange={messageChange} placeholder="Enter your message . . ." required></textarea>
                                 <span>Enter your message . . .</span>
                             </div>
                         </div>
