@@ -5,7 +5,7 @@ import Tilt from 'react-tilt';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import './WelcomePage.css';
-import profilePicture from "./images/profile.JPG";
+import profilePicture from "./images/profile.jpg";
 import facebookPicture from "./images/facebook.png";
 import linkedinPicture from "./images/linkedin.png";
 import githubPicture from "./images/github.png";
