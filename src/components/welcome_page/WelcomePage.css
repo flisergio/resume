@@ -1,105 +1,105 @@
 .welcome-page_container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background-color: #051937;
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-color: #051937;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .particles {
-    z-index: 4;
-    height: 100vh;
+  z-index: 4;
+  height: 100vh;
 }
 
 .description_container {
-    width: 50%;
-    margin: 220px 0 0 30px;
-    padding: 0 20px 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 50%;
+  margin: 220px 0 0 30px;
+  padding: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header_welcome {
-    color: #fff;
-    text-align: center;
-    font-size: 1.75vw;
-    line-height: 3vw;
-    margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.75vw;
+  line-height: 3vw;
+  margin: 0;
 }
 
 .header_welcome span {
-    color: #27d4cf;
-    font-size: 1.8em;
+  color: #27d4cf;
+  font-size: 1.8em;
 }
 
 .welcome-description_container {
-    border: 1px solid #fff;
-    padding: 1.5vw;
-    margin: 1vw 0;
-    border-radius: 25px;
+  border: 1px solid #fff;
+  padding: 1.5vw;
+  margin: 1vw 0;
+  border-radius: 25px;
 }
 
 .p_welcome-description {
-    color: #fff;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-size: 1.5vw;
-    line-height: 1.5vw;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
 }
 
 .p_quote {
-    color: #27d4cf;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    font-size: 1.5vw;
-    line-height: 1.5vw;
-    text-transform: uppercase;
-    margin-top: 1vw;
-    padding-top: 1vw;
-    border-top: 1px solid #fff;
+  color: #27d4cf;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  text-transform: uppercase;
+  margin-top: 1vw;
+  padding-top: 1vw;
+  border-top: 1px solid #fff;
 }
 
 .link_about {
-    position: relative;
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 1vw;
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: 2px;
-    font-size: 1.5vw;
-    font-weight: 300;
-    transition: .5s;
-    cursor: pointer;
-    z-index: 5;
+  position: relative;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 1vw;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1.5vw;
+  font-weight: 300;
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .link_about:hover {
-    background: #fff;
-    color: #000;
-    border-radius: 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
 }
 
 .link_about span {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .profile-picture_container {
-    margin-top: 220px;
-    padding: 0;
-    z-index: 5;
+  margin-top: 220px;
+  padding: 0;
+  z-index: 5;
 }
 
 .img_profile-picture {
@@ -111,112 +111,112 @@
 }
 
 .ul_social-media {
-    list-style-type: none;
-    z-index: 5;
-    padding: 0 20px 40px 20px;
-    margin: 220px 0 0 0;
+  list-style-type: none;
+  z-index: 5;
+  padding: 0 20px 40px 20px;
+  margin: 220px 0 0 0;
 }
 
 .ul_social-media li {
-    background: #fff;
-    border-radius: 10px;
-    margin: .8vw 0;
-    display: flex;
-    align-items: center;
-    transition: .5s;
-    opacity: .45;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0.8vw 0;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 0.45;
 }
 
 .ul_social-media:hover li {
-    opacity: .85;
+  opacity: 0.85;
 }
 
 .ul_social-media li a {
-    height: 2.8vw;
-    width: 3vw;
+  height: 2.8vw;
+  width: 3vw;
 }
 
 .icon_social-media_container {
-    background: linear-gradient(89deg, #CFD6E6 0%, #E7EFF9  100%);
+  background: linear-gradient(89deg, #cfd6e6 0%, #e7eff9 100%);
 }
 
 .icon_social-media {
-    height: 2.2vw;
-    width: auto;
-    margin: .3vw .4vw .1vw .4vw;
+  height: 2.2vw;
+  width: auto;
+  margin: 0.3vw 0.4vw 0.1vw 0.4vw;
 }
 
 .icon_social-media:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1200px) {
-    .welcome-page_container {
-        min-height: calc(100vh + 10vw);
-        padding: 0 0 10vw;
+  .welcome-page_container {
+    min-height: calc(100vh + 10vw);
+    padding: 0 0 10vw;
 
-        flex-direction: column-reverse;
-        justify-content: space-around;
-    }
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
 
-    .description_container {
-        width: 100%;
-        margin: 0;
-    }
+  .description_container {
+    width: 100%;
+    margin: 0;
+  }
 
-    .header_welcome {
-        font-size: 5vw;
-        line-height: 7vw;
-        margin: 0 0 1vw;
-    }
-    
-    .header_welcome span {
-        font-size: 7vw;
-    }
-    
-    .welcome-description_container {
-        padding: 3vw;
-        margin: 2vh 0 2vh;
-    }
-    
-    .p_welcome-description {
-        font-size: 3vw;
-        line-height: 3vw;
-    }
-    
-    .p_quote {
-        font-size: 3vw;
-        line-height: 3vw;
-        margin-top: 2vw;
-        padding-top: 2vw;
-    }
-    
-    .link_about {
-        margin: 1vw 0 0;
-        padding: 3vw;
-        background: #fff;
-        color: #000;
-        border-radius: 25px;
-        font-size: 4vw;
-    }
-    
-    .link_about:hover {
-        background: #000;
-        color: #fff;
-    }
+  .header_welcome {
+    font-size: 5vw;
+    line-height: 7vw;
+    margin: 0 0 1vw;
+  }
 
-    .profile-picture_container {
-        margin: 20px 0;
-    }
-    
-    .img_profile-picture {
-        margin: 0;
-        width: 60vw;
-        height: auto;
-        border-radius: 50px;
-    }
-    
-    .ul_social-media {
-        display: none;
-    }
+  .header_welcome span {
+    font-size: 7vw;
+  }
+
+  .welcome-description_container {
+    padding: 3vw;
+    margin: 2vh 0 2vh;
+  }
+
+  .p_welcome-description {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+
+  .p_quote {
+    font-size: 3vw;
+    line-height: 3vw;
+    margin-top: 2vw;
+    padding-top: 2vw;
+  }
+
+  .link_about {
+    margin: 1vw 0 0;
+    padding: 3vw;
+    background: #fff;
+    color: #000;
+    border-radius: 25px;
+    font-size: 4vw;
+  }
+
+  .link_about:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  .profile-picture_container {
+    margin: 20px 0;
+  }
+
+  .img_profile-picture {
+    margin: 0;
+    width: 60vw;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  .ul_social-media {
+    display: none;
+  }
 }

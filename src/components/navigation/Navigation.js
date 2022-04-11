@@ -1,504 +1,565 @@
-import React, { Fragment }  from 'react';
+import React, { Fragment, useEffect } from "react";
+import Tilt from "react-tilt";
+import { Link } from "react-scroll";
 
-import Tilt from 'react-tilt';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import PropTypes from "prop-types";
 
-import './Navigation.css';
-import logo_main from './images/logo_main.png';
+import * as scrolledActions from "../../redux/actions/scrolledActions";
+import * as hamClickedActions from "../../redux/actions/hamClickedActions";
+
+import logo_main from "./images/logo_main.png";
 import facebookPicture from "./images/facebook.png";
 import linkedinPicture from "./images/linkedin.png";
 import githubPicture from "./images/github.png";
 
-const scrollToTop = () => {
-    scroll.scrollToTop();
-};
-
-const scrollToBottom = () => {
-    scroll.scrollToBottom();
-};
+import "./Navigation.css";
 
 const Navigation = (props) => {
-    if (!props.scrolled) {
-        return(
-            <Fragment>
-                <nav className="nav_main">
-                    <div className="logo_container mt0">
-                        <Tilt className="logo_main_container br2 shadow-2" options={{ max : 55 }} >
-                            <div className="Tilt-inner"><img className="logo_main" src={logo_main} alt="logo" /></div>
-                        </Tilt>
-                    </div>
+  const { scrolled, hamClicked, actions } = props;
 
-                    <ul className="ul_menu_main">
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                            >
-                                <span>Home</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="aboutpage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>About Me</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="skillspage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>Skills</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="experiencepage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>Experience</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="linkspage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>Links</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>Contact</span>
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-                
-                <nav className={`nav_main_mobile ${props.hamClicked ? "active" : ""}`}>
-                    <Link
-                        className="hamburger_container" 
-                        to="#" 
-                        spy={true}
-                        smooth={true}
-                        offset={0}
-                        duration={1000}
-                        onClick={props.showMobileMenu}
-                    >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </Link>
+  const showMobileMenu = () => actions.updateHamClicked(!hamClicked);
 
-                    <div className="mobile_links-container">
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            >
-                                <span>Home</span>
-                            </Link>
-                        </div>
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="aboutpage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
-                                <span>About</span>
-                            </Link>
-                        </div>
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="skillspage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
-                                <span>Skills</span>
-                            </Link>
-                        </div>
+  const handleNavClick = () => {
+    setTimeout(() => {
+      window.scrollBy(0, 5);
+    }, 1050);
+  };
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="experiencepage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
+  const handleScroll = () => {
+    window.pageYOffset >= 80
+      ? actions.updateScrolled(true)
+      : actions.updateScrolled(false);
+  };
 
-                                <span>Experience</span>
-                            </Link>
-                        </div>
+  if (!scrolled) {
+    return (
+      <Fragment>
+        <nav className="nav_main">
+          <div className="logo_container mt0">
+            <Tilt
+              className="logo_main_container br2 shadow-2"
+              options={{ max: 55 }}
+            >
+              <div className="Tilt-inner">
+                <img className="logo_main" src={logo_main} alt="logo" />
+              </div>
+            </Tilt>
+          </div>
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="linkspage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
+          <ul className="ul_menu_main">
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+              >
+                <span>Home</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="aboutpage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>About Me</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="skillspage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>Skills</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="experiencepage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>Experience</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="linkspage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>Links</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>Contact</span>
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-                                <span>Links</span>
-                            </Link>
-                        </div>
+        <nav className={`nav_main_mobile ${hamClicked ? "active" : ""}`}>
+          <button className="hamburger_container" onClick={showMobileMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
+          <div className="mobile_links-container">
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Home</span>
+              </Link>
+            </div>
 
-                                <span>Contact</span>
-                            </Link>
-                        </div>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="aboutpage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>About</span>
+              </Link>
+            </div>
 
-                        <ul className="ul_social-media_mobile">
-                            <li>
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sergio.mejor.5/">
-                                    <img 
-                                        className="icon_social-media_mobile" 
-                                        src={facebookPicture} 
-                                        alt="facebook"
-                                    />
-                                </a>
-                            </li>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="skillspage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Skills</span>
+              </Link>
+            </div>
 
-                            <li>
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
-                                    <img 
-                                        className="icon_social-media_mobile" 
-                                        src={linkedinPicture} 
-                                        alt="linkedin"
-                                    />
-                                </a>
-                            </li>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="experiencepage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Experience</span>
+              </Link>
+            </div>
 
-                            <li>
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/flisergio">
-                                    <img 
-                                        className="icon_social-media_mobile" 
-                                        src={githubPicture} 
-                                        alt="github"
-                                    />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="linkspage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Links</span>
+              </Link>
+            </div>
 
-                </nav>
-            </Fragment>
-        );
-    } else {
-        return(
-            <Fragment>
-                <nav className="nav_main sticky">
-                    <div className="logo_container mt0">
-                        <Tilt className="logo_main_container br2 shadow-2" options={{ max : 35 }} >
-                            <div className="Tilt-inner"><img className="logo_main" src={logo_main} alt="logo"/></div>
-                        </Tilt>
-                    </div>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Contact</span>
+              </Link>
+            </div>
 
-                    <ul className="ul_menu_main">
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                            >
-                                <span>Home</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="aboutpage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>About Me</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="skillspage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>Skills</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="experiencepage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>Experience</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="linkspage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>Links</span>
-                            </Link>
-                        </li>
-                        <li className="li_menu_main_item">
-                            <Link
-                                className="link_main_nav"
-                                activeClass="active"
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.handleNavClick}
-                            >
-                                <span>Contact</span>
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
+            <ul className="ul_social-media_mobile">
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/sergio.mejor.5/"
+                >
+                  <img
+                    className="icon_social-media_mobile"
+                    src={facebookPicture}
+                    alt="facebook"
+                  />
+                </a>
+              </li>
 
-                <nav className={`nav_main_mobile ${props.hamClicked ? "active" : ""}`}>
-                    <Link
-                        className="hamburger_container" 
-                        to="#" 
-                        spy={true}
-                        smooth={true}
-                        offset={0}
-                        duration={1000}
-                        onClick={props.showMobileMenu}
-                    >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </Link>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/"
+                >
+                  <img
+                    className="icon_social-media_mobile"
+                    src={linkedinPicture}
+                    alt="linkedin"
+                  />
+                </a>
+              </li>
 
-                    <div className="mobile_links-container">
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            >
-                                <span>Home</span>
-                            </Link>
-                        </div>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.github.com/flisergio"
+                >
+                  <img
+                    className="icon_social-media_mobile"
+                    src={githubPicture}
+                    alt="github"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </Fragment>
+    );
+  } else {
+    return (
+      <Fragment>
+        <nav className="nav_main sticky">
+          <div className="logo_container mt0">
+            <Tilt
+              className="logo_main_container br2 shadow-2"
+              options={{ max: 35 }}
+            >
+              <div className="Tilt-inner">
+                <img className="logo_main" src={logo_main} alt="logo" />
+              </div>
+            </Tilt>
+          </div>
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="aboutpage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            >                                 
-                                <span>About</span>
-                            </Link>
-                        </div>
+          <ul className="ul_menu_main">
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+              >
+                <span>Home</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="aboutpage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>About Me</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="skillspage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>Skills</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="experiencepage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>Experience</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="linkspage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>Links</span>
+              </Link>
+            </li>
+            <li className="li_menu_main_item">
+              <Link
+                className="link_main_nav"
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleNavClick}
+              >
+                <span>Contact</span>
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="skillspage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
-                                <span>Skills</span>
-                            </Link>
-                        </div>
+        <nav className={`nav_main_mobile ${hamClicked ? "active" : ""}`}>
+          <button className="hamburger_container" onClick={showMobileMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="experiencepage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
-                                <span>Experience</span>
-                            </Link>
-                        </div>
+          <div className="mobile_links-container">
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Home</span>
+              </Link>
+            </div>
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="linkspage"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
-                                <span>Links</span>
-                            </Link>
-                        </div>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="aboutpage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>About</span>
+              </Link>
+            </div>
 
-                        <div className="mobile-link_container">
-                            <Link
-                                className="link_main_mobile_nav"
-                                activeClass="active"
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={1000}
-                                onClick={props.showMobileMenu}
-                            > 
-                                <span>Contact</span>
-                            </Link>
-                        </div>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="skillspage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Skills</span>
+              </Link>
+            </div>
 
-                        <ul className="ul_social-media_mobile">
-                            <li>
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sergio.mejor.5/">
-                                    <img 
-                                        className="icon_social-media_mobile" 
-                                        src={facebookPicture} 
-                                        alt="facebook"
-                                    />
-                                </a>
-                            </li>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="experiencepage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Experience</span>
+              </Link>
+            </div>
 
-                            <li>
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/">
-                                    <img 
-                                        className="icon_social-media_mobile" 
-                                        src={linkedinPicture} 
-                                        alt="linkedin"
-                                    />
-                                </a>
-                            </li>
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="linkspage"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Links</span>
+              </Link>
+            </div>
 
-                            <li>
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/flisergio">
-                                    <img 
-                                        className="icon_social-media_mobile" 
-                                        src={githubPicture} 
-                                        alt="github"
-                                    />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </Fragment>
-        );
-    }
-}
+            <div className="mobile-link_container">
+              <Link
+                className="link_main_mobile_nav"
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={showMobileMenu}
+              >
+                <span>Contact</span>
+              </Link>
+            </div>
 
-export default Navigation;
+            <ul className="ul_social-media_mobile">
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/sergio.mejor.5/"
+                >
+                  <img
+                    className="icon_social-media_mobile"
+                    src={facebookPicture}
+                    alt="facebook"
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/"
+                >
+                  <img
+                    className="icon_social-media_mobile"
+                    src={linkedinPicture}
+                    alt="linkedin"
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.github.com/flisergio"
+                >
+                  <img
+                    className="icon_social-media_mobile"
+                    src={githubPicture}
+                    alt="github"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </Fragment>
+    );
+  }
+};
+
+Navigation.propTypes = {
+  scrolled: PropTypes.bool.isRequired,
+  hamClicked: PropTypes.bool.isRequired,
+  actions: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  scrolled: state.scrolled,
+  hamClicked: state.hamClicked,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: {
+    updateScrolled: bindActionCreators(
+      scrolledActions.updateScrolled,
+      dispatch
+    ),
+    updateHamClicked: bindActionCreators(
+      hamClickedActions.updateHamClicked,
+      dispatch
+    ),
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
