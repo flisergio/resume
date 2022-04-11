@@ -13,13 +13,15 @@ import * as emailActions from "../../redux/actions/emailActions";
 import * as phoneActions from "../../redux/actions/phoneActions";
 import * as messageActions from "../../redux/actions/messageActions";
 
-import "./ContactForm.css";
 import locationPicture from "./images/location.png";
 import emailPicture from "./images/email.png";
 import phonePicture from "./images/phone.png";
 import facebookPicture from "./images/facebook.png";
 import linkedinPicture from "./images/linkedin.png";
 import githubPicture from "./images/github.png";
+
+import "./ContactForm.css";
+import { ContactFormEnum } from "./enums/ContactFormEnum";
 
 init("user_rJdhk2nwJUZEezZbmiTq9");
 
@@ -67,7 +69,7 @@ const ContactForm = (props) => {
         <div className="contact-form_inside_container">
           <div className="contact-info_container">
             <div>
-              <h2>Contact Info</h2>
+              <h2>{ContactFormEnum.CONTACT.TITLE}</h2>
 
               <ul className="ul_contact-info">
                 <li>
@@ -79,7 +81,7 @@ const ContactForm = (props) => {
                     />
                   </span>
 
-                  <span className="span_contact-info_text">Poland</span>
+                  <span className="span_contact-info_text">{ContactFormEnum.CONTACT.COUNTRY}</span>
                 </li>
 
                 <li>
@@ -96,7 +98,7 @@ const ContactForm = (props) => {
                     className="link_contact-info"
                   >
                     <span className="span_contact-info_text">
-                      sergey.dko@gmail.com
+                      {ContactFormEnum.CONTACT.EMAIL}
                     </span>
                   </a>
                 </li>
@@ -108,7 +110,7 @@ const ContactForm = (props) => {
 
                   <a href="tel:+48666946559" className="link_contact-info">
                     <span className="span_contact-info_text">
-                      +48 666 946 559
+                      {ContactFormEnum.CONTACT.PHONE}
                     </span>
                   </a>
                 </li>
@@ -164,7 +166,7 @@ const ContactForm = (props) => {
             className="contact-form_inner_container"
             onSubmit={handleEmailSubmit}
           >
-            <h2>Send me a message</h2>
+            <h2>{ContactFormEnum.MESSAGE.TITLE}</h2>
 
             <div className="form-box_container">
               <div className="input-box_container w50">
@@ -172,10 +174,10 @@ const ContactForm = (props) => {
                   type="text"
                   name=""
                   onChange={nameChange}
-                  placeholder="Name"
+                  placeholder={ContactFormEnum.MESSAGE.NAME}
                   required
                 />
-                <span>Name</span>
+                <span>{ContactFormEnum.MESSAGE.NAME}</span>
               </div>
             </div>
 
@@ -185,10 +187,10 @@ const ContactForm = (props) => {
                   type="email"
                   name=""
                   onChange={emailChange}
-                  placeholder="Email"
+                  placeholder={ContactFormEnum.MESSAGE.EMAIL}
                   required
                 />
-                <span>Email</span>
+                <span>{ContactFormEnum.MESSAGE.EMAIL}</span>
               </div>
             </div>
 
@@ -199,10 +201,10 @@ const ContactForm = (props) => {
                   name=""
                   pattern="[/+/][1, 4][2, 8][0-9]{9}"
                   onChange={phoneChange}
-                  placeholder="Phone"
+                  placeholder={ContactFormEnum.MESSAGE.PHONE}
                   required
                 />
-                <span>Phone</span>
+                <span>{ContactFormEnum.MESSAGE.PHONE}</span>
               </div>
             </div>
 
@@ -212,10 +214,10 @@ const ContactForm = (props) => {
                   name=""
                   minLength="10"
                   onChange={messageChange}
-                  placeholder="Enter your message . . ."
+                  placeholder={ContactFormEnum.MESSAGE.TEXT}
                   required
                 ></textarea>
-                <span>Enter your message . . .</span>
+                <span>{ContactFormEnum.MESSAGE.TEXT}</span>
               </div>
             </div>
 

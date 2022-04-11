@@ -15,6 +15,7 @@ import linkedinPicture from "./images/linkedin.png";
 import githubPicture from "./images/github.png";
 
 import "./Navigation.css";
+import { NavigationEnum } from "./enums/NavigationEnum";
 
 const Navigation = (props) => {
   const { scrolled, hamClicked, actions } = props;
@@ -67,7 +68,7 @@ const Navigation = (props) => {
                 offset={0}
                 duration={1000}
               >
-                <span>Home</span>
+                <span>{NavigationEnum.NAV.HOME}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -81,7 +82,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>About Me</span>
+                <span>{NavigationEnum.NAV.ABOUT}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -95,7 +96,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>Skills</span>
+                <span>{NavigationEnum.NAV.SKILLS}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -109,7 +110,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>Experience</span>
+                <span>{NavigationEnum.NAV.EXPERIENCE}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -123,7 +124,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>Links</span>
+                <span>{NavigationEnum.NAV.LINKS}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -137,7 +138,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>Contact</span>
+                <span>{NavigationEnum.NAV.CONTACT}</span>
               </Link>
             </li>
           </ul>
@@ -162,7 +163,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Home</span>
+                <span>{NavigationEnum.NAV.HOME}</span>
               </Link>
             </div>
 
@@ -177,7 +178,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>About</span>
+                <span>{NavigationEnum.NAV.ABOUT}</span>
               </Link>
             </div>
 
@@ -192,7 +193,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Skills</span>
+                <span>{NavigationEnum.NAV.SKILLS}</span>
               </Link>
             </div>
 
@@ -207,7 +208,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Experience</span>
+                <span>{NavigationEnum.NAV.EXPERIENCE}</span>
               </Link>
             </div>
 
@@ -222,7 +223,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Links</span>
+                <span>{NavigationEnum.NAV.LINKS}</span>
               </Link>
             </div>
 
@@ -237,7 +238,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Contact</span>
+                <span>{NavigationEnum.NAV.CONTACT}</span>
               </Link>
             </div>
 
@@ -314,7 +315,7 @@ const Navigation = (props) => {
                 offset={0}
                 duration={1000}
               >
-                <span>Home</span>
+                <span>{NavigationEnum.NAV.HOME}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -328,7 +329,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>About Me</span>
+                <span>{NavigationEnum.NAV.ABOUT}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -342,7 +343,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>Skills</span>
+                <span>{NavigationEnum.NAV.SKILLS}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -356,7 +357,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>Experience</span>
+                <span>{NavigationEnum.NAV.EXPERIENCE}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -370,7 +371,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>Links</span>
+                <span>{NavigationEnum.NAV.LINKS}</span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -384,7 +385,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>Contact</span>
+                <span>{NavigationEnum.NAV.CONTACT}</span>
               </Link>
             </li>
           </ul>
@@ -409,7 +410,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Home</span>
+                <span>{NavigationEnum.NAV.HOME}</span>
               </Link>
             </div>
 
@@ -424,7 +425,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>About</span>
+                <span>{NavigationEnum.NAV.ABOUT}</span>
               </Link>
             </div>
 
@@ -439,7 +440,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Skills</span>
+                <span>{NavigationEnum.NAV.SKILLS}</span>
               </Link>
             </div>
 
@@ -454,7 +455,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Experience</span>
+                <span>{NavigationEnum.NAV.EXPERIENCE}</span>
               </Link>
             </div>
 
@@ -469,7 +470,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Links</span>
+                <span>{NavigationEnum.NAV.LINKS}</span>
               </Link>
             </div>
 
@@ -484,7 +485,7 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>Contact</span>
+                <span>{NavigationEnum.NAV.CONTACT}</span>
               </Link>
             </div>
 

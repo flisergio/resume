@@ -4,11 +4,13 @@ import Particles from "react-particles-js";
 import Tilt from "react-tilt";
 import { Link } from "react-scroll";
 
-import './WelcomePage.css';
 import profilePicture from "./images/profile.jpg";
 import facebookPicture from "./images/facebook.png";
 import linkedinPicture from "./images/linkedin.png";
 import githubPicture from "./images/github.png";
+
+import './WelcomePage.css';
+import { WelcomePageEnum } from "./enums/WelcomePageEnum";
 
 const particlesOptions = {
   particles: {
@@ -131,27 +133,22 @@ const WelcomePage = ({ id }) => {
       <div className="welcome-page_container" id={id}>
         <Particles className="particles" params={particlesOptions} />
 
-        {/* <div className="welcome-page_inside_container"> */}
         <div className="description_container">
           <h2 className="header_welcome">
-            Hello, I'm
+            {WelcomePageEnum.WELCOME.TITLE_PREFIX}
             <span>
-              <br></br>Sergii Kobyliaiev
+              <br></br>{WelcomePageEnum.WELCOME.TITLE}
             </span>
           </h2>
 
           <div className="welcome-description_container">
             <p className="p_welcome-description">
-              My main goals are acquiring new skills and professional
-              development. I am a hard-working person, so I am ready to spend a
-              lot of time learning new things and doing work. Every created
-              project is my motivation. I am not scare of new tasks and always
-              finish anything I start.
+              {WelcomePageEnum.WELCOME.DESCRIPTION_MAIN}
             </p>
 
             <p className="p_quote">
               <span>
-                "If you can't do great things, do small things in a great way"
+                {WelcomePageEnum.WELCOME.DESCRIPTION_SPECIAL}
               </span>
             </p>
           </div>
@@ -164,7 +161,7 @@ const WelcomePage = ({ id }) => {
             duration={1000}
             onClick={handleClickAbout}
           >
-            <span>About Me</span>
+            <span>{WelcomePageEnum.WELCOME.DESCRIPTION_BUTTON_TEXT}</span>
           </Link>
         </div>
 
@@ -240,7 +237,6 @@ const WelcomePage = ({ id }) => {
             </a>
           </li>
         </ul>
-        {/* </div>   */}
       </div>
     </Fragment>
   );

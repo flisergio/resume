@@ -1,31 +1,24 @@
 import React, { Fragment } from "react";
 
 import "./SkillsPage.css";
+import { SkillsPageEnums } from "./enums/SkillsPageEnum";
 
 const SkillsPage = ({ id }) => (
   <Fragment>
     <div className="skills-page_container" id={id}>
       <div className="skills-page_inside_container">
         <div className="skills-window_container front-end-skills-window_container">
-          <h1>Front-End Skills</h1>
+          <h1>{SkillsPageEnums.FRONTEND.TITLE}</h1>
           <p>
-            Front-End development is the most exciting IT sphere for me. I enjoy
-            creating and designing the web pages and applications. I have a good
-            knowledge of HTML + CSS and can easily manipulate DOM with
-            JavaScript. Besides that I am familiar with advanced JS concepts,
-            jQuery and Bootstrap. I am familiar with React.JS and I know how
-            does the communication between React and Redux flows. I had also
-            touched web components approach along with Lit Elements while was
-            working in ING Bank. In my daily work in SAP I am working with
-            SAPUI5 JavaScript framework.
+            {SkillsPageEnums.FRONTEND.TEXT}
           </p>
 
-          <p>*All percentages are on my own (not global) scale*</p>
+          <p>{SkillsPageEnums.COMMON.PERCENTAGE_REMARK}</p>
 
           <div className="skill_container skill-js_container">
             <div className="skill-label_container">
-              <h3>JavaScript</h3>
-              <span className="skill-percentage">90%</span>
+              <h3>{SkillsPageEnums.FRONTEND.JS_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.FRONTEND.JS_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -37,8 +30,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-html-css_container">
             <div className="skill-label_container">
-              <h3>HTML5 & CSS3</h3>
-              <span className="skill-percentage">80%</span>
+              <h3>{SkillsPageEnums.FRONTEND.HTML_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.FRONTEND.HTML_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -50,8 +43,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-react_container">
             <div className="skill-label_container">
-              <h3>React.JS</h3>
-              <span className="skill-percentage">75%</span>
+              <h3>{SkillsPageEnums.FRONTEND.REACT_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.FRONTEND.REACT_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -63,8 +56,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-redux_container">
             <div className="skill-label_container">
-              <h3>Redux</h3>
-              <span className="skill-percentage">60%</span>
+              <h3>{SkillsPageEnums.FRONTEND.REDUX_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.FRONTEND.REDUX_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -76,8 +69,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-lit-wc_container">
             <div className="skill-label_container">
-              <h3>Lit Elements & Web Components</h3>
-              <span className="skill-percentage">60%</span>
+              <h3>{SkillsPageEnums.FRONTEND.LIT_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.FRONTEND.LIT_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -89,8 +82,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-sapui5_container">
             <div className="skill-label_container">
-              <h3>SAPUI5</h3>
-              <span className="skill-percentage">40%</span>
+              <h3>{SkillsPageEnums.FRONTEND.UI5_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.FRONTEND.UI5_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -102,25 +95,17 @@ const SkillsPage = ({ id }) => (
         </div>
 
         <div className="skills-window_container back-end-skills-window_container">
-          <h1>Back-End Skills</h1>
+          <h1>{SkillsPageEnums.BACKEND.TITLE}</h1>
           <p>
-            The most of my Back-End development skills are a part of a
-            Full-Stack developer tasks. I have a knowledge how Express.js and
-            Node.js communicate with Front-End part. With my daily work basis in
-            SAP, I am working with Cloud Application Programming Model (CAP) and
-            Fiori technologies. I have a knowledge about how asynchronous
-            programming work and what is JSON format. Besides that I know basics
-            of databases configuration and connection. About two years ago I was
-            learning Python in Machine Learning and Artificial Intelligence
-            sphere as a hobby.
+            {SkillsPageEnums.BACKEND.TEXT}
           </p>
 
-          <p>*All percentages are on my own (not global) scale*</p>
+          <p>{SkillsPageEnums.COMMON.PERCENTAGE_REMARK}</p>
 
           <div className="skill_container skill-node_container">
             <div className="skill-label_container">
-              <h3>Node.js</h3>
-              <span className="skill-percentage">55%</span>
+              <h3>{SkillsPageEnums.BACKEND.NODE_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.BACKEND.NODE_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -132,8 +117,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-cap_container">
             <div className="skill-label_container">
-              <h3>Cloud Application Programming Model</h3>
-              <span className="skill-percentage">50%</span>
+              <h3>{SkillsPageEnums.BACKEND.CAP_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.BACKEND.CAP_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -145,8 +130,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-api_container">
             <div className="skill-label_container">
-              <h3>JSON & API Communication</h3>
-              <span className="skill-percentage">50%</span>
+              <h3>{SkillsPageEnums.BACKEND.JSON_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.BACKEND.JSON_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -158,8 +143,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-server_container">
             <div className="skill-label_container">
-              <h3>HTTP, AJAX & Server Communication</h3>
-              <span className="skill-percentage">40%</span>
+              <h3>{SkillsPageEnums.BACKEND.SERVER_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.SERVER}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -171,8 +156,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-python_container">
             <div className="skill-label_container">
-              <h3>Python & ML + AI</h3>
-              <span className="skill-percentage">35%</span>
+              <h3>{SkillsPageEnums.BACKEND.PYTHON_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.BACKEND.PYTHON_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -184,8 +169,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-databases_container">
             <div className="skill-label_container">
-              <h3>Databases & SQL</h3>
-              <span className="skill-percentage">30%</span>
+              <h3>{SkillsPageEnums.BACKEND.DB_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.BACKEND.DB_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -197,25 +182,17 @@ const SkillsPage = ({ id }) => (
         </div>
 
         <div className="skills-window_container other-skills-window_container">
-          <h1>Other Skills</h1>
+          <h1>{SkillsPageEnums.OTHER.TITLE}</h1>
           <p>
-            When it comes to other IT skills I know how to use Git Bash Terminal
-            to connect the project to a GitHub repository and also how to
-            conribute in an open-source projects. I am working in Agile and
-            Scrum environments and I am familiar with it's concepts. I have an
-            experience in WordPress and I know how to create a template, which I
-            can maintain in WordPress, from-scratch. I know all the basics of
-            Microsoft Word, Excel and PowerPoint, while also familiar with MS
-            Project. Also I am familiar with security concepts and I know the
-            basics of how application's deployment process looks like.
+            {SkillsPageEnums.OTHER.TEXT}
           </p>
 
-          <p>*All percentages are on my own (not global) scale*</p>
+          <p>{SkillsPageEnums.COMMON.PERCENTAGE_REMARK}</p>
 
           <div className="skill_container skill-git_container">
             <div className="skill-label_container">
-              <h3>Git Bash, Git & GitLab</h3>
-              <span className="skill-percentage">80%</span>
+              <h3>{SkillsPageEnums.OTHER.GIT_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.OTHER.GIT_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -227,8 +204,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-agile_container">
             <div className="skill-label_container">
-              <h3>Agile + Scrum & Jira</h3>
-              <span className="skill-percentage">65%</span>
+              <h3>{SkillsPageEnums.OTHER.AGILE_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.OTHER.AGILE_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -240,8 +217,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-ms_container">
             <div className="skill-label_container">
-              <h3>Word & Excel & PowerPoint</h3>
-              <span className="skill-percentage">50%</span>
+              <h3>{SkillsPageEnums.OTHER.MS_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.OTHER.MS_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -253,8 +230,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-wordpress_container">
             <div className="skill-label_container">
-              <h3>WordPress</h3>
-              <span className="skill-percentage">50%</span>
+              <h3>{SkillsPageEnums.OTHER.WP_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.OTHER.WP_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -266,8 +243,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-deployment_container">
             <div className="skill-label_container">
-              <h3>Application Deployment Flow</h3>
-              <span className="skill-percentage">40%</span>
+              <h3>{SkillsPageEnums.OTHER.DEPLOY_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.OTHER.DEPLOY_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -279,19 +256,15 @@ const SkillsPage = ({ id }) => (
         </div>
 
         <div className="skills-window_container language-skills-window_container">
-          <h1>Languages</h1>
+          <h1>{SkillsPageEnums.LANG.TITLE}</h1>
           <p>
-            I was born in Ukraine, so my main (native) languages are Ukranian
-            and Russian. I live in Poland since October 2016, so Polish language
-            is on almost native level. And I truly love an English language,
-            which I learn since 10 years old. Currently I have a C1 level of
-            English.
+            {SkillsPageEnums.LANG.TEXT}
           </p>
 
           <div className="skill_container skill-ua_container">
             <div className="skill-label_container">
-              <h3>Ukranian</h3>
-              <span className="skill-percentage">Native</span>
+              <h3>{SkillsPageEnums.LANG.UA_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.LANG.UA_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -303,8 +276,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-rus_container">
             <div className="skill-label_container">
-              <h3>Russian</h3>
-              <span className="skill-percentage">Native</span>
+              <h3>{SkillsPageEnums.LANG.RU_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.LANG.RU_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -316,8 +289,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-pl_container">
             <div className="skill-label_container">
-              <h3>Polish</h3>
-              <span className="skill-percentage">Fluent</span>
+              <h3>{SkillsPageEnums.LANG.PL_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.LANG.PL_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -329,8 +302,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-en_container">
             <div className="skill-label_container">
-              <h3>English</h3>
-              <span className="skill-percentage">Advanced</span>
+              <h3>{SkillsPageEnums.LANG.EN_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.LANG.EN_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>
@@ -342,8 +315,8 @@ const SkillsPage = ({ id }) => (
 
           <div className="skill_container skill-de_container">
             <div className="skill-label_container">
-              <h3>Deutsch</h3>
-              <span className="skill-percentage">Beginner</span>
+              <h3>{SkillsPageEnums.LANG.DE_TITLE}</h3>
+              <span className="skill-percentage">{SkillsPageEnums.LANG.DE_PERCENT}</span>
 
               <div style={{ clear: "both" }}></div>
             </div>

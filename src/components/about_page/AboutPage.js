@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 
 import "./AboutPage.css";
+import { AboutPageEnum } from "./enums/AboutPageEnum";
 
 import personalInfoPicture from "./images/personal-info.svg";
 import educationPicture from "./images/education.svg";
@@ -20,7 +21,7 @@ const AboutPage = ({ id }) => (
                   alt="personal-info"
                 />
 
-                <h3>Personal information</h3>
+                <h3>{AboutPageEnum.PERSONAL.TITLE}</h3>
               </div>
             </div>
 
@@ -28,15 +29,15 @@ const AboutPage = ({ id }) => (
               <div className="content">
                 <div className="personal-info personal-info_content">
                   <p className="personal-info_name">
-                    My name is <span>Sergii Kobyliaiev</span>
+                    {AboutPageEnum.PERSONAL.NAME_PREFIX}<span>{AboutPageEnum.PERSONAL.NAME}</span>
                   </p>
 
                   <p className="personal-info_birthdate">
-                    I was born on <span>12/10/1999</span>
+                    {AboutPageEnum.PERSONAL.BORNDATE_PREFIX}<span>{AboutPageEnum.PERSONAL.BORNDATE}</span>
                   </p>
 
                   <p className="personal-info_birthplace">
-                    in <span>Odessa, Ukraine</span>
+                    {AboutPageEnum.PERSONAL.BORNPLACE_PREFIX}<span>{AboutPageEnum.PERSONAL.BORNPLACE}</span>
                   </p>
                 </div>
               </div>
@@ -52,7 +53,7 @@ const AboutPage = ({ id }) => (
                   alt="education"
                 />
 
-                <h3>Education</h3>
+                <h3>{AboutPageEnum.EDUCATION.TITLE}</h3>
               </div>
             </div>
 
@@ -60,24 +61,24 @@ const AboutPage = ({ id }) => (
               <div className="content education_content">
                 <div className="education-name">
                   <p>
-                    <span>Politechnika Krakowska</span> im. Tadeusza Kościuszki
+                    <span>{AboutPageEnum.EDUCATION.UNIVERSITY}</span>{AboutPageEnum.EDUCATION.UNIVERSITY_PREFIX}
                   </p>
                 </div>
 
                 <div className="education-info">
                   <p>
-                    Specialization: <span>IT</span>
+                    {AboutPageEnum.EDUCATION.SPECIALIZATION_PREFIX}<span>{AboutPageEnum.EDUCATION.SPECIALIZATION}</span>
                     <br />
-                    Level: <span>Bachelor's</span>
+                    {AboutPageEnum.EDUCATION.LEVEL_PREFIX}<span>{AboutPageEnum.EDUCATION.LEVEL}</span>
                   </p>
                 </div>
 
                 <div className="education-time">
                   <p>
-                    Started in <span>October, 2016</span>
+                    {AboutPageEnum.EDUCATION.START_PREFIX}<span>{AboutPageEnum.EDUCATION.START}</span>
                   </p>
                   <p>
-                    Graduated in <span>February, 2021</span>
+                    {AboutPageEnum.EDUCATION.END_PREFIX}<span>{AboutPageEnum.EDUCATION.END}</span>
                   </p>
                 </div>
               </div>
@@ -95,7 +96,7 @@ const AboutPage = ({ id }) => (
                   alt="hobbies"
                 />
 
-                <h3 className="hobbies">Hobbies</h3>
+                <h3 className="hobbies">{AboutPageEnum.HOBBIES.TITLE}</h3>
               </div>
             </div>
 
@@ -103,64 +104,60 @@ const AboutPage = ({ id }) => (
               <div className="hobbies_flexbox">
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>Driving</p>
+                    <p>{AboutPageEnum.HOBBIES.DRIVING_TITLE}</p>
                   </div>
 
                   <div className="hobby-description">
                     <p>
-                      I have driving license cat. B and enjoy car driving
-                      process
+                      {AboutPageEnum.HOBBIES.DRIVING_TEXT}
                     </p>
                   </div>
                 </div>
 
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>Music</p>
+                    <p>{AboutPageEnum.HOBBIES.MUSIC_TITLE}</p>
                   </div>
 
                   <div className="hobby-description">
                     <p>
-                      Almost every process in my life is always surrounded by
-                      music
+                      {AboutPageEnum.HOBBIES.MUSIC_TEXT}
                     </p>
                   </div>
                 </div>
 
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>Sport</p>
+                    <p>{AboutPageEnum.HOBBIES.SPORT_TITLE}</p>
                   </div>
 
                   <div className="hobby-description">
                     <p>
-                      Besides going to the gym I love playing football or
-                      billiard with friends
+                      {AboutPageEnum.HOBBIES.SPORT_TEXT}
                     </p>
                   </div>
                 </div>
 
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>Guitar</p>
+                    <p>{AboutPageEnum.HOBBIES.GUITAR_TITLE}</p>
                   </div>
 
                   <div className="hobby-description">
                     <p>
-                      I often spend my free time playing simple songs on guitar
+                      {AboutPageEnum.HOBBIES.GUITAR_TEXT}
                     </p>
                   </div>
                 </div>
 
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>Travelling</p>
+                    <p>{AboutPageEnum.HOBBIES.TRAVEL_TITLE}</p>
                   </div>
 
                   <div className="hobby-description">
                     <p>
-                      I am really excited about travelling and visiting new
-                      places
+                      {AboutPageEnum.HOBBIES.TRAVEL_TEXT}
                     </p>
                   </div>
                 </div>
