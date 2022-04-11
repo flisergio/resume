@@ -71,7 +71,7 @@ const LinksPage = ({ id }) => (
                             <a 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                href="https://flisergio.github.io/Face-Recognition-App/"
+                                href="https://github.com/flisergio/Face-Recognition-App"
                                 className="link_button link_facerecognition">
                                     Visit Link
                             </a>
