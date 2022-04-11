@@ -47,7 +47,7 @@ const LinksPage = ({ id }) => (
                             <a 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                href="https://flisergio.github.io/robofriends/"
+                                href="https://github.com/flisergio/robofriends"
                                 className="link_button link_robofriends">
                                     Visit Link
                             </a>
