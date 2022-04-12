@@ -80,29 +80,6 @@ const LinksPage = ({ id }) => (
                 </div>
 
                 <div className="links-card_container">
-                    <div className="links_link-box_container" data-text="Covid Cases">
-                        <p>Covid Cases</p>
-                    </div>
-
-                    <div className="links_content_container">
-                        <div className="links_content_inside_container">
-                            <p>
-                                Simple <span>Static Web Page</span> that shows how <span>COVID-19 cases quantity</span> was changing in 2020. 
-                                Created with <span>Vanilla JS</span>. Can be <span>run</span> only <span>locally</span> in browser.
-                            </p>
-
-                            <a 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                href="https://github.com/flisergio/covid-cases"
-                                className="link_button link_facerecognition">
-                                    Visit Link
-                            </a>
-                        </div>                           
-                    </div>
-                </div>
-
-                <div className="links-card_container">
                     <div className="links_link-box_container" data-text="Cinema">
                         <p>Simple cinema system</p>
                     </div>
