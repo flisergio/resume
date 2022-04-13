@@ -116,7 +116,7 @@
     font-size: 16px;
 }
 
-.links_content_inside_container_spectrumfilaments p {
+.links_content_inside_container_smallFont p {
     font-size: 14px;
 }
 
@@ -134,7 +134,7 @@
     color: #000;
 }
 
-.links_content_inside_container_spectrumfilaments a {
+.links_content_inside_container_smallFont a {
     font-size: 16px;
 }
 
@@ -194,11 +194,11 @@
         color: #fff;
     }
 
-    .links_content_inside_container_spectrumfilaments p {
+    .links_content_inside_container_smallFont p {
         font-size: 14px;
     }
 
-    .links_content_inside_container_spectrumfilaments a {
+    .links_content_inside_container_smallFont a {
         font-size: 16px;
     }
 }
@@ -220,11 +220,11 @@
         padding: 20px;
     }
 
-    .links_content_inside_container_spectrumfilaments p {
+    .links_content_inside_container_smallFont p {
         font-size: 14px;
     }
 
-    .links_content_inside_container_spectrumfilaments a {
+    .links_content_inside_container_smallFont a {
         font-size: 16px;
     }
 

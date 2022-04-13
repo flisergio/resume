@@ -68,7 +68,9 @@ const Navigation = (props) => {
                 offset={0}
                 duration={1000}
               >
-                <span>{NavigationEnum.NAV.HOME}</span>
+                <span>
+                  {NavigationEnum.NAV.HOME}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -82,7 +84,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.ABOUT}</span>
+                <span>
+                  {NavigationEnum.NAV.ABOUT}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -96,7 +100,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.SKILLS}</span>
+                <span>
+                  {NavigationEnum.NAV.SKILLS}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -110,7 +116,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.EXPERIENCE}</span>
+                <span>
+                  {NavigationEnum.NAV.EXPERIENCE}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -124,7 +132,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.LINKS}</span>
+                <span>
+                  {NavigationEnum.NAV.LINKS}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -138,7 +148,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.CONTACT}</span>
+                <span>
+                  {NavigationEnum.NAV.CONTACT}
+                </span>
               </Link>
             </li>
           </ul>
@@ -163,7 +175,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.HOME}</span>
+                <span>
+                  {NavigationEnum.NAV.HOME}
+                </span>
               </Link>
             </div>
 
@@ -178,7 +192,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.ABOUT}</span>
+                <span>
+                  {NavigationEnum.NAV.ABOUT}
+                </span>
               </Link>
             </div>
 
@@ -193,7 +209,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.SKILLS}</span>
+                <span>
+                  {NavigationEnum.NAV.SKILLS}
+                </span>
               </Link>
             </div>
 
@@ -208,7 +226,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.EXPERIENCE}</span>
+                <span>
+                  {NavigationEnum.NAV.EXPERIENCE}
+                </span>
               </Link>
             </div>
 
@@ -223,7 +243,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.LINKS}</span>
+                <span>
+                  {NavigationEnum.NAV.LINKS}
+                </span>
               </Link>
             </div>
 
@@ -238,7 +260,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.CONTACT}</span>
+                <span>
+                  {NavigationEnum.NAV.CONTACT}
+                </span>
               </Link>
             </div>
 
@@ -315,7 +339,9 @@ const Navigation = (props) => {
                 offset={0}
                 duration={1000}
               >
-                <span>{NavigationEnum.NAV.HOME}</span>
+                <span>
+                  {NavigationEnum.NAV.HOME}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -329,7 +355,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.ABOUT}</span>
+                <span>
+                  {NavigationEnum.NAV.ABOUT}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -343,7 +371,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.SKILLS}</span>
+                <span>
+                  {NavigationEnum.NAV.SKILLS}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -357,7 +387,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.EXPERIENCE}</span>
+                <span>
+                  {NavigationEnum.NAV.EXPERIENCE}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -371,7 +403,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.LINKS}</span>
+                <span>
+                  {NavigationEnum.NAV.LINKS}
+                </span>
               </Link>
             </li>
             <li className="li_menu_main_item">
@@ -385,7 +419,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={handleNavClick}
               >
-                <span>{NavigationEnum.NAV.CONTACT}</span>
+                <span>
+                  {NavigationEnum.NAV.CONTACT}
+                </span>
               </Link>
             </li>
           </ul>
@@ -410,7 +446,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.HOME}</span>
+                <span>
+                  {NavigationEnum.NAV.HOME}
+                </span>
               </Link>
             </div>
 
@@ -425,7 +463,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.ABOUT}</span>
+                <span>
+                  {NavigationEnum.NAV.ABOUT}
+                </span>
               </Link>
             </div>
 
@@ -440,7 +480,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.SKILLS}</span>
+                <span>
+                  {NavigationEnum.NAV.SKILLS}
+                </span>
               </Link>
             </div>
 
@@ -455,7 +497,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.EXPERIENCE}</span>
+                <span>
+                  {NavigationEnum.NAV.EXPERIENCE}
+                </span>
               </Link>
             </div>
 
@@ -470,7 +514,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.LINKS}</span>
+                <span>
+                  {NavigationEnum.NAV.LINKS}
+                </span>
               </Link>
             </div>
 
@@ -485,7 +531,9 @@ const Navigation = (props) => {
                 duration={1000}
                 onClick={showMobileMenu}
               >
-                <span>{NavigationEnum.NAV.CONTACT}</span>
+                <span>
+                  {NavigationEnum.NAV.CONTACT}
+                </span>
               </Link>
             </div>
 

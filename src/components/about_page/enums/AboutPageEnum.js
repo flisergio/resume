@@ -2,26 +2,18 @@ export const AboutPageEnum = {
     // Personal info section
     PERSONAL: {
         TITLE: "Personal information",
-        NAME_PREFIX: "My name is ",
-        NAME: "Sergii Kobyliaiev",
-        BORNDATE_PREFIX: "I was born on ",
-        BORNDATE: "12/10/1999",
-        BORNPLACE_PREFIX: "in ",
-        BORNPLACE: "Odessa, Ukraine",
+        NAME: "My name is <span>Sergii Kobyliaiev</span>",
+        BORNDATE: "I was born on <span>12/10/1999</span>",
+        BORNPLACE: "in <span>Odessa, Ukraine</span>",
     },
     // Education section
     EDUCATION: {
         TITLE: "Education",
-        UNIVERSITY_PREFIX: " im. Tadeusza Kościuszki",
-        UNIVERSITY: "Politechnika Krakowska",
-        SPECIALIZATION_PREFIX: "Specialization: ",
-        SPECIALIZATION: "IT",
-        LEVEL_PREFIX: "Level: ",
-        LEVEL: "Bachelor's",
-        START_PREFIX: "Started in ",
-        START: "October, 2016",
-        END_PREFIX: "Graduated in ",
-        END: "February, 2021",
+        UNIVERSITY: "<span>Politechnika Krakowska</span> im. Tadeusza Kościuszki",
+        SPECIALIZATION: "Specialization: <span>IT</span>",
+        LEVEL: "Level: <span>Bachelor's</span>",
+        START: "Started in <span>October, 2016</span>",
+        END: "Graduated in <span>February, 2021</span>",
     },
     // Hobbies section
     HOBBIES: {

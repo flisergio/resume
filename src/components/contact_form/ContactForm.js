@@ -69,7 +69,9 @@ const ContactForm = (props) => {
         <div className="contact-form_inside_container">
           <div className="contact-info_container">
             <div>
-              <h2>{ContactFormEnum.CONTACT.TITLE}</h2>
+              <h2>
+                {ContactFormEnum.CONTACT.TITLE}
+              </h2>
 
               <ul className="ul_contact-info">
                 <li>
@@ -81,7 +83,9 @@ const ContactForm = (props) => {
                     />
                   </span>
 
-                  <span className="span_contact-info_text">{ContactFormEnum.CONTACT.COUNTRY}</span>
+                  <span className="span_contact-info_text">
+                    {ContactFormEnum.CONTACT.COUNTRY}
+                  </span>
                 </li>
 
                 <li>
@@ -166,7 +170,9 @@ const ContactForm = (props) => {
             className="contact-form_inner_container"
             onSubmit={handleEmailSubmit}
           >
-            <h2>{ContactFormEnum.MESSAGE.TITLE}</h2>
+            <h2>
+              {ContactFormEnum.MESSAGE.TITLE}
+            </h2>
 
             <div className="form-box_container">
               <div className="input-box_container w50">
@@ -177,7 +183,10 @@ const ContactForm = (props) => {
                   placeholder={ContactFormEnum.MESSAGE.NAME}
                   required
                 />
-                <span>{ContactFormEnum.MESSAGE.NAME}</span>
+
+                <span>
+                  {ContactFormEnum.MESSAGE.NAME}
+                </span>
               </div>
             </div>
 
@@ -190,7 +199,10 @@ const ContactForm = (props) => {
                   placeholder={ContactFormEnum.MESSAGE.EMAIL}
                   required
                 />
-                <span>{ContactFormEnum.MESSAGE.EMAIL}</span>
+
+                <span>
+                  {ContactFormEnum.MESSAGE.EMAIL}
+                </span>
               </div>
             </div>
 
@@ -204,7 +216,10 @@ const ContactForm = (props) => {
                   placeholder={ContactFormEnum.MESSAGE.PHONE}
                   required
                 />
-                <span>{ContactFormEnum.MESSAGE.PHONE}</span>
+
+                <span>
+                  {ContactFormEnum.MESSAGE.PHONE}
+                </span>
               </div>
             </div>
 
@@ -217,7 +232,10 @@ const ContactForm = (props) => {
                   placeholder={ContactFormEnum.MESSAGE.TEXT}
                   required
                 ></textarea>
-                <span>{ContactFormEnum.MESSAGE.TEXT}</span>
+
+                <span>
+                  {ContactFormEnum.MESSAGE.TEXT}
+                </span>
               </div>
             </div>
 

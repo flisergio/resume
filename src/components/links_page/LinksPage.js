@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import parse from 'html-react-parser';
 
-import './LinksPage.css'
+import './LinksPage.css';
+import { LinksPageEnum } from './enums/LinksPageEnum';
 
 const LinksPage = ({ id }) => (
     <Fragment>
@@ -8,16 +10,15 @@ const LinksPage = ({ id }) => (
             <div className="links-page_inside_container">
                 <div className="links-card_container">
                     <div className="links_link-box_container" data-text="Spectrum">
-                        <p>Spectrum filaments</p>
+                        <p>
+                            {LinksPageEnum.SPECTRUM.TITLE}
+                        </p>
                     </div>
 
                     <div className="links_content_container">
-                        <div className="links_content_inside_container links_content_inside_container_spectrumfilaments">
+                        <div className="links_content_inside_container links_content_inside_container_smallFont">
                             <p>
-                                Big back-end system (developed using <span>Python</span>) that communicates with PLC controller by <span>TCP</span>. 
-                                Developed and used for controlling <span>filament quality</span>. After entering an ID of filament spool 
-                                (generated in Python), system searches for such spool in <span>PostgreSQL database </span> and shows it's 
-                                characteristics that declare quality of the spool along with the raph that visualises it's quality.
+                                {parse(LinksPageEnum.SPECTRUM.DESCRIPTION)}
                             </p>
 
                             <a 
@@ -25,7 +26,7 @@ const LinksPage = ({ id }) => (
                                 rel="noopener noreferrer" 
                                 href="https://verify.spectrumfilaments.com/"
                                 className="link_button link_spectrumfilaments">
-                                    Visit Link
+                                    {LinksPageEnum.COMMON.LINK}
                             </a>
                         </div>                           
                     </div>
@@ -33,15 +34,15 @@ const LinksPage = ({ id }) => (
 
                 <div className="links-card_container">
                     <div className="links_link-box_container" data-text="RoboFriends">
-                        <p>RoboFriends</p>
+                        <p>
+                            {LinksPageEnum.ROBO.TITLE}
+                        </p>
                     </div>
 
                     <div className="links_content_container">
                         <div className="links_content_inside_container">
                             <p>
-                                Simple and one of my first <span>React.JS application</span>, that shows general way 
-                                of <span>creating</span> React.JS <span>components</span>, has <span>searching functionality</span> and <span>scrolling window</span> component. 
-                                Just a <span>practice</span> mixed with a <span>fun</span>, nothing more :)
+                                {parse(LinksPageEnum.ROBO.DESCRIPTION)}
                             </p>
 
                             <a 
@@ -49,7 +50,7 @@ const LinksPage = ({ id }) => (
                                 rel="noopener noreferrer" 
                                 href="https://github.com/flisergio/robofriends"
                                 className="link_button link_robofriends">
-                                    Visit Link
+                                    {LinksPageEnum.COMMON.LINK}
                             </a>
                         </div>                           
                     </div>
@@ -57,15 +58,15 @@ const LinksPage = ({ id }) => (
 
                 <div className="links-card_container">
                     <div className="links_link-box_container" data-text="FaceReco">
-                        <p>Face Recognition</p>
+                        <p>
+                            {LinksPageEnum.FR.TITLE}
+                        </p>
                     </div>
 
                     <div className="links_content_container">
-                        <div className="links_content_inside_container">
+                        <div className="links_content_inside_container links_content_inside_container_smallFont">
                             <p>
-                                <span>Front-End React.JS</span> application connected with a <span>Back-End (Node & Express.js)</span>. 
-                                Application shows how simple <span>functionality of login/register</span> works in <span>NodeJS</span> and it is connected with 
-                                open-source <span>Machine Learning</span> API that makes face recognition possible (only for <span>one-face images</span>).
+                                {parse(LinksPageEnum.FR.DESCRIPTION)}
                             </p>
 
                             <a 
@@ -73,7 +74,7 @@ const LinksPage = ({ id }) => (
                                 rel="noopener noreferrer" 
                                 href="https://github.com/flisergio/Face-Recognition-App"
                                 className="link_button link_facerecognition">
-                                    Visit Link
+                                    {LinksPageEnum.COMMON.LINK}
                             </a>
                         </div>                           
                     </div>
@@ -81,16 +82,15 @@ const LinksPage = ({ id }) => (
 
                 <div className="links-card_container">
                     <div className="links_link-box_container" data-text="Cinema">
-                        <p>Simple cinema system</p>
+                        <p>
+                           {LinksPageEnum.CINEMA.TITLE} 
+                        </p>
                     </div>
 
                     <div className="links_content_container">
-                        <div className="links_content_inside_container">
+                        <div className="links_content_inside_container links_content_inside_container_smallFont">
                             <p>
-                                <span>Back-End application</span>, which was a <span> university project</span> used for simple maintaining of 
-                                the <span>cinema system</span>. It was developed by me and two other friends 
-                                in <span>Java</span> on 2nd year of studies. Application is connected with a <span>MySQL</span> database. 
-                                Needs Java to be installed for running the project.
+                                {parse(LinksPageEnum.CINEMA.DESCRIPTION)}
                             </p>
 
                             <a 
@@ -98,7 +98,7 @@ const LinksPage = ({ id }) => (
                                 rel="noopener noreferrer" 
                                 href="https://github.com/flisergio/CultureCenter"
                                 className="link_button link_culturecenter">
-                                    Visit Link
+                                    {LinksPageEnum.COMMON.LINK}
                             </a>
                         </div>  
                     </div>
@@ -106,6 +106,6 @@ const LinksPage = ({ id }) => (
             </div>
         </div>
     </Fragment>
-)
+);
 
-export default LinksPage
+export default LinksPage;

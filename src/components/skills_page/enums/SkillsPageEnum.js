@@ -1,5 +1,5 @@
 export const SkillsPageEnums = {
-    // Common
+    // Common section
     COMMON: {
         PERCENTAGE_REMARK: "*All percentages are on my own (not global) scale*",
     },
@@ -37,7 +37,7 @@ export const SkillsPageEnums = {
             programming work and what is JSON format. Besides that I know basics
             of databases configuration and connection. About two years ago I was
             learning Python in Machine Learning and Artificial Intelligence
-            sphere as a hobby.`,
+            spheres as a hobby.`,
         NODE_TITLE: "Node.js",
         NODE_PERCENT: "55%",
         CAP_TITLE: "Cloud Application Programming Model",
@@ -61,7 +61,7 @@ export const SkillsPageEnums = {
             I know all the basics of Microsoft Word, Excel and PowerPoint, while also familiar with MS
             Project. Also I am familiar with security concepts and I know the basics of how 
             application's deployment process looks like.`,
-        GIT_TITLE: "Git Bash, Git & GitLab",
+        GIT_TITLE: "Git Bash, Git & GitHub",
         GIT_PERCENT: "80%",
         AGILE_TITLE: "Agile + Scrum & Jira",
         AGILE_PERCENT: "65%",

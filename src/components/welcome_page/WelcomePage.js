@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import parse from 'html-react-parser';
 
 import Particles from "react-particles-js";
 import Tilt from "react-tilt";
@@ -135,10 +136,7 @@ const WelcomePage = ({ id }) => {
 
         <div className="description_container">
           <h2 className="header_welcome">
-            {WelcomePageEnum.WELCOME.TITLE_PREFIX}
-            <span>
-              <br></br>{WelcomePageEnum.WELCOME.TITLE}
-            </span>
+            {parse(WelcomePageEnum.WELCOME.TITLE)}
           </h2>
 
           <div className="welcome-description_container">
@@ -152,6 +150,7 @@ const WelcomePage = ({ id }) => {
               </span>
             </p>
           </div>
+
           <Link
             className="link_about"
             to="aboutpage"
@@ -161,7 +160,9 @@ const WelcomePage = ({ id }) => {
             duration={1000}
             onClick={handleClickAbout}
           >
-            <span>{WelcomePageEnum.WELCOME.DESCRIPTION_BUTTON_TEXT}</span>
+            <span>
+              {WelcomePageEnum.WELCOME.DESCRIPTION_BUTTON_TEXT}
+            </span>
           </Link>
         </div>
 

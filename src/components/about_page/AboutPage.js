@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import parse from 'html-react-parser';
 
 import "./AboutPage.css";
 import { AboutPageEnum } from "./enums/AboutPageEnum";
@@ -21,7 +22,9 @@ const AboutPage = ({ id }) => (
                   alt="personal-info"
                 />
 
-                <h3>{AboutPageEnum.PERSONAL.TITLE}</h3>
+                <h3>
+                  {AboutPageEnum.PERSONAL.TITLE}
+                </h3>
               </div>
             </div>
 
@@ -29,15 +32,15 @@ const AboutPage = ({ id }) => (
               <div className="content">
                 <div className="personal-info personal-info_content">
                   <p className="personal-info_name">
-                    {AboutPageEnum.PERSONAL.NAME_PREFIX}<span>{AboutPageEnum.PERSONAL.NAME}</span>
+                    {parse(AboutPageEnum.PERSONAL.NAME)}
                   </p>
 
                   <p className="personal-info_birthdate">
-                    {AboutPageEnum.PERSONAL.BORNDATE_PREFIX}<span>{AboutPageEnum.PERSONAL.BORNDATE}</span>
+                    {parse(AboutPageEnum.PERSONAL.BORNDATE)}
                   </p>
 
                   <p className="personal-info_birthplace">
-                    {AboutPageEnum.PERSONAL.BORNPLACE_PREFIX}<span>{AboutPageEnum.PERSONAL.BORNPLACE}</span>
+                    {parse(AboutPageEnum.PERSONAL.BORNPLACE)}
                   </p>
                 </div>
               </div>
@@ -53,7 +56,9 @@ const AboutPage = ({ id }) => (
                   alt="education"
                 />
 
-                <h3>{AboutPageEnum.EDUCATION.TITLE}</h3>
+                <h3>
+                  {AboutPageEnum.EDUCATION.TITLE}
+                </h3>
               </div>
             </div>
 
@@ -61,24 +66,25 @@ const AboutPage = ({ id }) => (
               <div className="content education_content">
                 <div className="education-name">
                   <p>
-                    <span>{AboutPageEnum.EDUCATION.UNIVERSITY}</span>{AboutPageEnum.EDUCATION.UNIVERSITY_PREFIX}
+                    {parse(AboutPageEnum.EDUCATION.UNIVERSITY)}
                   </p>
                 </div>
 
                 <div className="education-info">
                   <p>
-                    {AboutPageEnum.EDUCATION.SPECIALIZATION_PREFIX}<span>{AboutPageEnum.EDUCATION.SPECIALIZATION}</span>
+                    {parse(AboutPageEnum.EDUCATION.SPECIALIZATION)}
                     <br />
-                    {AboutPageEnum.EDUCATION.LEVEL_PREFIX}<span>{AboutPageEnum.EDUCATION.LEVEL}</span>
+                    {parse(AboutPageEnum.EDUCATION.LEVEL)}
                   </p>
                 </div>
 
                 <div className="education-time">
                   <p>
-                    {AboutPageEnum.EDUCATION.START_PREFIX}<span>{AboutPageEnum.EDUCATION.START}</span>
+                    {parse(AboutPageEnum.EDUCATION.START)}
                   </p>
+                  
                   <p>
-                    {AboutPageEnum.EDUCATION.END_PREFIX}<span>{AboutPageEnum.EDUCATION.END}</span>
+                    {parse(AboutPageEnum.EDUCATION.END)}
                   </p>
                 </div>
               </div>
@@ -96,7 +102,9 @@ const AboutPage = ({ id }) => (
                   alt="hobbies"
                 />
 
-                <h3 className="hobbies">{AboutPageEnum.HOBBIES.TITLE}</h3>
+                <h3 className="hobbies">
+                  {AboutPageEnum.HOBBIES.TITLE}
+                </h3>
               </div>
             </div>
 
@@ -104,7 +112,9 @@ const AboutPage = ({ id }) => (
               <div className="hobbies_flexbox">
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>{AboutPageEnum.HOBBIES.DRIVING_TITLE}</p>
+                    <p>
+                      {AboutPageEnum.HOBBIES.DRIVING_TITLE}
+                    </p>
                   </div>
 
                   <div className="hobby-description">
@@ -116,7 +126,9 @@ const AboutPage = ({ id }) => (
 
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>{AboutPageEnum.HOBBIES.MUSIC_TITLE}</p>
+                    <p>
+                      {AboutPageEnum.HOBBIES.MUSIC_TITLE}
+                    </p>
                   </div>
 
                   <div className="hobby-description">
@@ -128,7 +140,9 @@ const AboutPage = ({ id }) => (
 
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>{AboutPageEnum.HOBBIES.SPORT_TITLE}</p>
+                    <p>
+                      {AboutPageEnum.HOBBIES.SPORT_TITLE}
+                    </p>
                   </div>
 
                   <div className="hobby-description">
@@ -152,7 +166,9 @@ const AboutPage = ({ id }) => (
 
                 <div className="hobbies-column">
                   <div className="hobby-title">
-                    <p>{AboutPageEnum.HOBBIES.TRAVEL_TITLE}</p>
+                    <p>
+                      {AboutPageEnum.HOBBIES.TRAVEL_TITLE}
+                    </p>
                   </div>
 
                   <div className="hobby-description">
