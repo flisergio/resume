@@ -7,7 +7,7 @@ export const ExperiencePageEnum = {
             from scratch. The <span>main area</span> of operation is <span>3D-printing</span>, so the large part 
             of products are machines used in the 3D-printing for companies that operate in this sphere.`,
         POSITION: "Intern Programmer",
-        PERIOD: "Oct 2018 - Oct 2019",
+        PERIOD: "Oct 2018 - Sep 2019",
         TASKS: {
             T1: `Developing <span>web pages</span> for selected products, systems, as also helping with creating 
                 of company's web page (using <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>).
