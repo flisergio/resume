@@ -28,7 +28,7 @@ const Navigation = (props) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   const handleNavClick = () => {
     setTimeout(() => {
