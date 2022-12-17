@@ -131,7 +131,7 @@ const WelcomePage = ({ id }) => {
 
   return (
     <Fragment>
-      <div className="welcome-page_container" id={id}>
+      <div className="welcome-page_container" id={id} data-testid="WelcomePage">
         <Particles className="particles" params={particlesOptions} />
 
         <div className="description_container">
@@ -145,9 +145,7 @@ const WelcomePage = ({ id }) => {
             </p>
 
             <p className="p_quote">
-              <span>
-                {WelcomePageEnum.WELCOME.DESCRIPTION_SPECIAL}
-              </span>
+              <span>{WelcomePageEnum.WELCOME.DESCRIPTION_SPECIAL}</span>
             </p>
           </div>
 
@@ -160,9 +158,7 @@ const WelcomePage = ({ id }) => {
             duration={1000}
             onClick={handleClickAbout}
           >
-            <span>
-              {WelcomePageEnum.WELCOME.DESCRIPTION_BUTTON_TEXT}
-            </span>
+            <span>{WelcomePageEnum.WELCOME.DESCRIPTION_BUTTON_TEXT}</span>
           </Link>
         </div>
 

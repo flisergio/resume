@@ -12,7 +12,7 @@ import "./App.css";
 
 const App = () => (
   <Fragment>
-    <div className="container_App">
+    <div className="container_App" data-testid="App">
       <Navigation />
 
       <WelcomePage id="home" />

@@ -65,13 +65,11 @@ const ContactForm = (props) => {
 
   return (
     <Fragment>
-      <div className="contact-form_container" id={id}>
+      <div className="contact-form_container" id={id} data-testid="ContactForm">
         <div className="contact-form_inside_container">
           <div className="contact-info_container">
             <div>
-              <h2>
-                {ContactFormEnum.CONTACT.TITLE}
-              </h2>
+              <h2>{ContactFormEnum.CONTACT.TITLE}</h2>
 
               <ul className="ul_contact-info">
                 <li>
@@ -170,9 +168,7 @@ const ContactForm = (props) => {
             className="contact-form_inner_container"
             onSubmit={handleEmailSubmit}
           >
-            <h2>
-              {ContactFormEnum.MESSAGE.TITLE}
-            </h2>
+            <h2>{ContactFormEnum.MESSAGE.TITLE}</h2>
 
             <div className="form-box_container">
               <div className="input-box_container w50">
@@ -184,9 +180,7 @@ const ContactForm = (props) => {
                   required
                 />
 
-                <span>
-                  {ContactFormEnum.MESSAGE.NAME}
-                </span>
+                <span>{ContactFormEnum.MESSAGE.NAME}</span>
               </div>
             </div>
 
@@ -200,9 +194,7 @@ const ContactForm = (props) => {
                   required
                 />
 
-                <span>
-                  {ContactFormEnum.MESSAGE.EMAIL}
-                </span>
+                <span>{ContactFormEnum.MESSAGE.EMAIL}</span>
               </div>
             </div>
 
@@ -217,9 +209,7 @@ const ContactForm = (props) => {
                   required
                 />
 
-                <span>
-                  {ContactFormEnum.MESSAGE.PHONE}
-                </span>
+                <span>{ContactFormEnum.MESSAGE.PHONE}</span>
               </div>
             </div>
 
@@ -233,9 +223,7 @@ const ContactForm = (props) => {
                   required
                 ></textarea>
 
-                <span>
-                  {ContactFormEnum.MESSAGE.TEXT}
-                </span>
+                <span>{ContactFormEnum.MESSAGE.TEXT}</span>
               </div>
             </div>
 

@@ -10,7 +10,7 @@ import hobbiesPicture from "./images/hobbies.svg";
 
 const AboutPage = ({ id }) => (
   <Fragment>
-    <div className="about-page_container" id={id}>
+    <div className="about-page_container" id={id} data-testid="AboutPage">
       <div className="about-page_inside_container">
         <div className="about-page_left_container">
           <div className="about-page_card_container about-page_personal-info_container">
