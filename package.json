@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://flisergio.github.io/resume",
+  "homepage": "https://flisergio-resume.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
