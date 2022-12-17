@@ -5,7 +5,7 @@ import Particles from "react-particles-js";
 import Tilt from "react-tilt";
 import { Link } from "react-scroll";
 
-import profilePicture from "./images/profile.jpg";
+import profilePicture from "./images/profile.JPG";
 import facebookPicture from "./images/facebook.png";
 import linkedinPicture from "./images/linkedin.png";
 import githubPicture from "./images/github.png";
