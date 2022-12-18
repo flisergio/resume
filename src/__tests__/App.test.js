@@ -1,11 +1,31 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import App from "../App.js";
+
 import { Provider as ReduxProvider } from "react-redux";
 import configureStore from "../redux/configureStore.js";
 
+import App from "../App.js";
+import Navigation from "../components/navigation/Navigation.js";
+
 describe("App", () => {
-  const store = configureStore();
+  const store = configureStore(),
+    testIdValues = {
+      appTestId: "",
+      navigationTestId: "",
+      welcomePageTestId: "",
+      skillsPageTestId: "",
+      experiencePageTestId: "",
+      linksPageTestId: "",
+      contactFormTestId: "",
+    };
+
+  const testIdValuesEntries = Object.entries(testIdValues);
+
+  const assignTestIdValues = (...args) => {
+    testIdValuesEntries.map(
+      ([key, value], index) => (testIdValues[key] = args[index])
+    );
+  };
 
   beforeEach(() => {
     // eslint-disable-next-line testing-library/no-render-in-setup
@@ -16,24 +36,34 @@ describe("App", () => {
         </React.StrictMode>
       </ReduxProvider>
     );
+
+    assignTestIdValues(
+      "App",
+      "Navigation",
+      "WelcomePage",
+      "SkillsPage",
+      "ExperiencePage",
+      "LinksPage",
+      "ContactForm"
+    );
   });
 
   it("App component renders successfully", () => {});
 
   it("App component renders all other components inside", () => {
-    const appTestId = screen.getByTestId("App"),
-      welcomePageTestId = screen.getByTestId("WelcomePage"),
-      aboutPageTestId = screen.getByTestId("AboutPage"),
-      skillsPageTestId = screen.getByTestId("SkillsPage"),
-      experiencePageTestId = screen.getByTestId("ExperiencePage"),
-      linksPageTestId = screen.getByTestId("LinksPage"),
-      contactFormTestId = screen.getByTestId("ContactForm");
+    const realAppTestId = screen.getByTestId("App");
+    Object.values(testIdValues).map(val => expect(realAppTestId).toContainElement(screen.getByTestId(val)))
+  });
 
-    expect(appTestId).toContainElement(welcomePageTestId);
-    expect(appTestId).toContainElement(aboutPageTestId);
-    expect(appTestId).toContainElement(skillsPageTestId);
-    expect(appTestId).toContainElement(experiencePageTestId);
-    expect(appTestId).toContainElement(linksPageTestId);
-    expect(appTestId).toContainElement(contactFormTestId);
+  describe("Navigation", () => {
+    // beforeEach(() => {
+
+    // });
+
+    it("Navigation component renders nav inside", () => {
+      const navTag = screen.getAllByRole("navigation")[0];
+      const realNavigationTestId = screen.getByTestId("Navigation");
+      expect(realNavigationTestId).toContainElement(navTag);
+    });
   });
 });

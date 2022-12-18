@@ -45,7 +45,7 @@ const Navigation = (props) => {
   if (!scrolled) {
     return (
       <Fragment>
-        <div data-testid="NavigationPage">
+        <div data-testid="Navigation">
           <nav className="nav_main">
             <div className="logo_container mt0">
               <Tilt
