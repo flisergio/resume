@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment } from "react";
 import parse from 'html-react-parser';
 
@@ -132,19 +133,25 @@ const WelcomePage = ({ id }) => {
   return (
     <Fragment>
       <div className="welcome-page_container" id={id} data-testid="WelcomePage">
-        <Particles className="particles" params={particlesOptions} />
+        <Particles className="particles" params={particlesOptions}></Particles>
 
-        <div className="description_container">
-          <h2 className="header_welcome">
+        <div
+          className="description_container"
+          data-testid="WelcomePage_DescriptionContainer"
+        >
+          <h2 className="header_welcome" role="header_welcome">
             {parse(WelcomePageEnum.WELCOME.TITLE)}
           </h2>
 
-          <div className="welcome-description_container">
-            <p className="p_welcome-description">
+          <div
+            className="welcome-description_container"
+            data-testid="WelcomePage_InnerDescriptionContainer"
+          >
+            <p className="p_welcome-description" role="InnerDescription_p">
               {WelcomePageEnum.WELCOME.DESCRIPTION_MAIN}
             </p>
 
-            <p className="p_quote">
+            <p className="p_quote" role="InnerDescription_p">
               <span>{WelcomePageEnum.WELCOME.DESCRIPTION_SPECIAL}</span>
             </p>
           </div>
