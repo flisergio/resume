@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment } from "react";
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
 
 import Particles from "react-particles-js";
 import Tilt from "react-tilt";
@@ -11,7 +11,7 @@ import facebookPicture from "./images/facebook.png";
 import linkedinPicture from "./images/linkedin.png";
 import githubPicture from "./images/github.png";
 
-import './WelcomePage.css';
+import "./WelcomePage.css";
 import { WelcomePageEnum } from "./enums/WelcomePageEnum";
 
 const particlesOptions = {
@@ -164,35 +164,45 @@ const WelcomePage = ({ id }) => {
             offset={0}
             duration={1000}
             onClick={handleClickAbout}
+            role="WelcomePage_Link_AboutPage"
           >
             <span>{WelcomePageEnum.WELCOME.DESCRIPTION_BUTTON_TEXT}</span>
           </Link>
         </div>
 
-        <div className="profile-picture_container">
+        <div
+          className="profile-picture_container"
+          data-testid="WelcomePage_ProfilePictureContainer"
+        >
           <img
             src={profilePicture}
             className="img_profile-picture"
             alt="profile"
+            role="ProfilePicture"
           />
         </div>
 
-        <ul className="ul_social-media">
+        <ul className="ul_social-media" role="SocialMediaLinksList">
           <li>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.facebook.com/sergio.mejor.5/"
+              role="Welcome_SocialMediaLink"
             >
               <Tilt
                 className="icon_social-media_container br2 shadow-2"
                 options={{ max: 35 }}
               >
-                <div className="Tilt-inner">
+                <div
+                  className="Tilt-inner"
+                  data-testid="Welcome_SocialMedia_TiltContainer"
+                >
                   <img
                     className="icon_social-media"
                     src={facebookPicture}
                     alt="facebook"
+                    role="Welcome_SocialMediaIcon"
                   />
                 </div>
               </Tilt>
@@ -204,16 +214,21 @@ const WelcomePage = ({ id }) => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/"
+              role="Welcome_SocialMediaLink"
             >
               <Tilt
                 className="icon_social-media_container br2 shadow-2"
                 options={{ max: 35 }}
               >
-                <div className="Tilt-inner">
+                <div
+                  className="Tilt-inner"
+                  data-testid="Welcome_SocialMedia_TiltContainer"
+                >
                   <img
                     className="icon_social-media"
                     src={linkedinPicture}
                     alt="linkedin"
+                    role="Welcome_SocialMediaIcon"
                   />
                 </div>
               </Tilt>
@@ -225,16 +240,21 @@ const WelcomePage = ({ id }) => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.github.com/flisergio"
+              role="Welcome_SocialMediaLink"
             >
               <Tilt
                 className="icon_social-media_container br2 shadow-2"
                 options={{ max: 35 }}
               >
-                <div className="Tilt-inner">
+                <div
+                  className="Tilt-inner"
+                  data-testid="Welcome_SocialMedia_TiltContainer"
+                >
                   <img
                     className="icon_social-media"
                     src={githubPicture}
                     alt="github"
+                    role="Welcome_SocialMediaIcon"
                   />
                 </div>
               </Tilt>

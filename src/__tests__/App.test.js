@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React from "react";
 import { render, screen } from "@testing-library/react";
 
@@ -60,6 +61,7 @@ describe("App", () => {
 
   it("App component renders all other components inside", () => {
     const realAppTestId = screen.getByTestId("App");
+    
     Object.values(testIdValues).map((val) =>
       expect(realAppTestId).toContainElement(screen.getByTestId(val))
     );
@@ -113,6 +115,7 @@ describe("App", () => {
         expect(realWelcomePageTestId).toContainElement(
           descriptionContainerTestId
         );
+
         expect(descriptionContainerTestId).toHaveClass("description_container");
       });
 
@@ -125,18 +128,160 @@ describe("App", () => {
 
       it("tests Inner Description container", () => {
         const innerDescriptionContainerTestId = screen.getByTestId(
-          "WelcomePage_InnerDescriptionContainer"
-        ),
+            "WelcomePage_InnerDescriptionContainer"
+          ),
           innerDescriptionPTags = screen.getAllByRole("InnerDescription_p");
-
 
         expect(descriptionContainerTestId).toContainElement(
           innerDescriptionContainerTestId
         );
+
         expect(innerDescriptionPTags).toHaveLength(2);
-        innerDescriptionPTags.map(p => expect(innerDescriptionContainerTestId).toContainElement(p));
+        innerDescriptionPTags.map((p) =>
+          expect(innerDescriptionContainerTestId).toContainElement(p)
+        );
+
         expect(innerDescriptionPTags[0]).toHaveClass("p_welcome-description");
         expect(innerDescriptionPTags[1]).toHaveClass("p_quote");
+      });
+
+      it("Description container renders Link with appropriate class attribute inside", () => {
+        const Link_AboutPage = screen.getByRole("WelcomePage_Link_AboutPage");
+
+        expect(descriptionContainerTestId).toContainElement(Link_AboutPage);
+        expect(Link_AboutPage).toHaveClass("link_about");
+      });
+    });
+
+    describe("Profile Picture Container", () => {
+      let profilePictureContainerTestId;
+
+      beforeEach(() => {
+        profilePictureContainerTestId = screen.getByTestId(
+          "WelcomePage_ProfilePictureContainer"
+        );
+      });
+
+      it("WelcomePage component renders profile picture container inside", () => {
+        expect(realWelcomePageTestId).toContainElement(
+          profilePictureContainerTestId
+        );
+
+        expect(profilePictureContainerTestId).toHaveClass(
+          "profile-picture_container"
+        );
+      });
+
+      it("Profile Picture container renders image with appropriate attributes inside", () => {
+        const profilePictureTag = screen.getByRole("ProfilePicture");
+
+        expect(profilePictureContainerTestId).toContainElement(
+          profilePictureTag
+        );
+
+        expect(
+          profilePictureTag.getAttribute("src").includes("profile.JPG")
+        ).toBeTruthy();
+
+        expect(profilePictureTag).toHaveClass("img_profile-picture");
+        expect(profilePictureTag).toHaveAttribute("alt", "profile");
+      });
+    });
+
+    describe("Social Media Links List", () => {
+      let socialMediaLinksListTag;
+
+      beforeEach(() => {
+        socialMediaLinksListTag = screen.getByRole("SocialMediaLinksList");
+      });
+
+      it("WelcomePage component renders social media links list inside", () => {
+        expect(realWelcomePageTestId).toContainElement(socialMediaLinksListTag);
+        expect(socialMediaLinksListTag).toHaveClass("ul_social-media");
+      });
+
+      describe("Social Media Links", () => {
+        let socialMediaLinkTags,
+          socialMediaFacebook,
+          socialMediaLinkedIn,
+          socialMediaGitHub;
+
+        beforeEach(() => {
+          socialMediaLinkTags = screen.getAllByRole("Welcome_SocialMediaLink");
+          socialMediaFacebook = socialMediaLinkTags[0];
+          socialMediaLinkedIn = socialMediaLinkTags[1];
+          socialMediaGitHub = socialMediaLinkTags[2];
+        });
+
+        it("Social Media Links List renders three links with right attributes inside", () => {
+          expect(socialMediaLinkTags).toHaveLength(3);
+          socialMediaLinkTags.map((tag) => {
+            expect(socialMediaLinksListTag).toContainElement(tag);
+            expect(tag).toHaveAttribute("target", "_blank");
+            expect(tag).toHaveAttribute("rel", "noopener noreferrer");
+          });
+
+          expect(socialMediaFacebook).toHaveAttribute(
+            "href",
+            "https://www.facebook.com/sergio.mejor.5/"
+          );
+
+          expect(socialMediaLinkedIn).toHaveAttribute(
+            "href",
+            "https://www.linkedin.com/in/sergii-kobyliaiev-570b46165/"
+          );
+
+          expect(socialMediaGitHub).toHaveAttribute(
+            "href",
+            "https://www.github.com/flisergio"
+          );
+        });
+
+        describe("Tilt Container", () => {
+          let tiltTags;
+
+          beforeEach(() => {
+            tiltTags = screen.getAllByTestId(
+              "Welcome_SocialMedia_TiltContainer"
+            );
+          });
+
+          it("each link renders Tilt container inside", () => {
+            expect(tiltTags).toHaveLength(3);
+
+            for (let i = 0; i < socialMediaLinkTags.length; i++) {
+              expect(socialMediaLinkTags[i]).toContainElement(tiltTags[i]);
+              expect(tiltTags[i]).toHaveClass("Tilt-inner");
+            }
+          });
+
+          it("each Tilt Container renders an icon with appropriate attributes inside", () => {
+            const tiltIconTags = screen.getAllByRole("Welcome_SocialMediaIcon"),
+              iconFacebook = tiltIconTags[0],
+              iconLinkedIn = tiltIconTags[1],
+              iconGitHub = tiltIconTags[2];
+
+            expect(tiltIconTags).toHaveLength(3);
+            tiltIconTags.map((tag) =>
+              expect(tag).toHaveClass("icon_social-media")
+            );
+
+            expect(
+              iconFacebook.getAttribute("src").includes("facebook.png")
+            ).toBeTruthy();
+            expect(iconFacebook).toHaveAttribute("alt", "facebook");
+
+            expect(
+              iconLinkedIn.getAttribute("src").includes("linkedin.png")
+            ).toBeTruthy();
+            expect(iconLinkedIn).toHaveAttribute("alt", "linkedin");
+
+            expect(
+              iconGitHub.getAttribute("src").includes("github.png")
+            ).toBeTruthy();
+            expect(iconGitHub).toHaveAttribute("alt", "github");
+          });
+        });
       });
     });
   });
