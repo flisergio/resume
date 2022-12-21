@@ -544,4 +544,111 @@ describe("App", () => {
       });
     });
   });
+
+  describe("SkillsPage", () => {
+    let realSkillsPageTestId;
+
+    beforeEach(() => {
+      realSkillsPageTestId = screen.getByTestId("SkillsPage");
+    });
+
+    it("AboutPage component to have right class and id", () => {
+      const skillsPageId = realSkillsPageTestId.getAttribute("id");
+
+      expect(skillsPageId).toEqual("skillspage");
+      expect(realSkillsPageTestId).toHaveClass("skills-page_container");
+    });
+
+    describe("Skills Windows Containers", () => {
+      let skillsWindowsTestId,
+        backEndSkillsWindow,
+        otherSkillsWindow,
+        languageSkillsWindow;
+
+      beforeEach(() => {
+        skillsWindowsTestId = screen.getAllByTestId(
+          "SkillsPage_WindowContainer"
+        );
+
+        backEndSkillsWindow = screen.getByRole("BackEndSkillsContainer");
+        otherSkillsWindow = screen.getByRole("OtherSkillsContainer");
+        languageSkillsWindow = screen.getByRole("LanguageSkillsContainer");
+      });
+
+      it("Skills Page renders exactly four Skills Window containers inside", () => {
+        expect(skillsWindowsTestId).toHaveLength(4);
+        skillsWindowsTestId.map((id) => {
+          expect(realSkillsPageTestId).toContainElement(id);
+          expect(id).toHaveClass("skills-window_container");
+        });
+      });
+
+      describe("Frond-End Skills Container", () => {
+        let frontEndSkillsWindow;
+
+        beforeEach(() => {
+          frontEndSkillsWindow = screen.getByRole("FrontEndSkillsContainer");
+        });
+
+        it("Front-End Skills container renders exactly seven Skill containers containing required elements", () => {
+          const frontEndSkillsTestId = screen.getAllByTestId(
+              "SkillsPage_FrontEndSkillContainer"
+            ),
+            frontEndSkillLabels = screen.getAllByRole("FrontEndSkillLabel"),
+            frontEndSkillBars = screen.getAllByRole("FrontEndSkillBar"),
+            frontEndSkillTitles = screen.getAllByRole("FrontEndSkillTitle"),
+            frontEndSkillPercentages = screen.getAllByRole(
+              "FrontEndSkillPercentage"
+            ),
+            frontEndSkillProgresses = screen.getAllByRole(
+              "FrontEndSkillProgress"
+            );
+
+          expect(frontEndSkillsTestId).toHaveLength(7);
+          expect(frontEndSkillLabels).toHaveLength(7);
+          expect(frontEndSkillBars).toHaveLength(7);
+          expect(frontEndSkillTitles).toHaveLength(7);
+          expect(frontEndSkillPercentages).toHaveLength(7);
+          expect(frontEndSkillProgresses).toHaveLength(7);
+
+          for (let i = 0; i < frontEndSkillsTestId.length; i++) {
+            expect(frontEndSkillsWindow).toContainElement(
+              frontEndSkillsTestId[i]
+            );
+            expect(frontEndSkillsTestId[i]).toHaveClass("skill_container");
+
+            expect(frontEndSkillsTestId[i]).toContainElement(
+              frontEndSkillLabels[i]
+            );
+            expect(frontEndSkillsTestId[i]).toContainElement(
+              frontEndSkillBars[i]
+            );
+          }
+
+          for (let i = 0; i < frontEndSkillLabels.length; i++) {
+            expect(frontEndSkillLabels[i]).toHaveClass("skill-label_container");
+
+            expect(frontEndSkillLabels[i]).toContainElement(
+              frontEndSkillTitles[i]
+            );
+
+            expect(frontEndSkillLabels[i]).toContainElement(
+              frontEndSkillPercentages[i]
+            );
+            expect(frontEndSkillPercentages[i]).toHaveClass("skill-percentage");
+          }
+
+          for (let i = 0; i < frontEndSkillBars; i++) {
+            expect(frontEndSkillBars[i]).toHaveClass("skill-bar_container");
+            expect(frontEndSkillBars[i]).toContainElement(
+              frontEndSkillProgresses[i]
+            );
+            expect(frontEndSkillProgresses[i]).toHaveClass(
+              "skill-progress_container"
+            );
+          }
+        });
+      });
+    });
+  });
 });
