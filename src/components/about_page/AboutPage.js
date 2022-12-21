@@ -155,52 +155,97 @@ const AboutPage = ({ id }) => (
                 data-testid="AboutPage_Card_Content2"
                 role="HobbiesContent2"
               >
-                <div className="hobbies-column">
-                  <div className="hobby-title">
+                <div
+                  className="hobbies-column"
+                  data-testid="AboutPage_HobbiesColumn"
+                >
+                  <div
+                    className="hobby-title"
+                    data-testid="AboutPage_HobbiesTitle"
+                  >
                     <p>{AboutPageEnum.HOBBIES.DRIVING_TITLE}</p>
                   </div>
 
-                  <div className="hobby-description">
+                  <div
+                    className="hobby-description"
+                    data-testid="AboutPage_HobbiesDescription"
+                  >
                     <p>{AboutPageEnum.HOBBIES.DRIVING_TEXT}</p>
                   </div>
                 </div>
 
-                <div className="hobbies-column">
-                  <div className="hobby-title">
+                <div
+                  className="hobbies-column"
+                  data-testid="AboutPage_HobbiesColumn"
+                >
+                  <div
+                    className="hobby-title"
+                    data-testid="AboutPage_HobbiesTitle"
+                  >
                     <p>{AboutPageEnum.HOBBIES.MUSIC_TITLE}</p>
                   </div>
 
-                  <div className="hobby-description">
+                  <div
+                    className="hobby-description"
+                    data-testid="AboutPage_HobbiesDescription"
+                  >
                     <p>{AboutPageEnum.HOBBIES.MUSIC_TEXT}</p>
                   </div>
                 </div>
 
-                <div className="hobbies-column">
-                  <div className="hobby-title">
+                <div
+                  className="hobbies-column"
+                  data-testid="AboutPage_HobbiesColumn"
+                >
+                  <div
+                    className="hobby-title"
+                    data-testid="AboutPage_HobbiesTitle"
+                  >
                     <p>{AboutPageEnum.HOBBIES.SPORT_TITLE}</p>
                   </div>
 
-                  <div className="hobby-description">
+                  <div
+                    className="hobby-description"
+                    data-testid="AboutPage_HobbiesDescription"
+                  >
                     <p>{AboutPageEnum.HOBBIES.SPORT_TEXT}</p>
                   </div>
                 </div>
 
-                <div className="hobbies-column">
-                  <div className="hobby-title">
+                <div
+                  className="hobbies-column"
+                  data-testid="AboutPage_HobbiesColumn"
+                >
+                  <div
+                    className="hobby-title"
+                    data-testid="AboutPage_HobbiesTitle"
+                  >
                     <p>{AboutPageEnum.HOBBIES.GUITAR_TITLE}</p>
                   </div>
 
-                  <div className="hobby-description">
+                  <div
+                    className="hobby-description"
+                    data-testid="AboutPage_HobbiesDescription"
+                  >
                     <p>{AboutPageEnum.HOBBIES.GUITAR_TEXT}</p>
                   </div>
                 </div>
 
-                <div className="hobbies-column">
-                  <div className="hobby-title">
+                <div
+                  className="hobbies-column"
+                  data-testid="AboutPage_HobbiesColumn"
+                >
+                  <div
+                    className="hobby-title"
+                    data-testid="AboutPage_HobbiesTitle"
+                  >
                     <p>{AboutPageEnum.HOBBIES.TRAVEL_TITLE}</p>
                   </div>
 
-                  <div className="hobby-description">
+                  <div
+                    className="hobby-description"
+                    data-testid="AboutPage_HobbiesDescription"
+                  >
                     <p>{AboutPageEnum.HOBBIES.TRAVEL_TEXT}</p>
                   </div>
                 </div>

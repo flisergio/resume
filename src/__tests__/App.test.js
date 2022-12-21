@@ -5,7 +5,6 @@ import { render, screen } from "@testing-library/react";
 import { Provider as ReduxProvider } from "react-redux";
 import configureStore from "../redux/configureStore.js";
 import App from "../App.js";
-import { toHaveClass } from "@testing-library/jest-dom/dist/matchers.js";
 
 describe("App", () => {
   const store = configureStore(),
@@ -487,29 +486,59 @@ describe("App", () => {
           });
 
           it("tests Education Content2 container", () => {
-            const educationContent2Container = screen.getByRole(
-                "EducationContent2"
-              ),
+            const educationContent2Container =
+                screen.getByRole("EducationContent2"),
               educationName = screen.getByRole("EducationName"),
               educationInfo = screen.getByRole("EducationInfo"),
-              educationTime = screen.getByRole(
-                "EducationTime"
-              );
-            
-            expect(educationContent2Container).toContainElement(
-              educationName
-            );
+              educationTime = screen.getByRole("EducationTime");
+
+            expect(educationContent2Container).toContainElement(educationName);
             expect(educationName).toHaveClass("education-name");
 
-            expect(educationContent2Container).toContainElement(
-              educationInfo
-            );
+            expect(educationContent2Container).toContainElement(educationInfo);
             expect(educationInfo).toHaveClass("education-info");
 
-            expect(educationContent2Container).toContainElement(
-              educationTime
-            );
+            expect(educationContent2Container).toContainElement(educationTime);
             expect(educationTime).toHaveClass("education-time");
+          });
+
+          it("tests Hobbies Content2 container", () => {
+            const hobbiesContent2Container =
+                screen.getByRole("HobbiesContent2"),
+              hobbiesColumnTagsTestId = screen.getAllByTestId(
+                "AboutPage_HobbiesColumn"
+              ),
+              hobbiesTitleTagsTestId = screen.getAllByTestId(
+                "AboutPage_HobbiesTitle"
+              ),
+              hobbiesDescriptionTagsTestId = screen.getAllByTestId(
+                "AboutPage_HobbiesDescription"
+              );
+
+            expect(hobbiesColumnTagsTestId).toHaveLength(5);
+            hobbiesColumnTagsTestId.map((id) => {
+              expect(hobbiesContent2Container).toContainElement(id);
+              expect(id).toHaveClass("hobbies-column");
+            });
+
+            expect(hobbiesTitleTagsTestId).toHaveLength(5);
+            hobbiesTitleTagsTestId.map((id) =>
+              expect(id).toHaveClass("hobby-title")
+            );
+
+            expect(hobbiesDescriptionTagsTestId).toHaveLength(5);
+            hobbiesDescriptionTagsTestId.map((id) =>
+              expect(id).toHaveClass("hobby-description")
+            );
+
+            for (let i = 0; i < hobbiesColumnTagsTestId.length; i++) {
+              expect(hobbiesColumnTagsTestId[i]).toContainElement(
+                hobbiesTitleTagsTestId[i]
+              );
+              expect(hobbiesColumnTagsTestId[i]).toContainElement(
+                hobbiesDescriptionTagsTestId[i]
+              );
+            }
           });
         });
       });
