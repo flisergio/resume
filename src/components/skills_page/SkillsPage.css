@@ -64,6 +64,10 @@
   color: #fff;
 }
 
+.skills-window_container .language-skills-text {
+  font-size: 1.2vw;
+}
+
 .skill_container {
   position: relative;
   padding: 5px 10px;
@@ -128,55 +132,67 @@
   width: 60%;
 }
 
-.front-end-skills-window_container:hover .skill-lit-wc-progress_container {
-  width: 60%;
+.front-end-skills-window_container:hover .skill-ts-progress_container {
+  width: 50%;
 }
 
 .front-end-skills-window_container:hover .skill-sapui5-progress_container {
-  width: 40%;
+  width: 45%;
+}
+
+.front-end-skills-window_container:hover .skill-lit-wc-progress_container {
+  width: 35%;
 }
 
 .back-end-skills-window_container:hover .skill-node-progress_container {
-  width: 55%;
-}
-
-.back-end-skills-window_container:hover .skill-cap-progress_container {
-  width: 50%;
+  width: 65%;
 }
 
 .back-end-skills-window_container:hover .skill-api-progress_container {
+  width: 55%;
+}
+
+.back-end-skills-window_container:hover .skill-cloud-progress_container {
   width: 50%;
+}
+
+.back-end-skills-window_container:hover .skill-cap-progress_container {
+  width: 45%;
 }
 
 .back-end-skills-window_container:hover .skill-server-progress_container {
   width: 40%;
 }
 
-.back-end-skills-window_container:hover .skill-python-progress_container {
+.back-end-skills-window_container:hover .skill-databases-progress_container {
   width: 35%;
 }
 
-.back-end-skills-window_container:hover .skill-databases-progress_container {
+.back-end-skills-window_container:hover .skill-python-progress_container {
   width: 30%;
 }
 
 .other-skills-window_container:hover .skill-git-progress_container {
-  width: 80%;
+  width: 90%;
+}
+
+.other-skills-window_container:hover .skill-unit-progress_container {
+  width: 75%;
 }
 
 .other-skills-window_container:hover .skill-agile-progress_container {
   width: 65%;
 }
 
-.other-skills-window_container:hover .skill-wordpress-progress_container {
-  width: 50%;
+.other-skills-window_container:hover .skill-deployment-progress_container {
+  width: 60%;
 }
 
 .other-skills-window_container:hover .skill-ms-progress_container {
   width: 50%;
 }
 
-.other-skills-window_container:hover .skill-deployment-progress_container {
+.other-skills-window_container:hover .skill-wordpress-progress_container {
   width: 40%;
 }
 

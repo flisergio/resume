@@ -78,19 +78,19 @@ const SkillsPage = ({ id }) => (
             </div>
           </div>
 
-          <div className="skill_container skill-lit-wc_container">
+          <div className="skill_container skill-ts_container">
             <div className="skill-label_container">
-              <h3>{SkillsPageEnums.FRONTEND.LIT_TITLE}</h3>
+              <h3>{SkillsPageEnums.FRONTEND.TS_TITLE}</h3>
 
               <span className="skill-percentage">
-                {SkillsPageEnums.FRONTEND.LIT_PERCENT}
+                {SkillsPageEnums.FRONTEND.TS_PERCENT}
               </span>
 
               <div style={{ clear: "both" }}></div>
             </div>
 
             <div className="skill-bar_container">
-              <div className="skill-progress_container skill-lit-wc-progress_container"></div>
+              <div className="skill-progress_container skill-ts-progress_container"></div>
             </div>
           </div>
 
@@ -107,6 +107,22 @@ const SkillsPage = ({ id }) => (
 
             <div className="skill-bar_container">
               <div className="skill-progress_container skill-sapui5-progress_container"></div>
+            </div>
+          </div>
+
+          <div className="skill_container skill-lit-wc_container">
+            <div className="skill-label_container">
+              <h3>{SkillsPageEnums.FRONTEND.LIT_TITLE}</h3>
+
+              <span className="skill-percentage">
+                {SkillsPageEnums.FRONTEND.LIT_PERCENT}
+              </span>
+
+              <div style={{ clear: "both" }}></div>
+            </div>
+
+            <div className="skill-bar_container">
+              <div className="skill-progress_container skill-lit-wc-progress_container"></div>
             </div>
           </div>
         </div>
@@ -134,22 +150,6 @@ const SkillsPage = ({ id }) => (
             </div>
           </div>
 
-          <div className="skill_container skill-cap_container">
-            <div className="skill-label_container">
-              <h3>{SkillsPageEnums.BACKEND.CAP_TITLE}</h3>
-
-              <span className="skill-percentage">
-                {SkillsPageEnums.BACKEND.CAP_PERCENT}
-              </span>
-
-              <div style={{ clear: "both" }}></div>
-            </div>
-
-            <div className="skill-bar_container">
-              <div className="skill-progress_container skill-cap-progress_container"></div>
-            </div>
-          </div>
-
           <div className="skill_container skill-api_container">
             <div className="skill-label_container">
               <h3>{SkillsPageEnums.BACKEND.JSON_TITLE}</h3>
@@ -166,33 +166,51 @@ const SkillsPage = ({ id }) => (
             </div>
           </div>
 
-          <div className="skill_container skill-server_container">
+          <div className="skill_container skill-cloud_container">
             <div className="skill-label_container">
-              <h3>{SkillsPageEnums.BACKEND.SERVER_TITLE}</h3>
-
-              <span className="skill-percentage">{SkillsPageEnums.SERVER}</span>
-
-              <div style={{ clear: "both" }}></div>
-            </div>
-
-            <div className="skill-bar_container">
-              <div className="skill-progress_container skill-server-progress_container"></div>
-            </div>
-          </div>
-
-          <div className="skill_container skill-python_container">
-            <div className="skill-label_container">
-              <h3>{SkillsPageEnums.BACKEND.PYTHON_TITLE}</h3>
+              <h3>{SkillsPageEnums.BACKEND.CLOUD_TITLE}</h3>
 
               <span className="skill-percentage">
-                {SkillsPageEnums.BACKEND.PYTHON_PERCENT}
+                {SkillsPageEnums.BACKEND.CLOUD_PERCENT}
               </span>
 
               <div style={{ clear: "both" }}></div>
             </div>
 
             <div className="skill-bar_container">
-              <div className="skill-progress_container skill-python-progress_container"></div>
+              <div className="skill-progress_container skill-cloud-progress_container"></div>
+            </div>
+          </div>
+
+          <div className="skill_container skill-cap_container">
+            <div className="skill-label_container">
+              <h3>{SkillsPageEnums.BACKEND.CAP_TITLE}</h3>
+
+              <span className="skill-percentage">
+                {SkillsPageEnums.BACKEND.CAP_PERCENT}
+              </span>
+
+              <div style={{ clear: "both" }}></div>
+            </div>
+
+            <div className="skill-bar_container">
+              <div className="skill-progress_container skill-cap-progress_container"></div>
+            </div>
+          </div>
+
+          <div className="skill_container skill-server_container">
+            <div className="skill-label_container">
+              <h3>{SkillsPageEnums.BACKEND.SERVER_TITLE}</h3>
+
+              <span className="skill-percentage">
+                {SkillsPageEnums.BACKEND.SERVER_PERCENT}
+              </span>
+
+              <div style={{ clear: "both" }}></div>
+            </div>
+
+            <div className="skill-bar_container">
+              <div className="skill-progress_container skill-server-progress_container"></div>
             </div>
           </div>
 
@@ -209,6 +227,22 @@ const SkillsPage = ({ id }) => (
 
             <div className="skill-bar_container">
               <div className="skill-progress_container skill-databases-progress_container"></div>
+            </div>
+          </div>
+
+          <div className="skill_container skill-python_container">
+            <div className="skill-label_container">
+              <h3>{SkillsPageEnums.BACKEND.PYTHON_TITLE}</h3>
+
+              <span className="skill-percentage">
+                {SkillsPageEnums.BACKEND.PYTHON_PERCENT}
+              </span>
+
+              <div style={{ clear: "both" }}></div>
+            </div>
+
+            <div className="skill-bar_container">
+              <div className="skill-progress_container skill-python-progress_container"></div>
             </div>
           </div>
         </div>
@@ -236,6 +270,22 @@ const SkillsPage = ({ id }) => (
             </div>
           </div>
 
+          <div className="skill_container skill-unit">
+            <div className="skill-label_container">
+              <h3>{SkillsPageEnums.OTHER.UNIT_TITLE}</h3>
+
+              <span className="skill-percentage">
+                {SkillsPageEnums.OTHER.UNIT_PERCENT}
+              </span>
+
+              <div style={{ clear: "both" }}></div>
+            </div>
+
+            <div className="skill-bar_container">
+              <div className="skill-progress_container skill-unit-progress_container"></div>
+            </div>
+          </div>
+
           <div className="skill_container skill-agile_container">
             <div className="skill-label_container">
               <h3>{SkillsPageEnums.OTHER.AGILE_TITLE}</h3>
@@ -249,6 +299,22 @@ const SkillsPage = ({ id }) => (
 
             <div className="skill-bar_container">
               <div className="skill-progress_container skill-agile-progress_container"></div>
+            </div>
+          </div>
+
+          <div className="skill_container skill-deployment_container">
+            <div className="skill-label_container">
+              <h3>{SkillsPageEnums.OTHER.DEPLOY_TITLE}</h3>
+
+              <span className="skill-percentage">
+                {SkillsPageEnums.OTHER.DEPLOY_PERCENT}
+              </span>
+
+              <div style={{ clear: "both" }}></div>
+            </div>
+
+            <div className="skill-bar_container">
+              <div className="skill-progress_container skill-deployment-progress_container"></div>
             </div>
           </div>
 
@@ -283,28 +349,11 @@ const SkillsPage = ({ id }) => (
               <div className="skill-progress_container skill-wordpress-progress_container"></div>
             </div>
           </div>
-
-          <div className="skill_container skill-deployment_container">
-            <div className="skill-label_container">
-              <h3>{SkillsPageEnums.OTHER.DEPLOY_TITLE}</h3>
-
-              <span className="skill-percentage">
-                {SkillsPageEnums.OTHER.DEPLOY_PERCENT}
-              </span>
-
-              <div style={{ clear: "both" }}></div>
-            </div>
-
-            <div className="skill-bar_container">
-              <div className="skill-progress_container skill-deployment-progress_container"></div>
-            </div>
-          </div>
         </div>
 
         <div className="skills-window_container language-skills-window_container">
           <h1>{SkillsPageEnums.LANG.TITLE}</h1>
-
-          <p>{SkillsPageEnums.LANG.TEXT}</p>
+          <p className="language-skills-text">{SkillsPageEnums.LANG.TEXT}</p>
 
           <div className="skill_container skill-ua_container">
             <div className="skill-label_container">
