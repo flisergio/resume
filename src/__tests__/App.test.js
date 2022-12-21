@@ -552,7 +552,7 @@ describe("App", () => {
       realSkillsPageTestId = screen.getByTestId("SkillsPage");
     });
 
-    it("AboutPage component to have right class and id", () => {
+    it("Skills component to have right class and id", () => {
       const skillsPageId = realSkillsPageTestId.getAttribute("id");
 
       expect(skillsPageId).toEqual("skillspage");
@@ -560,19 +560,13 @@ describe("App", () => {
     });
 
     describe("Skills Windows Containers", () => {
-      let skillsWindowsTestId,
-        backEndSkillsWindow,
-        otherSkillsWindow,
-        languageSkillsWindow;
+      let skillsWindowsTestId, percentageRemarkTags;
 
       beforeEach(() => {
         skillsWindowsTestId = screen.getAllByTestId(
           "SkillsPage_WindowContainer"
         );
-
-        backEndSkillsWindow = screen.getByRole("BackEndSkillsContainer");
-        otherSkillsWindow = screen.getByRole("OtherSkillsContainer");
-        languageSkillsWindow = screen.getByRole("LanguageSkillsContainer");
+        percentageRemarkTags = screen.getAllByRole("SkillPercentageRemark");
       });
 
       it("Skills Page renders exactly four Skills Window containers inside", () => {
@@ -583,11 +577,37 @@ describe("App", () => {
         });
       });
 
+      it("Skills Page has exactly three percentage remarks inside", () =>
+        expect(percentageRemarkTags).toHaveLength(3));
+
       describe("Frond-End Skills Container", () => {
         let frontEndSkillsWindow;
 
         beforeEach(() => {
           frontEndSkillsWindow = screen.getByRole("FrontEndSkillsContainer");
+        });
+
+        it("Front-End Skills container contains main title, main text and percentage remark", () => {
+          const frontEndSkillsMainTitle = screen.getByRole(
+              "FrontEndSkillsMainTitle"
+            ),
+            frontEndSkillsMainText = screen.getByRole("FrontEndSkillsMainText");
+
+          expect(frontEndSkillsWindow).toContainElement(
+            frontEndSkillsMainTitle
+          );
+          expect(frontEndSkillsWindow).toContainElement(frontEndSkillsMainText);
+
+          for (let i = 0; i < percentageRemarkTags.length; i++) {
+            try {
+              expect(frontEndSkillsWindow).toContainElement(
+                percentageRemarkTags[i]
+              );
+              break;
+            } catch (err) {
+              continue;
+            }
+          }
         });
 
         it("Front-End Skills container renders exactly seven Skill containers containing required elements", () => {
@@ -644,6 +664,249 @@ describe("App", () => {
               frontEndSkillProgresses[i]
             );
             expect(frontEndSkillProgresses[i]).toHaveClass(
+              "skill-progress_container"
+            );
+          }
+        });
+      });
+
+      describe("Back-End Skills Container", () => {
+        let backEndSkillsWindow;
+
+        beforeEach(() => {
+          backEndSkillsWindow = screen.getByRole("BackEndSkillsContainer");
+        });
+
+        it("Back-End Skills container contains main title, main text and percentage remark", () => {
+          const backEndSkillsMainTitle = screen.getByRole(
+              "BackEndSkillsMainTitle"
+            ),
+            backEndSkillsMainText = screen.getByRole("BackEndSkillsMainText");
+
+          expect(backEndSkillsWindow).toContainElement(backEndSkillsMainTitle);
+          expect(backEndSkillsWindow).toContainElement(backEndSkillsMainText);
+
+          for (let i = 0; i < percentageRemarkTags.length; i++) {
+            try {
+              expect(backEndSkillsWindow).toContainElement(
+                percentageRemarkTags[i]
+              );
+              break;
+            } catch (err) {
+              continue;
+            }
+          }
+        });
+
+        it("Back-End Skills container renders exactly seven Skill containers containing required elements", () => {
+          const backEndSkillsTestId = screen.getAllByTestId(
+              "SkillsPage_BackEndSkillContainer"
+            ),
+            backEndSkillLabels = screen.getAllByRole("BackEndSkillLabel"),
+            backEndSkillBars = screen.getAllByRole("BackEndSkillBar"),
+            backEndSkillTitles = screen.getAllByRole("BackEndSkillTitle"),
+            backEndSkillPercentages = screen.getAllByRole(
+              "BackEndSkillPercentage"
+            ),
+            backEndSkillProgresses = screen.getAllByRole(
+              "BackEndSkillProgress"
+            );
+
+          expect(backEndSkillsTestId).toHaveLength(7);
+          expect(backEndSkillLabels).toHaveLength(7);
+          expect(backEndSkillBars).toHaveLength(7);
+          expect(backEndSkillTitles).toHaveLength(7);
+          expect(backEndSkillPercentages).toHaveLength(7);
+          expect(backEndSkillProgresses).toHaveLength(7);
+
+          for (let i = 0; i < backEndSkillsTestId.length; i++) {
+            expect(backEndSkillsWindow).toContainElement(
+              backEndSkillsTestId[i]
+            );
+            expect(backEndSkillsTestId[i]).toHaveClass("skill_container");
+
+            expect(backEndSkillsTestId[i]).toContainElement(
+              backEndSkillLabels[i]
+            );
+            expect(backEndSkillsTestId[i]).toContainElement(
+              backEndSkillBars[i]
+            );
+          }
+
+          for (let i = 0; i < backEndSkillLabels.length; i++) {
+            expect(backEndSkillLabels[i]).toHaveClass("skill-label_container");
+
+            expect(backEndSkillLabels[i]).toContainElement(
+              backEndSkillTitles[i]
+            );
+
+            expect(backEndSkillLabels[i]).toContainElement(
+              backEndSkillPercentages[i]
+            );
+            expect(backEndSkillPercentages[i]).toHaveClass("skill-percentage");
+          }
+
+          for (let i = 0; i < backEndSkillBars; i++) {
+            expect(backEndSkillBars[i]).toHaveClass("skill-bar_container");
+            expect(backEndSkillBars[i]).toContainElement(
+              backEndSkillProgresses[i]
+            );
+            expect(backEndSkillProgresses[i]).toHaveClass(
+              "skill-progress_container"
+            );
+          }
+        });
+      });
+
+      describe("Other Skills Container", () => {
+        let otherSkillsWindow;
+
+        beforeEach(() => {
+          otherSkillsWindow = screen.getByRole("OtherSkillsContainer");
+        });
+
+        it("Back-End Skills container contains main title, main text and percentage remark", () => {
+          const otherSkillsMainTitle = screen.getByRole("OtherSkillsMainTitle"),
+            otherSkillsMainText = screen.getByRole("OtherSkillsMainText");
+
+          expect(otherSkillsWindow).toContainElement(otherSkillsMainTitle);
+          expect(otherSkillsWindow).toContainElement(otherSkillsMainText);
+
+          for (let i = 0; i < percentageRemarkTags.length; i++) {
+            try {
+              expect(otherSkillsWindow).toContainElement(
+                percentageRemarkTags[i]
+              );
+              break;
+            } catch (err) {
+              continue;
+            }
+          }
+        });
+
+        it("Other Skills container renders exactly six Skill containers containing required elements", () => {
+          const otherSkillsTestId = screen.getAllByTestId(
+              "SkillsPage_OtherSkillContainer"
+            ),
+            otherSkillLabels = screen.getAllByRole("OtherSkillLabel"),
+            otherSkillBars = screen.getAllByRole("OtherSkillBar"),
+            otherSkillTitles = screen.getAllByRole("OtherSkillTitle"),
+            otherSkillPercentages = screen.getAllByRole("OtherSkillPercentage"),
+            otherSkillProgresses = screen.getAllByRole("OtherSkillProgress");
+
+          expect(otherSkillsTestId).toHaveLength(6);
+          expect(otherSkillLabels).toHaveLength(6);
+          expect(otherSkillBars).toHaveLength(6);
+          expect(otherSkillTitles).toHaveLength(6);
+          expect(otherSkillPercentages).toHaveLength(6);
+          expect(otherSkillProgresses).toHaveLength(6);
+
+          for (let i = 0; i < otherSkillsTestId.length; i++) {
+            expect(otherSkillsWindow).toContainElement(otherSkillsTestId[i]);
+            expect(otherSkillsTestId[i]).toHaveClass("skill_container");
+
+            expect(otherSkillsTestId[i]).toContainElement(otherSkillLabels[i]);
+            expect(otherSkillsTestId[i]).toContainElement(otherSkillBars[i]);
+          }
+
+          for (let i = 0; i < otherSkillLabels.length; i++) {
+            expect(otherSkillLabels[i]).toHaveClass("skill-label_container");
+
+            expect(otherSkillLabels[i]).toContainElement(otherSkillTitles[i]);
+
+            expect(otherSkillLabels[i]).toContainElement(
+              otherSkillPercentages[i]
+            );
+            expect(otherSkillPercentages[i]).toHaveClass("skill-percentage");
+          }
+
+          for (let i = 0; i < otherSkillBars; i++) {
+            expect(otherSkillBars[i]).toHaveClass("skill-bar_container");
+            expect(otherSkillBars[i]).toContainElement(otherSkillProgresses[i]);
+            expect(otherSkillProgresses[i]).toHaveClass(
+              "skill-progress_container"
+            );
+          }
+        });
+      });
+
+      describe("Language Skills Container", () => {
+        let languageSkillsWindow;
+
+        beforeEach(() => {
+          languageSkillsWindow = screen.getByRole("LanguageSkillsContainer");
+        });
+
+        it("Language Skills container contains main title, main text but not percentage remark", () => {
+          const languageSkillsMainTitle = screen.getByRole(
+              "LanguageSkillsMainTitle"
+            ),
+            languageSkillsMainText = screen.getByRole("LanguageSkillsMainText");
+
+          expect(languageSkillsWindow).toContainElement(
+            languageSkillsMainTitle
+          );
+          expect(languageSkillsWindow).toContainElement(languageSkillsMainText);
+
+          percentageRemarkTags.map((tag) =>
+            expect(languageSkillsWindow).not.toContainElement(tag)
+          );
+        });
+
+        it("Language Skills container renders exactly five Skill containers containing required elements", () => {
+          const languageSkillsTestId = screen.getAllByTestId(
+              "SkillsPage_LanguageSkillContainer"
+            ),
+            languageSkillLabels = screen.getAllByRole("LanguageSkillLabel"),
+            languageSkillBars = screen.getAllByRole("LanguageSkillBar"),
+            languageSkillTitles = screen.getAllByRole("LanguageSkillTitle"),
+            languageSkillPercentages = screen.getAllByRole(
+              "LanguageSkillPercentage"
+            ),
+            languageSkillProgresses = screen.getAllByRole(
+              "LanguageSkillProgress"
+            );
+
+          expect(languageSkillsTestId).toHaveLength(5);
+          expect(languageSkillLabels).toHaveLength(5);
+          expect(languageSkillBars).toHaveLength(5);
+          expect(languageSkillTitles).toHaveLength(5);
+          expect(languageSkillPercentages).toHaveLength(5);
+          expect(languageSkillProgresses).toHaveLength(5);
+
+          for (let i = 0; i < languageSkillsTestId.length; i++) {
+            expect(languageSkillsWindow).toContainElement(
+              languageSkillsTestId[i]
+            );
+            expect(languageSkillsTestId[i]).toHaveClass("skill_container");
+
+            expect(languageSkillsTestId[i]).toContainElement(
+              languageSkillLabels[i]
+            );
+            expect(languageSkillsTestId[i]).toContainElement(
+              languageSkillBars[i]
+            );
+          }
+
+          for (let i = 0; i < languageSkillLabels.length; i++) {
+            expect(languageSkillLabels[i]).toHaveClass("skill-label_container");
+
+            expect(languageSkillLabels[i]).toContainElement(
+              languageSkillTitles[i]
+            );
+
+            expect(languageSkillLabels[i]).toContainElement(
+              languageSkillPercentages[i]
+            );
+            expect(languageSkillPercentages[i]).toHaveClass("skill-percentage");
+          }
+
+          for (let i = 0; i < languageSkillBars; i++) {
+            expect(languageSkillBars[i]).toHaveClass("skill-bar_container");
+            expect(languageSkillBars[i]).toContainElement(
+              languageSkillProgresses[i]
+            );
+            expect(languageSkillProgresses[i]).toHaveClass(
               "skill-progress_container"
             );
           }
