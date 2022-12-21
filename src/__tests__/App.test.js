@@ -61,7 +61,7 @@ describe("App", () => {
 
   it("App component renders all other components inside", () => {
     const realAppTestId = screen.getByTestId("App");
-    
+
     Object.values(testIdValues).map((val) =>
       expect(realAppTestId).toContainElement(screen.getByTestId(val))
     );
@@ -280,6 +280,236 @@ describe("App", () => {
               iconGitHub.getAttribute("src").includes("github.png")
             ).toBeTruthy();
             expect(iconGitHub).toHaveAttribute("alt", "github");
+          });
+        });
+      });
+    });
+  });
+
+  describe("AboutPage", () => {
+    let realAboutPageTestId;
+
+    beforeEach(() => {
+      realAboutPageTestId = screen.getByTestId("AboutPage");
+    });
+
+    it("AboutPage component to have right class and id", () => {
+      const aboutPageId = realAboutPageTestId.getAttribute("id");
+
+      expect(aboutPageId).toEqual("aboutpage");
+      expect(realAboutPageTestId).toHaveClass("about-page_container");
+    });
+
+    describe("Inner Container", () => {
+      let innerContainerTestId;
+
+      beforeEach(() => {
+        innerContainerTestId = screen.getByTestId("AboutPage_InnerContainer");
+      });
+
+      it("AboutPage component renders inner container inside", () => {
+        expect(realAboutPageTestId).toContainElement(innerContainerTestId);
+
+        expect(innerContainerTestId).toHaveClass("about-page_inside_container");
+      });
+
+      describe("Left and Right Containers", () => {
+        let leftContainerTestId, rightContainerTestId;
+
+        beforeEach(() => {
+          leftContainerTestId = screen.getByTestId("AboutPage_LeftContainer");
+          rightContainerTestId = screen.getByTestId("AboutPage_RightContainer");
+        });
+
+        it("Inner container renders left container inside", () => {
+          expect(innerContainerTestId).toContainElement(leftContainerTestId);
+          expect(leftContainerTestId).toHaveClass("about-page_left_container");
+        });
+
+        it("Inner container renders right container inside", () => {
+          expect(innerContainerTestId).toContainElement(rightContainerTestId);
+          expect(rightContainerTestId).toHaveClass(
+            "about-page_right_container"
+          );
+        });
+
+        describe("Card Containers", () => {
+          let cardContainersTestId,
+            personalInfoContainer,
+            educationContainer,
+            hobbiesContainer;
+
+          beforeEach(() => {
+            cardContainersTestId = screen.getAllByTestId(
+              "AboutPage_CardContainer"
+            );
+            personalInfoContainer = screen.getByRole("PersonalInfoContainer");
+            educationContainer = screen.getByRole("EducationContainer");
+            hobbiesContainer = screen.getByRole("HobbiesContainer");
+          });
+
+          it("About Page renders exactly three Card containers", () => {
+            expect(cardContainersTestId).toHaveLength(3);
+            cardContainersTestId.map((id) =>
+              expect(id).toHaveClass("about-page_card_container")
+            );
+          });
+
+          it("Left container renders personal info and education containers inside", () => {
+            expect(leftContainerTestId).toContainElement(personalInfoContainer);
+            expect(personalInfoContainer).toHaveClass(
+              "about-page_personal-info_container"
+            );
+
+            expect(leftContainerTestId).toContainElement(educationContainer);
+            expect(educationContainer).toHaveClass(
+              "about-page_education_container"
+            );
+          });
+
+          it("Right container renders hobbies container inside", () => {
+            expect(rightContainerTestId).toContainElement(hobbiesContainer);
+            expect(hobbiesContainer).toHaveClass(
+              "about-page_hobbies_container"
+            );
+          });
+
+          it("each Card renders Content Container inside", () => {
+            const contentContainersTestId = screen.getAllByTestId(
+              "AboutPage_Card_Content"
+            );
+            for (let i = 0; i < cardContainersTestId; i++) {
+              expect(cardContainersTestId[i]).toContainElement(
+                contentContainersTestId[i]
+              );
+              expect(contentContainersTestId[i]).toHaveClass("content");
+            }
+          });
+
+          it("tests Personal Info Content container", () => {
+            const personalInfoContentContainer = screen.getByRole(
+                "PersonalInfoContent"
+              ),
+              personalInfoPicture = screen.getByRole("PersonalInfoPicture"),
+              personalInfoTitle = screen.getByRole("PersonalInfoTitle");
+
+            expect(personalInfoContentContainer).toContainElement(
+              personalInfoPicture
+            );
+            expect(personalInfoPicture).toHaveClass("img_about-page_card");
+            expect(personalInfoPicture).toHaveClass("img_personal-info");
+            expect(personalInfoPicture).toHaveAttribute("alt", "personal-info");
+            expect(
+              personalInfoPicture
+                .getAttribute("src")
+                .includes("personal-info.svg")
+            ).toBeTruthy();
+
+            expect(personalInfoContentContainer).toContainElement(
+              personalInfoTitle
+            );
+          });
+
+          it("tests Education Content container", () => {
+            const educationContentContainer =
+                screen.getByRole("EducationContent"),
+              educationPicture = screen.getByRole("EducationPicture"),
+              educationTitle = screen.getByRole("EducationTitle");
+
+            expect(educationContentContainer).toContainElement(
+              educationPicture
+            );
+            expect(educationPicture).toHaveClass("img_about-page_card");
+            expect(educationPicture).toHaveClass("img_education");
+            expect(educationPicture).toHaveAttribute("alt", "education");
+            expect(
+              educationPicture.getAttribute("src").includes("education.svg")
+            ).toBeTruthy();
+
+            expect(educationContentContainer).toContainElement(educationTitle);
+          });
+
+          it("tests Hobbies Content container", () => {
+            const hobbiesContentContainer = screen.getByRole("HobbiesContent"),
+              hobbiesPicture = screen.getByRole("HobbiesPicture"),
+              hobbiesTitle = screen.getByRole("HobbiesTitle");
+
+            expect(hobbiesContentContainer).toContainElement(hobbiesPicture);
+            expect(hobbiesPicture).toHaveClass("img_about-page_card");
+            expect(hobbiesPicture).toHaveClass("img_hobbies");
+            expect(hobbiesPicture).toHaveAttribute("alt", "hobbies");
+            expect(
+              hobbiesPicture.getAttribute("src").includes("hobbies.svg")
+            ).toBeTruthy();
+
+            expect(hobbiesContentContainer).toContainElement(hobbiesTitle);
+          });
+
+          it("each Card renders Content2 Container inside", () => {
+            const content2ContainersTestId = screen.getAllByTestId(
+              "AboutPage_Card_Content2"
+            );
+            for (let i = 0; i < cardContainersTestId; i++) {
+              expect(cardContainersTestId[i]).toContainElement(
+                content2ContainersTestId[i]
+              );
+            }
+          });
+
+          it("tests Personal Info Content2 container", () => {
+            const personalInfoContent2Container = screen.getByRole(
+                "PersonalInfoContent2"
+              ),
+              personalInfoName = screen.getByRole("PersonalInfoName"),
+              personalInfoBirthDate = screen.getByRole("PersonalInfoBirthDate"),
+              personalInfoBirthPlace = screen.getByRole(
+                "PersonalInfoBirthPlace"
+              );
+
+            expect(personalInfoContent2Container).toContainElement(
+              personalInfoName
+            );
+            expect(personalInfoName).toHaveClass("personal-info_name");
+
+            expect(personalInfoContent2Container).toContainElement(
+              personalInfoBirthDate
+            );
+            expect(personalInfoBirthDate).toHaveClass(
+              "personal-info_birthdate"
+            );
+
+            expect(personalInfoContent2Container).toContainElement(
+              personalInfoBirthPlace
+            );
+            expect(personalInfoBirthPlace).toHaveClass(
+              "personal-info_birthplace"
+            );
+          });
+
+          it("tests Education Content2 container", () => {
+            const educationContent2Container = screen.getByRole(
+                "EducationContent2"
+              ),
+              educationName = screen.getByRole("EducationName"),
+              educationInfo = screen.getByRole("EducationInfo"),
+              educationTime = screen.getByRole(
+                "EducationTime"
+              );
+            
+            expect(educationContent2Container).toContainElement(
+              educationName
+            );
+            expect(educationName).toHaveClass("education-name");
+
+            expect(educationContent2Container).toContainElement(
+              educationInfo
+            );
+            expect(educationInfo).toHaveClass("education-info");
+
+            expect(educationContent2Container).toContainElement(
+              educationTime
+            );
+            expect(educationTime).toHaveClass("education-time");
           });
         });
       });
