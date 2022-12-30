@@ -914,4 +914,19 @@ describe("App", () => {
       });
     });
   });
+
+  describe("ExperiencePage", () => {
+    let realExperiencePageTestId;
+
+    beforeEach(() => {
+      realExperiencePageTestId = screen.getByTestId("ExperiencePage");
+    });
+
+    it("Experience component to have right class and id", () => {
+      const experiencePageId = realExperiencePageTestId.getAttribute("id");
+
+      expect(experiencePageId).toEqual("experiencepage");
+      expect(realExperiencePageTestId).toHaveClass("experience-page_container");
+    });
+  })
 });

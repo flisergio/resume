@@ -261,6 +261,10 @@
     font-size: 3vw;
   }
 
+  .skills-window_container .language-skills-text {
+    font-size: 3vw;
+  }
+
   .skill_container {
     padding: 10px 20px;
     margin: 1vw 0;
