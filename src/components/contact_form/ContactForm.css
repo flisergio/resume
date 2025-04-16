@@ -314,7 +314,7 @@
   }
 
   .contact-info_container h2 {
-    font-size: 5vh;
+    font-size: 3vh;
     margin-bottom: 2vh;
   }
 
@@ -345,6 +345,7 @@
 
   .ul_social-media_contact li {
     margin-right: 0;
+    
   }
 
   .ul_social-media_contact li a img {

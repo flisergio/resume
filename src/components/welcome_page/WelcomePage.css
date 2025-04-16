@@ -165,12 +165,13 @@
     padding: 0 0 10vw;
 
     flex-direction: column-reverse;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .description_container {
     width: 100%;
     margin: 0;
+    margin-top: 2vw
   }
 
   .header_welcome {
@@ -185,7 +186,7 @@
 
   .welcome-description_container {
     padding: 3vw;
-    margin: 3.5vw 0 3.5vw;
+    margin: 3vw 0 3vw;
   }
 
   .p_welcome-description {
@@ -215,13 +216,13 @@
   }
 
   .profile-picture_container {
-    margin: 2vw 0 .5vw;
+    margin: 2vw 0 2vw;
   }
 
   .img_profile-picture {
     margin: 0;
-    width: auto;
-    height: 60vw;
+    width: 64vw;
+    height: auto;
     border-radius: 50px;
   }
 
