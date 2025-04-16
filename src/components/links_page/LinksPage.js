@@ -30,27 +30,6 @@ const LinksPage = ({ id }) => (
         </div>
 
         <div className="links-card_container">
-          <div className="links_link-box_container" data-text="RoboFriends">
-            <p>{LinksPageEnum.ROBO.TITLE}</p>
-          </div>
-
-          <div className="links_content_container">
-            <div className="links_content_inside_container">
-              <p>{parse(LinksPageEnum.ROBO.DESCRIPTION)}</p>
-
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/flisergio/robofriends"
-                className="link_button link_robofriends"
-              >
-                {LinksPageEnum.COMMON.LINK}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="links-card_container">
           <div className="links_link-box_container" data-text="FaceReco">
             <p>{LinksPageEnum.FR.TITLE}</p>
           </div>
@@ -83,7 +62,7 @@ const LinksPage = ({ id }) => (
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/flisergio/CultureCenter"
+                href="https://github.com/wazxse5/CultureCenter"
                 className="link_button link_culturecenter"
               >
                 {LinksPageEnum.COMMON.LINK}

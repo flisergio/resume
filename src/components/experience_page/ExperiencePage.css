@@ -62,7 +62,7 @@
 }
 
 .company-title {
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
   color: #27d4cf;
   margin: 0;
@@ -70,13 +70,12 @@
 }
 
 .company-title span {
-  font-size: 0.8vw;
   margin-left: 0.5vw;
   color: #fff;
 }
 
 .company-description {
-  font-size: 1vw;
+  font-size: .8vw;
   color: #fff;
   padding: 0;
   margin: 0;
@@ -96,7 +95,7 @@
   margin: 0.5vw;
   padding: 0;
   color: #fff;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   text-transform: uppercase;
 }
 
@@ -112,7 +111,7 @@
 .position-name {
   margin: 0;
   padding: 0;
-  font-size: 1.5vw;
+  font-size: 2vw;
   text-align: center;
   color: #27d4cf;
 }
@@ -120,7 +119,7 @@
 .position-dates {
   margin: 0;
   padding: 0;
-  font-size: 0.8vw;
+  font-size: 1.1vw;
   margin-bottom: 0.5vw;
   text-align: center;
   color: #fff;
@@ -138,7 +137,7 @@
 .experience-window_task-container p {
   text-align: left;
   color: #fff;
-  font-size: 0.8vw;
+  font-size: 1.1vw;
 }
 
 .experience-window_task-container p span {
@@ -168,23 +167,22 @@
   }
 
   .company-title {
-    font-size: 3.5vh;
+    font-size: 5vw;
   }
 
   .company-title span {
-    font-size: 1.2vh;
     margin-left: 0.5vw;
-  }
-
-  .company-description {
-    font-size: 1.8vh;
-    margin-top: 0.5vh;
-    padding: 2vh;
   }
 
   .company-location {
     margin: 0.5vh;
-    font-size: 2vh;
+    font-size: 1.7vw;
+  }
+
+  .company-description {
+    font-size: 1.7vw;
+    margin-top: 0.5vh;
+    padding: 2vh;
   }
 
   .experience-window_position-container {
@@ -192,11 +190,11 @@
   }
 
   .position-name {
-    font-size: 2.5vh;
+    font-size: 3vw;
   }
 
   .position-dates {
-    font-size: 1.4vh;
+    font-size: 1.7vw;
     margin-bottom: 0.5vh;
   }
 
@@ -206,6 +204,6 @@
   }
 
   .experience-window_task-container p {
-    font-size: 1.8vh;
+    font-size: 1.7vw;
   }
 }

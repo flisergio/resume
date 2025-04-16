@@ -47,7 +47,7 @@ const ContactForm = (props) => {
 
   const sendFeedback = (templateId, variables) => {
     emailjs
-      .send("gmail", templateId, variables)
+      .send("service_5nr5n3l", templateId, variables)
       .then((res) => {
         Swal.fire({
           title: "Email Successfully Sent",

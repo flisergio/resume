@@ -8,7 +8,7 @@ export const ContactFormEnum = {
     },
     // Message section
     MESSAGE: {
-        TITLE: "Send me a message",
+        TITLE: "Message me!",
         NAME: "Name",
         EMAIL: "E-mail",
         PHONE: "Phone",

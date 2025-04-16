@@ -39,6 +39,10 @@ const ExperiencePage = ({ id }) => (
             <div className="experience-window_task-container">
               <p>{parse(ExperiencePageEnum.MORA.TASKS.T3)}</p>
             </div>
+
+            <div className="experience-window_task-container">
+              <p>{parse(ExperiencePageEnum.MORA.TASKS.T4)}</p>
+            </div>
           </div>
         </div>
 
@@ -69,6 +73,10 @@ const ExperiencePage = ({ id }) => (
 
             <div className="experience-window_task-container">
               <p>{parse(ExperiencePageEnum.ING.TASKS.T3)}</p>
+            </div>
+
+            <div className="experience-window_task-container">
+              <p>{parse(ExperiencePageEnum.ING.TASKS.T4)}</p>
             </div>
           </div>
         </div>
@@ -105,6 +113,22 @@ const ExperiencePage = ({ id }) => (
 
             <div className="experience-window_task-container">
               <p>{parse(ExperiencePageEnum.SAP.TASKS.T4)}</p>
+            </div>
+
+            <div className="experience-window_task-container">
+              <p>{parse(ExperiencePageEnum.SAP.TASKS.T5)}</p>
+            </div>
+
+            <div className="experience-window_task-container">
+              <p>{parse(ExperiencePageEnum.SAP.TASKS.T6)}</p>
+            </div>
+
+            <div className="experience-window_task-container">
+              <p>{parse(ExperiencePageEnum.SAP.TASKS.T7)}</p>
+            </div>
+
+            <div className="experience-window_task-container">
+              <p>{parse(ExperiencePageEnum.SAP.TASKS.T8)}</p>
             </div>
           </div>
         </div>

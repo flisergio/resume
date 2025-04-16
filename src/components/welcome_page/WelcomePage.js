@@ -148,11 +148,11 @@ const WelcomePage = ({ id }) => {
             data-testid="WelcomePage_InnerDescriptionContainer"
           >
             <p className="p_welcome-description" role="InnerDescription_p">
-              {WelcomePageEnum.WELCOME.DESCRIPTION_MAIN}
+              {parse(WelcomePageEnum.WELCOME.DESCRIPTION_MAIN)}
             </p>
 
             <p className="p_quote" role="InnerDescription_p">
-              <span>{WelcomePageEnum.WELCOME.DESCRIPTION_SPECIAL}</span>
+              {parse(WelcomePageEnum.WELCOME.DESCRIPTION_SPECIAL)}
             </p>
           </div>
 

@@ -18,7 +18,7 @@
 }
 
 .description_container {
-  width: 50%;
+  width: 60%;
   margin: 220px 0 0 30px;
   padding: 0 20px 40px 20px;
   display: flex;
@@ -56,6 +56,10 @@
   line-height: 1.5vw;
 }
 
+.p_welcome-description span {
+  color: #27d4cf;
+}
+
 .p_quote {
   color: #27d4cf;
   text-align: center;
@@ -67,6 +71,11 @@
   margin-top: 1vw;
   padding-top: 1vw;
   border-top: 1px solid #fff;
+}
+
+.p_quote span {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
 }
 
 .link_about {

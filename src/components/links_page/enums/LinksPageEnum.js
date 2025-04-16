@@ -5,30 +5,26 @@ export const LinksPageEnum = {
     },
     // Spectrum section
     SPECTRUM: {
-        TITLE: "Spectrum filaments",
-        DESCRIPTION: `Back-end system (developed using <span>Python</span>) that communicates with PLC controller using <span>TCP</span>. 
-            Developed and used for controlling the <span>filament quality</span>. After entering an ID of filament spool, system searches for 
-            the spool with same ID in <span>PostgreSQL database</span> and shows it's characteristics that visualise the spool quality.`,
-    },
-    // RoboFriends section
-    ROBO: {
-        TITLE: "RoboFriends",
-        DESCRIPTION: `Very simple and one of my first front-end <span>React.JS</span> applications, that represents a general 
-            way of <span>creating</span> React.JS <span>components</span>, has <span>searching functionality</span> and 
-            <span>scrolling window</span> component. Just a <span>practice</span> mixed with <span>fun</span>, nothing more :)`,
+        TITLE: "Filament Quality Control System",
+        DESCRIPTION: `<span>Python-based back-end system</span> designed to communicate with a <span>PLC controller</span> via <span>TCP
+            protocol</span> for real-time <span>filament quality monitoring</span>. The system retrieves spool data by <span>querying a
+            PostgreSQL database</span> based on a unique spool ID and displays <span>key quality characteristics</span>, enabling precise
+            and efficient quality assurance in filament production.`,
     },
     // Face Recognition section
     FR: {
-        TITLE: "Face Recognition",
-        DESCRIPTION: `<span>Full-Stack React.JS</span> application connected with a back-end using <span>Node & Express.js</span>. 
-            Application represents, how basic <span>functionality of login/register</span> works in <span>Node.JS</span> and it is connected with 
-            open-source <span>Machine Learning</span> API that helps with face recognition functionality (only works for <span>one-face images</span>).`,
+        TITLE: "Face Recognition Application",
+        DESCRIPTION: `<span>React.js application</span> integrated with a <span>Node.js and Express.js back-end</span>.
+            The application demonstrates basic <span>login and registration functionality</span>, while connecting to an open-source <span>Machine
+            Learning API</span> for <span>face recognition</span>. The system showcases practical integration of <span>ML-powered
+            authentication</span> for enhancing security and user experience.`,
     },
     // Cinema system section
     CINEMA: {
-        TITLE: "Simple Cinema system",
-        DESCRIPTION: `Back-end <span>Java</span> application, which was a <span>university project</span>, used for simulation of a simple 
-            <span>cinema system</span>. It was developed by a group of three people (me and two colleagues) on the 2nd year of studies. 
-            Application is connected with <span>MySQL</span> database. Requires Java to be installed for running the application.`,
+        TITLE: "Cinema System Simulation",
+        DESCRIPTION: `<span>Back-end Java application</span>, simulating a simple <span>cinema management system</span>.
+            The application, created by a team of three during the <span>second year of the university</span>, is integrated with
+            a <span>MySQL database</span> for data management. The system requires installed <span>Java runtime</span> for execution
+            and was developed to demonstrate core <span>back-end development skills</span>.`,
     },
 };

@@ -9,8 +9,8 @@ export const AboutPageEnum = {
     // Education section
     EDUCATION: {
         TITLE: "Education",
-        UNIVERSITY: "<span>Politechnika Krakowska</span> im. Tadeusza Kościuszki",
-        SPECIALIZATION: "Specialization: <span>IT</span>",
+        UNIVERSITY: "Cracow University of <span>Technology</span>",
+        SPECIALIZATION: "Field: <span>Computer Science</span>",
         LEVEL: "Level: <span>Bachelor's</span>",
         START: "Started in <span>October, 2016</span>",
         END: "Graduated in <span>February, 2021</span>",
@@ -19,14 +19,14 @@ export const AboutPageEnum = {
     HOBBIES: {
         TITLE: "Hobbies",
         DRIVING_TITLE: "Driving",
-        DRIVING_TEXT: "I have driving license cat. B and enjoy car driving process",
+        DRIVING_TEXT: "I enjoy driving experience, whether it's a daily routine or a road trip adventure",
         MUSIC_TITLE: "Music",
-        MUSIC_TEXT: "Almost every process in my life is always surrounded by music",
-        SPORT_TITLE: "Sport",
-        SPORT_TEXT: "Besides going to the gym I love playing football or billiard with friends",
+        MUSIC_TEXT: "Music is a constant companion in my life, fueling focus, creativity, and relaxation",
+        SPORT_TITLE: "Sports",
+        SPORT_TEXT: "A regular at the gym and always up for a friendly game of football or billiards with friends",
         GUITAR_TITLE: "Guitar",
-        GUITAR_TEXT: "I often spend my free time playing simple songs on guitar",
-        TRAVEL_TITLE: "Travelling",
-        TRAVEL_TEXT: "I am really excited about travelling and visiting new places",
+        GUITAR_TEXT: "Playing on the guitar during my downtime — it’s a great way to unwind and stay creative",
+        TRAVEL_TITLE: "Traveling",
+        TRAVEL_TEXT: "Passionate about exploring new places and cultures to gain fresh perspectives",
     },
 };
