@@ -3,8 +3,8 @@ export const LinksPageEnum = {
     COMMON: {
         LINK: "Visit Link",
     },
-    // Spectrum section
-    SPECTRUM: {
+    // FQCS section
+    FQCS: {
         TITLE: "Filament Quality Control System",
         DESCRIPTION: `<span>Python-based back-end system</span> designed to communicate with a <span>PLC controller</span> via <span>TCP
             protocol</span> for real-time <span>filament quality monitoring</span>. The system retrieves spool data by <span>querying a

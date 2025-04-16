@@ -21,7 +21,7 @@ export const AboutPageEnum = {
         DRIVING_TITLE: "Driving",
         DRIVING_TEXT: "I enjoy driving experience, whether it's a daily routine or a road trip adventure",
         MUSIC_TITLE: "Music",
-        MUSIC_TEXT: "Music is a constant companion in my life, fueling focus, creativity, and relaxation",
+        MUSIC_TEXT: "Music is my constant companion, fueling focus, creativity and relaxation",
         SPORT_TITLE: "Sports",
         SPORT_TEXT: "A regular at the gym and always up for a friendly game of football or billiards with friends",
         GUITAR_TITLE: "Guitar",

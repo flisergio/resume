@@ -9,13 +9,13 @@ const LinksPage = ({ id }) => (
     <div className="links-page_container" id={id} data-testid="LinksPage">
       <div className="links-page_inside_container">
         <div className="links-card_container">
-          <div className="links_link-box_container" data-text="Spectrum">
-            <p>{LinksPageEnum.SPECTRUM.TITLE}</p>
+          <div className="links_link-box_container" data-text="FQCS">
+            <p>{LinksPageEnum.FQCS.TITLE}</p>
           </div>
 
           <div className="links_content_container">
             <div className="links_content_inside_container links_content_inside_container_smallFont">
-              <p>{parse(LinksPageEnum.SPECTRUM.DESCRIPTION)}</p>
+              <p>{parse(LinksPageEnum.FQCS.DESCRIPTION)}</p>
 
               <a
                 target="_blank"

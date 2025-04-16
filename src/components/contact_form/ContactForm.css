@@ -302,7 +302,7 @@
   }
 
   .contact-info_container {
-    width: 50vw;
+    width: 70vw;
     height: 40vh;
     padding: 1.5vh;
     align-items: center;
@@ -314,12 +314,16 @@
   }
 
   .contact-info_container h2 {
-    font-size: 4vh;
+    font-size: 5vh;
     margin-bottom: 2vh;
   }
 
+  .ul_contact-info {
+    margin-top: 3vh;
+  }
+
   .ul_contact-info li {
-    justify-content: center;
+    justify-content: flex-start;
     margin: 2vh 0;
   }
 
@@ -335,7 +339,8 @@
 
   .ul_social-media_contact {
     justify-content: space-around;
-    width: 90%;
+    margin-top: 3vh;
+    width: 50%;
   }
 
   .ul_social-media_contact li {
@@ -353,18 +358,18 @@
 
   .contact-form_inner_container {
     position: relative;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0;
     margin-top: -10vh;
     padding: 3vh;
-    padding-top: 15vh;
-    width: 80%;
-    height: 70vh;
+    padding-top: 12vh;
+    width: 90vw;
+    height: 62vh;
     opacity: 1;
   }
 
   .contact-form_inner_container h2 {
-    font-size: 4vh;
+    font-size: 5vh;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;

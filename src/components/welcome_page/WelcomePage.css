@@ -51,7 +51,7 @@
   color: #fff;
   padding: 0;
   margin: 0;
-  text-align: center;
+  text-align: justify;
   font-size: 1.5vw;
   line-height: 1.5vw;
 }
@@ -112,11 +112,11 @@
 }
 
 .img_profile-picture {
-    height: 35vw;
-    width: auto;
-    margin-bottom: 40px;
-    border-radius: 25px;
-    opacity: .85;
+  height: 32vw;
+  width: auto;
+  margin-bottom: 40px;
+  border-radius: 25px;
+  opacity: .85;
 }
 
 .ul_social-media {
@@ -174,22 +174,22 @@
   }
 
   .header_welcome {
-    font-size: 5vw;
-    line-height: 7vw;
+    font-size: 3vw;
+    line-height: 6vw;
     margin: 0 0 1vw;
   }
 
   .header_welcome span {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 
   .welcome-description_container {
     padding: 3vw;
-    margin: 2vh 0 2vh;
+    margin: 3.5vw 0 3.5vw;
   }
 
   .p_welcome-description {
-    font-size: 3vw;
+    font-size: 2.5vw;
     line-height: 3vw;
   }
 
@@ -215,13 +215,13 @@
   }
 
   .profile-picture_container {
-    margin: 20px 0;
+    margin: 2vw 0 .5vw;
   }
 
   .img_profile-picture {
     margin: 0;
-    width: 60vw;
-    height: auto;
+    width: auto;
+    height: 60vw;
     border-radius: 50px;
   }
 

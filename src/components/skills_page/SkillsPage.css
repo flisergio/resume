@@ -61,6 +61,7 @@
 
 .skills-window_container p {
   font-size: .8vw;
+  text-align: justify;
   color: #fff;
 }
 
