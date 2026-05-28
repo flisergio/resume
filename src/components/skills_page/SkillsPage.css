@@ -75,9 +75,9 @@
 
 .skill_container {
   position: relative;
-  padding: 5px 10px;
+  padding: 10px 12px;
   background: rgba(0, 0, 0, 0.1);
-  margin: 0.2vw 0;
+  margin: 0.4vw 0;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.5);
 }
@@ -108,7 +108,7 @@
   width: 100%;
   height: 2px;
   background: #051937;
-  margin: 0.5vw 0;
+  margin: 0.7vw 0 0.3vw;
 }
 
 .skill-progress_container {
@@ -126,47 +126,47 @@
 }
 
 .front-end-skills-window_container:hover .skill-react-progress_container {
-  width: 90%;
-}
-
-.front-end-skills-window_container:hover .skill-css-progress_container {
   width: 80%;
 }
 
-.front-end-skills-window_container:hover .skill-sapui5-progress_container {
+.front-end-skills-window_container:hover .skill-css-progress_container {
   width: 70%;
 }
 
+.front-end-skills-window_container:hover .skill-sapui5-progress_container {
+  width: 80%;
+}
+
 .front-end-skills-window_container:hover .skill-ts-progress_container {
-  width: 70%;
+  width: 75%;
 }
 
 .front-end-skills-window_container:hover .skill-wc-progress_container {
   width: 60%;
 }
 
-.front-end-skills-window_container:hover .skill-fiori-progress_container {
-  width: 50%;
+.front-end-skills-window_container:hover .skill-bundlers-progress_container {
+  width: 60%;
 }
 
 .back-end-skills-window_container:hover .skill-capbtp-progress_container {
-  width: 90%;
+  width: 100%;
 }
 
 .back-end-skills-window_container:hover .skill-node-progress_container {
-  width: 80%;
+  width: 90%;
 }
 
 .back-end-skills-window_container:hover .skill-api-progress_container {
-  width: 70%;
+  width: 80%;
 }
 
 .back-end-skills-window_container:hover .skill-cds-progress_container {
-  width: 65%;
+  width: 75%;
 }
 
 .back-end-skills-window_container:hover .skill-db-progress_container {
-  width: 50%;
+  width: 55%;
 }
 
 .back-end-skills-window_container:hover .skill-python-progress_container {
@@ -178,15 +178,15 @@
 }
 
 .other-skills-window_container:hover .skill-agile-progress_container {
-  width: 80%;
+  width: 95%;
 }
 
 .other-skills-window_container:hover .skill-cicd-progress_container {
-  width: 80%;
+  width: 55%;
 }
 
 .other-skills-window_container:hover .skill-unit-progress_container {
-  width: 75%;
+  width: 90%;
 }
 
 .other-skills-window_container:hover .skill-security-progress_container {
@@ -194,7 +194,7 @@
 }
 
 .other-skills-window_container:hover .skill-genai-progress_container {
-  width: 50%;
+  width: 75%;
 }
 
 .other-skills-window_container:hover .skill-kub-progress_container {

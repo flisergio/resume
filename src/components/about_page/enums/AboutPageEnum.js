@@ -3,7 +3,7 @@ export const AboutPageEnum = {
     PERSONAL: {
         TITLE: "Personal information",
         NAME: "My name is <span>Sergii Kobyliaiev</span>",
-        BORNDATE: "I was born on <span>12/10/1999</span>",
+        BORNDATE: "I was born on <span>12 October 1999</span>",
         BORNPLACE: "in <span>Odessa, Ukraine</span>",
     },
     // Education section
@@ -12,21 +12,21 @@ export const AboutPageEnum = {
         UNIVERSITY: "Cracow University of <span>Technology</span>",
         SPECIALIZATION: "Field: <span>Computer Science</span>",
         LEVEL: "Level: <span>Bachelor's</span>",
-        START: "Started in <span>October, 2016</span>",
-        END: "Graduated in <span>February, 2021</span>",
+        START: "Started in <span>October 2016</span>",
+        END: "Graduated in <span>February 2021</span>",
     },
     // Hobbies section
     HOBBIES: {
         TITLE: "Hobbies",
         DRIVING_TITLE: "Driving",
-        DRIVING_TEXT: "I enjoy driving experience, whether it's a daily routine or a road trip adventure",
+        DRIVING_TEXT: "Enjoy time behind the wheel, from daily commutes to long road trips",
         MUSIC_TITLE: "Music",
-        MUSIC_TEXT: "Music is my constant companion, fueling focus, creativity and relaxation",
+        MUSIC_TEXT: "A constant companion that fuels focus, creativity, and relaxation",
         SPORT_TITLE: "Sports",
-        SPORT_TEXT: "A regular at the gym and always up for a friendly game of football or billiards with friends",
+        SPORT_TEXT: "Regular gym sessions, plus a friendly game of football or billiards with friends",
         GUITAR_TITLE: "Guitar",
-        GUITAR_TEXT: "Playing on the guitar during my downtime — it’s a great way to unwind and stay creative",
+        GUITAR_TEXT: "Playing the guitar in downtime — a great way to unwind and stay creative",
         TRAVEL_TITLE: "Traveling",
-        TRAVEL_TEXT: "Passionate about exploring new places and cultures to gain fresh perspectives",
+        TRAVEL_TEXT: "Drawn to new places and cultures as a way to keep a fresh perspective",
     },
 };

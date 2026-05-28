@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__filesystem__get_file_info",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "Bash(rm -f package-lock.json)",
+      "Bash(rm -rf node_modules)",
+      "Bash(npm install:*)",
+      "Bash(CI=true npm test)",
+      "Bash(CI=true npm run build)",
+      "Bash(CI=true npm test -- --testPathPattern=ContactForm)",
+      "Bash(CI=true npm test -- --coverage)",
+      "Bash(rm:*)",
+      "Bash(npm run:*)",
+      "Bash(ls:*)",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_close",
+      "mcp__playwright__browser_evaluate"
+    ]
+  }
+}

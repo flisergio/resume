@@ -6,25 +6,22 @@ export const LinksPageEnum = {
     // FQCS section
     FQCS: {
         TITLE: "Filament Quality Control System",
-        DESCRIPTION: `<span>Python-based back-end system</span> designed to communicate with a <span>PLC controller</span> via <span>TCP
-            protocol</span> for real-time <span>filament quality monitoring</span>. The system retrieves spool data by <span>querying a
-            PostgreSQL database</span> based on a unique spool ID and displays <span>key quality characteristics</span>, enabling precise
-            and efficient quality assurance in filament production.`,
+        DESCRIPTION: `<span>Python-based back-end system</span> that communicates with a <span>PLC controller</span> over <span>TCP</span>
+            for real-time <span>filament quality monitoring</span>. The service queries a <span>PostgreSQL database</span> by spool ID
+            and surfaces <span>key quality characteristics</span>, supporting precise quality assurance in filament production.`,
     },
     // Face Recognition section
     FR: {
         TITLE: "Face Recognition Application",
-        DESCRIPTION: `<span>React.js application</span> integrated with a <span>Node.js and Express.js back-end</span>.
-            The application demonstrates basic <span>login and registration functionality</span>, while connecting to an open-source <span>Machine
-            Learning API</span> for <span>face recognition</span>. The system showcases practical integration of <span>ML-powered
-            authentication</span> for enhancing security and user experience.`,
+        DESCRIPTION: `<span>React.js</span> front-end paired with a <span>Node.js / Express.js back-end</span>. The app provides
+            basic <span>login and registration</span>, and consumes an open-source <span>Machine Learning API</span> for <span>face recognition</span>,
+            demonstrating practical integration of <span>ML-powered authentication</span>.`,
     },
     // Cinema system section
     CINEMA: {
         TITLE: "Cinema System Simulation",
-        DESCRIPTION: `<span>Back-end Java application</span>, simulating a simple <span>cinema management system</span>.
-            The application, created by a team of three during the <span>second year of the university</span>, is integrated with
-            a <span>MySQL database</span> for data management. The system requires installed <span>Java runtime</span> for execution
-            and was developed to demonstrate core <span>back-end development skills</span>.`,
+        DESCRIPTION: `<span>Java back-end application</span> simulating a simple <span>cinema management system</span>. Built by a
+            three-person team during the <span>second year of university</span> and backed by a <span>MySQL database</span>. Requires a
+            local <span>Java runtime</span> to run; created to demonstrate core <span>back-end development skills</span>.`,
     },
 };

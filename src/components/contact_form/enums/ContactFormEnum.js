@@ -12,6 +12,6 @@ export const ContactFormEnum = {
         NAME: "Name",
         EMAIL: "E-mail",
         PHONE: "Phone",
-        TEXT: "Enter your message . . .",
+        TEXT: "Enter your message…",
     },
 };

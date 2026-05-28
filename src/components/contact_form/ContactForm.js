@@ -23,7 +23,7 @@ import githubPicture from "./images/github.png";
 import "./ContactForm.css";
 import { ContactFormEnum } from "./enums/ContactFormEnum";
 
-init("user_rJdhk2nwJUZEezZbmiTq9");
+init(import.meta.env.VITE_EMAILJS_USER_ID);
 
 const ContactForm = (props) => {
   const { id, name, email, phone, message, actions } = props;
@@ -35,7 +35,7 @@ const ContactForm = (props) => {
 
   const handleEmailSubmit = (event) => {
     event.preventDefault();
-    const templateId = "template_97mdipt";
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
     sendFeedback(templateId, {
       message: message,
@@ -47,7 +47,7 @@ const ContactForm = (props) => {
 
   const sendFeedback = (templateId, variables) => {
     emailjs
-      .send("service_5nr5n3l", templateId, variables)
+      .send(import.meta.env.VITE_EMAILJS_SERVICE_ID, templateId, variables)
       .then((res) => {
         Swal.fire({
           title: "Email Successfully Sent",
@@ -203,7 +203,8 @@ const ContactForm = (props) => {
                 <input
                   type="tel"
                   name=""
-                  pattern="[/+/][1, 4][2, 8][0-9]{9}"
+                  // E.164-ish: optional leading +, then 9-15 digits.
+                  pattern="\+?[0-9]{9,15}"
                   onChange={phoneChange}
                   placeholder={ContactFormEnum.MESSAGE.PHONE}
                   required

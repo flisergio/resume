@@ -1,0 +1,19 @@
+# Netlify build configuration. Replaces the implicit git-connected default
+# so Netlify and local builds use the same Node version and build command.
+
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  # Vite 5 supports Node 18, 20, and 22. Pinning to 20 (current LTS) keeps the
+  # CI environment predictable; bump as new LTS lines drop.
+  NODE_VERSION = "20"
+
+# SPA fallback. The site uses react-scroll for in-page navigation, so deep
+# links never hit the server today, but adding this makes any future client
+# router behave correctly on direct navigation / refresh.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useMemo, useState } from "react";
 import parse from "html-react-parser";
 
-import Particles from "react-particles-js";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import Tilt from "react-tilt";
 import { Link } from "react-scroll";
 
@@ -14,50 +15,30 @@ import githubPicture from "./images/github.png";
 import "./WelcomePage.css";
 import { WelcomePageEnum } from "./enums/WelcomePageEnum";
 
+// Migrated from react-particles-js v3 (snake_case) to @tsparticles/react v3
+// (camelCase). Preserves the previous look: 100 white circles drifting,
+// hover-to-grab, click-to-repulse.
 const particlesOptions = {
   particles: {
     number: {
       value: 100,
-      density: {
-        enable: true,
-        value_area: 1000,
-      },
+      density: { enable: true, area: 1000 },
     },
-    color: {
-      value: "#ffffff",
-    },
+    color: { value: "#ffffff" },
     shape: {
       type: "circle",
-      stroke: {
-        width: 0,
-        color: "#000000",
-      },
-      polygon: {
-        nb_sides: 5,
-      },
-      image: {},
+      stroke: { width: 0, color: "#000000" },
+      polygon: { sides: 5 },
     },
     size: {
-      value: 3,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 4,
-        size_min: 0.3,
-        sync: false,
-      },
+      value: { min: 0.3, max: 3 },
+      animation: { enable: false, speed: 4, sync: false },
     },
     opacity: {
-      value: 1,
-      random: true,
-      anim: {
-        enable: true,
-        speed: 1,
-        opacity_min: 0,
-        sync: false,
-      },
+      value: { min: 0, max: 1 },
+      animation: { enable: true, speed: 1, sync: false },
     },
-    line_linked: {
+    links: {
       enable: false,
       distance: 200,
       color: "#ffffff",
@@ -70,60 +51,38 @@ const particlesOptions = {
       random: true,
       straight: false,
       speed: 1,
-      out_mode: "out",
-      attract: {
-        enable: false,
-        rotateX: 600,
-        totateY: 600,
-      },
+      outModes: { default: "out" },
     },
   },
   interactivity: {
-    detect_on: "canvas",
+    detectsOn: "canvas",
     events: {
-      onhover: {
-        enable: true,
-        mode: "grab",
-      },
-      onclick: {
-        enable: true,
-        mode: "repulse",
-      },
+      onHover: { enable: true, mode: "grab" },
+      onClick: { enable: true, mode: "repulse" },
       resize: true,
     },
     modes: {
-      grab: {
-        distance: 150,
-        line_linked: {
-          opacity: 0.5,
-        },
-      },
-      bubble: {
-        distance: 300,
-        size: 0,
-        duration: 3,
-        opacity: 0,
-        speed: 3,
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.3,
-      },
-      push: {
-        particles_nb: 4,
-      },
-      remove: {
-        particles_nb: 2,
-      },
+      grab: { distance: 150, links: { opacity: 0.5 } },
+      bubble: { distance: 300, size: 0, duration: 3, opacity: 0, speed: 3 },
+      repulse: { distance: 200, duration: 0.3 },
+      push: { quantity: 4 },
+      remove: { quantity: 2 },
     },
   },
-  retina_detect: true,
-  // config_demo: {
-  //   hide_card: false,
-  // }
+  detectRetina: true,
 };
 
 const WelcomePage = ({ id }) => {
+  const [particlesReady, setParticlesReady] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setParticlesReady(true));
+  }, []);
+
+  const memoizedOptions = useMemo(() => particlesOptions, []);
+
   const handleClickAbout = () => {
     setTimeout(() => {
       window.scrollBy(0, 5);
@@ -133,7 +92,13 @@ const WelcomePage = ({ id }) => {
   return (
     <Fragment>
       <div className="welcome-page_container" id={id} data-testid="WelcomePage">
-        <Particles className="particles" params={particlesOptions}></Particles>
+        {particlesReady && (
+          <Particles
+            id="welcome-particles"
+            className="particles"
+            options={memoizedOptions}
+          />
+        )}
 
         <div
           className="description_container"
